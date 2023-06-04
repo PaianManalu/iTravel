@@ -204,7 +204,8 @@
                             $row['garis_bujur'],
                             $row['icon'],
                             $row['alamat'],
-                            $row['gambar']
+                            $row['gambar'],
+                            $row['des']
                         );
                     }
                     ?>
@@ -382,6 +383,7 @@
                                     '<b>Lokasi :</b><br>' +
                                     '<h3>' + locations[i][4] + '</h3><br>' +
                                     '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br>' +
+                                    '<h3> fasilitas:' + locations[i][6] + '</h3><br>' +
                                     '<h3>Rating</h3><br>' +
                                     '<div class="rating">' +
                                     '<input type="radio" id="star5" name="rating" value="5">' +
