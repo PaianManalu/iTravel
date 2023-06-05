@@ -350,6 +350,16 @@
         color: #000;
     }
 
+    .services a {
+        text-align: center;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .services a:hover {
+        color: #0dcdc2
+    }
+
     .services .box-container {
         display: flex;
         flex-wrap: nowrap;
@@ -637,13 +647,15 @@
         <h1 class="heading">Service</h1>
         <div class="box-container">
             <div class="box">
-                <i class="fas fa-hotel"></i>
-                <h3>Hotel</h3>
-                <p>
-                    Temukan pilihan penginapan nyaman dan terjangkau di sekitar Bandara
-                    Kualanamu dan Bandara Silangit untuk memastikan Anda memiliki tempat
-                    istirahat yang sempurna.
-                </p>
+                <a href="">
+                    <i class="fas fa-hotel"></i>
+                    <h3>Hotel</h3>
+                    <p>
+                        Temukan pilihan penginapan nyaman dan terjangkau di sekitar Bandara
+                        Kualanamu dan Bandara Silangit untuk memastikan Anda memiliki tempat
+                        istirahat yang sempurna.
+                    </p>
+                </a>
             </div>
             <div class=" box">
                 <a href="../iTravel/tabel/tabel.php">
@@ -657,32 +669,38 @@
                 </a>
             </div>
             <div class="box">
-                <i class="fas fa-utensils"></i>
-                <h3>Restoran</h3>
-                <p>
-                    Cicipi kuliner lokal terbaik di sekitar Bandara Kualanamu dan
-                    Bandara Silangit yang memanjakan lidah Anda dengan cita rasa khas
-                    daerah dan masakan internasional.
-                </p>
+                <a href="">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Restoran</h3>
+                    <p>
+                        Cicipi kuliner lokal terbaik di sekitar Bandara Kualanamu dan
+                        Bandara Silangit yang memanjakan lidah Anda dengan cita rasa khas
+                        daerah dan masakan internasional.
+                    </p>
+                </a>
             </div>
             <div class="box">
-                <i class="fas fa-bus"></i>
-                <h3>Transportasi</h3>
-                <p>
-                    Dapatkan informasi lengkap tentang layanan shuttle, angkutan umum,
-                    dan penyewaan mobil/sepeda motor di sekitar Bandara Kualanamu dan
-                    Bandara Silangit untuk memudahkan perjalanan Anda dan menjadikan
-                    pengalaman liburan Anda lebih nyaman.
-                </p>
+                <a href="">
+                    <i class="fas fa-bus"></i>
+                    <h3>Transportasi</h3>
+                    <p>
+                        Dapatkan informasi lengkap tentang layanan shuttle, angkutan umum,
+                        dan penyewaan mobil/sepeda motor di sekitar Bandara Kualanamu dan
+                        Bandara Silangit untuk memudahkan perjalanan Anda dan menjadikan
+                        pengalaman liburan Anda lebih nyaman.
+                    </p>
+                </a>
             </div>
             <div class="box">
-                <i class="fas fa-gift"></i>
-                <h3>Souvenir</h3>
-                <p>
-                    Temukan toko-toko souvenir terbaik di sekitar Bandara Kualanamu dan
-                    Bandara Silangit yang menawarkan produk unik dan khas daerah sebagai
-                    oleh-oleh yang sempurna untuk diambil pulang.
-                </p>
+                <a href="">
+                    <i class="fas fa-gift"></i>
+                    <h3>Souvenir</h3>
+                    <p>
+                        Temukan toko-toko souvenir terbaik di sekitar Bandara Kualanamu dan
+                        Bandara Silangit yang menawarkan produk unik dan khas daerah sebagai
+                        oleh-oleh yang sempurna untuk diambil pulang.
+                    </p>
+                </a>
             </div>
         </div>
     </section>
