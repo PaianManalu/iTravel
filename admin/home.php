@@ -19,7 +19,7 @@
         <a href="tb_wisata.php">wisata</a>
         <a href="tb_transportasi.php">Transportasi</a>
         <a href="tb_rumahmakan.php">Rumah Makan</a>
-
+        <a href="upload_form.php">Upload</a>
     </div>
 
     <div id="main">
