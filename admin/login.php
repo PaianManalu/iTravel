@@ -83,42 +83,41 @@
   </style>
 </head>
 
-<div class="col-md-6">
-  <div class="card">
-    <div class="card-body">
-    </div>
-    <h1 class="m-3">LOGIN</h1>
-    <form action="get_data.php" method="POST" onsubmit="return validateLogin()">
-      <label for="email"></label>
-      <div class="container">
-        <div class="mb-3">
-          <input type="email" id="email" name="email" placeholder="Email/UserName" required class="form-control p-2" id="exampleInputEmail1" aria-describedby="emailHelp"><br>
-        </div>
-
-        <div class="mb-3">
-          <input type="password" id="password" name="password" placeholder="Password" class="form-control p-2" id="exampleInputPassword1">
-        </div>
-
-        <div class="d-grid gap-2">
-          <button class="btn btn-dark text-light mt-3 m-4" name="login">LOGIN</button>
-          <div class="container">
-            <img src="img/orwith.png" class="img-fluid" alt="" style="margin-left:10%;">
-          </div>
-
-          <div class="d-grid gap-2 col-6 mx-auto">
-            <p class="text-center">By registering, You agree to the Terms, Conditions and Policies of Borcelle & Privacy Policy</p>
-          </div>
-
-        </div>
+<body>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
       </div>
+      <h1 class="m-3">LOGIN</h1>
+      <form action="get_data.php" method="POST" onsubmit="return validateLogin()">
+        <label for="email"></label>
+        <div class="container">
+          <div class="mb-3">
+            <input type="email" id="email" name="email" placeholder="Email/UserName" required class="form-control p-2" id="exampleInputEmail1" aria-describedby="emailHelp"><br>
+          </div>
 
-    </form>
+          <div class="mb-3">
+            <input type="password" id="password" name="password" placeholder="Password" class="form-control p-2" id="exampleInputPassword1">
+          </div>
+
+          <div class="d-grid gap-2">
+            <button class="btn btn-dark text-light mt-3 m-4" name="login">LOGIN</button>
+            <div class="container">
+              <img src="img/orwith.png" class="img-fluid" alt="" style="margin-left:10%;">
+            </div>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <p class="text-center">By registering, You agree to the Terms, Conditions and Policies of Borcelle & Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
-</div>
-</div>
+  </div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
 
 </html>
