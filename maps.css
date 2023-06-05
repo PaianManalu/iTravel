@@ -616,6 +616,32 @@ header {
     color: #f8b500;
 }
 
+.social-media img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Sembunyikan radio button */
+input[type="radio"] {
+    display: none;
+}
+
+/* Tambahkan gaya ikon bintang menggunakan label */
+.rating label {
+    font-size: 34px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* Berikan tampilan ikon bintang terpilih */
+.rating input[type="radio"]:checked~label {
+    color: gold;
+}
+
+.social-media img {
+    width: 50px;
+    height: 50px;
+}
 
 /*responsif header*/
 /* Tambahkan style untuk logo menjadi lebih kecil pada layar kecil */
