@@ -85,9 +85,9 @@
     }
     // Query untuk SELECT dari tabel "tb_rumahmakan"
     $query_tb_rumahmakan = "SELECT `id`, `nama`, `garis_lintang`, `garis_bujur`, `alamat`, `icon`, `gambar` FROM `tb_rumahmakan`";
-    $result_tb_rumahmakan = mysqli_query($db, $tb_rumahmakan);
+    $result_tb_rumahmakan = mysqli_query($db, $query_tb_rumahmakan);
 
-    echo "<h1>Data dari tabel MAP RUMAH MAKAN</h1><br><br>";
+    echo "<h1>Data dari tabel MAP PENGINAPAN</h1><br><br>";
 
     if (mysqli_num_rows($result_tb_rumahmakan) > 0) {
         echo "<table>";
@@ -102,7 +102,7 @@
             echo "<td>" . $row['alamat'] . "</td>";
             echo "<td>" . $row['icon'] . "</td>";
             echo "<td>" . $row['gambar'] . "</td>";
-            echo "<td><a href='edit_rumahmakan.php?id=" . $row['id'] . "' class='button'>Edit</a></td>";
+            echo "<td><a href='edit_map.php?id=" . $row['id'] . "' class='button'>Edit</a></td>";
             echo "<td><a href='?delete_id=" . $row['id'] . "' class='button'>Delete</a></td>";
             echo "</tr>";
         }
