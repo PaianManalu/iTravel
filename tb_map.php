@@ -6,11 +6,30 @@
     <meta charset="utf-8"><!--parsing code-->
     <meta name="viewport" content="initial-scale=1.0"> <!--web mobile-->
     <link rel="stylesheet" href="maps.css">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="maps.js"></script>
     <style>
         .social-media img {
             width: 50px;
             height: 50px;
+        }
+
+        /* Sembunyikan radio button */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Tambahkan gaya ikon bintang menggunakan label */
+        .rating label {
+            font-size: 34px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        /* Berikan tampilan ikon bintang terpilih */
+        .rating input[type="radio"]:checked~label {
+            color: gold;
         }
     </style>
 
@@ -452,9 +471,9 @@
                                     '<b><h1>' + locations[i][0] + '</h1><b><br>' +
                                     '<b>Lokasi :</b><br>' +
                                     '<h3>' + locations[i][4] + '</h3><br>' +
-                                    '<h3>' + locations[i][7] + '</h3><br>' +
                                     '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br>' +
                                     '<h3>Rating</h3><br>' +
+                                    '<form action="rating.php" method="POST">' +
                                     '<div class="rating">' +
                                     '<input type="radio" id="star5" name="rating" value="5">' +
                                     '<label for="star5"></label><br>' +
@@ -468,13 +487,20 @@
                                     '<label for="star1"></label><br>' +
                                     '</div><br>' +
                                     '<h3>Komentar</h3><br>' +
-                                    '<textarea id="comment"></textarea><br>' +
+                                    '<textarea id="comment" name="comment"></textarea>' +
+                                    '<button type="submit">Simpan</button>' +
+                                    '</form>' +
                                     '</div>';
+
+
+
+
 
                             };
                         })(marker, i));
                         markers.push(marker);
                     }
+
 
                     google.maps.event.addListener(map, 'click', function() {
                         infoSidebar.style.display = 'none'; // sembunyikan sidebar
@@ -534,6 +560,7 @@
                         }
                         q.fitBounds(bounds);
                     });
+
 
                 }
             </script>
