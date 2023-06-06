@@ -150,7 +150,7 @@
 
         <input type="submit" value="Simpan">
     </form>
-    <a href="map.php" class="back-button">Kembali ke Halaman Utama</a>
+    <a href="tb_wisata.php" class="back-button">Kembali ke Halaman Utama</a>
 </body>
 
 </html>
