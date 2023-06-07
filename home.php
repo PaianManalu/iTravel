@@ -46,8 +46,8 @@
     /* navigasi */
     .navigation a {
         font-size: 26px;
-        color: #ffffff;
         text-decoration: none;
+        color: #0dcdc2;
         font-weight: 400;
         margin-left: 5px;
         transition: background 0.3s ease;
@@ -58,67 +58,38 @@
         border: 1px solid transparent;
     }
 
-    .navigation a::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -5px;
-        right: -5px;
-        bottom: 0;
-        border-radius: 100px;
-        background: rgba(255, 255, 255, 0.233);
-        opacity: 0;
-        transition: opacity 0.3s ease;
+    .navigation button {
+        background: none;
+        border: 2px solid;
+        font: inherit;
+        line-height: 1;
+        margin: 0.5em;
+        padding: 1em 2em;
     }
 
-    .navigation a:hover::before,
-    .navigation a.active::before {
-        opacity: 1;
+    .navigation button.raise {
+        --color: #0dcdc2;
+        --hover: #00bab0;
     }
 
-    /* Tambahkan style untuk menu yang aktif */
-    .navigation a.active {
-        border-color: #ffffff;
-        border-radius: 100px;
+    button {
+        color: var(--color);
+        transition: 0.25s;
     }
 
-    .nav-item.dropdown {
-        position: relative;
-        float: right;
-        margin-left: 15px;
-    }
-
-    .nav-link.dropdown-toggle::after {
-        display: inline-block;
-        margin-left: 5px;
-        vertical-align: middle;
-        content: "\25BC";
-    }
-
-    .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .dropdown-item {
-        display: block;
-        padding: 10px 20px;
+    button:hover,
+    button:focus {
+        border-color: var(--hover);
         color: #fff;
-        background-color: #000;
-        text-decoration: none;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        pointer-events: none;
     }
 
-    .nav-item:hover .dropdown-menu {
-        display: block;
+    .raise:hover,
+    .raise:focus {
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
     }
+
+
 
     /*content*/
     .body .bodyBx {
@@ -177,13 +148,19 @@
         width: 150px;
         height: 100%;
         background: transparent;
-        border: 2px solid #0dcdc2;
-        border-radius: 20px;
         font-size: 26px;
         color: #0dcdc2;
         text-decoration: none;
         font-weight: 600;
         letter-spacing: 1px;
+        padding: 10px 20px;
+    }
+
+    .btn-box .raise {
+        border: 2px solid #0dcdc2;
+        border-radius: 20px;
+        background: transparent;
+
     }
 
     /* Popular Destination */
@@ -207,65 +184,63 @@
         justify-content: center;
     }
 
-    .destination-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    .destination {
+        position: relative;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .destination-item {
-        width: calc(33.33% - 40px);
         padding: 20px;
-        margin: 20px;
-        text-align: center;
-        position: relative;
-        /* menambahkan posisi relatif untuk efek mengambang */
-        overflow: hidden;
-        /* mengatur overflow menjadi hidden untuk mengatur efek mengambang */
+        justify-content: space-between;
+        padding-top: 50px;
+        padding: 0 50px;
     }
 
-    .destination-image {
+    .card {
         width: 650px;
-        height: 350px;
-        /* ukuran gambar yang diperbesar */
+        height: 650px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 1rem 3rem rgba(13, 205, 194, 0.2);
+        padding-bottom: 2rem;
+        margin: 3rem 3rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: 2px solid #0dcdc2;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 1rem 3rem rgba(13, 205, 194, 0.4), 0 0.5rem 1rem rgba(13, 205, 194, 0.3);
+    }
+
+    .card-img-top {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 300px;
         object-fit: cover;
-        border-radius: 20px;
-        transition: transform 0.3s ease-in-out;
-        /* menambahkan transisi transform untuk efek mengambang */
+        margin-bottom: 25px;
+        transition: filter 0.3s;
     }
 
-    .destination-title {
-        font-size: 28px;
-        font-weight: bold;
-        margin-top: 10px;
-        margin-bottom: 5px;
+    .card-img-top:hover {
+        filter: brightness(60%);
     }
 
-    .destination-description {
-        font-size: 22px;
-        color: #000000;
+    .card-body {
+        padding: 1rem 4.5rem;
+        margin-bottom: 120px;
+    }
+
+    .card-title {
+        font-size: 30px;
         margin-bottom: 10px;
+        letter-spacing: 1px;
+        color: #0dcdc2;
     }
 
-    .destination-link {
-        font-size: 16px;
-        color: #007bff;
-        text-decoration: none;
+    .card-text {
+        font-size: 22px;
     }
 
-    .destination-link:hover {
-        text-decoration: underline;
-    }
-
-    /* Efek mengambang saat hover */
-    .destination-item:hover .destination-image {
-        transform: scale(1.1);
-        border-radius: 20px;
-        /* memberikan efek perbesaran pada gambar saat hover */
-    }
 
     /*testinmonials*/
 
@@ -515,10 +490,20 @@
             <nav>
                 <ul>
                     <div class="navigation">
-                        <a href="#home">Home</a>
-                        <a href="tb_map.php">Map</a>
-                        <a href="#service">Service</a>
-                        <a href="#about">About</a>s
+                        <div id:"button">
+                            <button class:"raise">
+                                <a href="#home">Home</a>
+                            </button>
+                            <button class:"raise">
+                                <a href="tb_map.php">Map</a>
+                            </button>
+                            <button class:"raise">
+                                <a href="#service">Service</a>
+                            </button>
+                            <button class:"raise">
+                                <a href="#about">About</a>
+                            </button>
+                        </div>
                     </div>
 
                 </ul>
@@ -532,76 +517,122 @@
     <section class="body" ">
       <div class=" bodyBx">
         <div class="content">
-            <h1>Welcome To iTravel <br /></h1>
+            <h1>Selamat datang di iTravel <br /></h1>
             <p>
                 Nikmati Eksplorasi Sumatera Utara dengan i-Travel: Panduan Komprehensif untuk Akomodasi, Restoran,
                 Suvenir, dan Transportasi dari Kualanamu hingga Bandara Silangit!
             </p>
             <div class="btn-box">
-                <a href="home.php">Eksplorasi</a>
+                <button class="raise">
+                    <a href="home.php">Eksplorasi</a>
+                </button>
+
             </div>
+        </div>
         </div>
         </div>
     </section>
     <!--rekomendation-->
     <section class="Destination">
         <section class="popular-destination">
-            <h1 class="heading"> Popular Destination</h1>
+            <h1 class="heading"> Destinasi Populer</h1>
             <div class="container">
                 <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
-                <ul class="destination-list">
-                    <li class="destination-item">
-                        <img src="img/taman eden.jpeg" alt="Destination 1" class="destination-image">
-                        <h3 class="destination-title">Taman Eden 100</h3>
-                        <p class="destination-description">Taman Eden 100 di Sumatera Utara menawarkan keindahan alam
-                            yang menakjubkan.</p>
-                    </li>
-                    <li class="destination-item">
-                        <img src="img/toledo.jpg" alt="Destination 4" class="destination-image">
-                        <h3 class="destination-title">Toledo InnToledo Inna</h3>
-                        <p class="destination-description">Hotel di Pematangsiantar, Sumatera Utara menawarkan
-                            kamar-kamar modern dengan fasilitas seperti AC dan TV layar datar. Terdapat juga restoran,
-                            lounge, dan ruang rapat. Dekat dengan tempat wisata seperti Air Terjun Sipiso-piso dan Danau
-                            Toba. Pilihan tepat untuk menginap di Pematangsiantar.</p>
-                    </li>
-                    <li class="destination-item">
-                        <img src="img/baren.jpg" alt="Destination 5" class="destination-image">
-                        <h3 class="destination-title">Baren Coffee & Roastery</h3>
-                        <p class="destination-description">Baren's Coffee & Roastery adalah tempat kopi yang menawarkan
-                            kopi berkualitas tinggi yang dipanggang dengan baik, serta suasana yang modern dan nyaman
-                            untuk menikmati kopi. Dalam lingkungan yang ramah pengunjung</p>
-                    </li>
-                    <li class="destination-item">
-                        <img src="img/Puncak Sipinsur.jpg" alt="Destination 4" class="destination-image">
-                        <h3 class="destination-title">Puncak Sipinsur</h3>
-                        <p class="destination-description">Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
-                            pemandangan sawah, perbukitan hijau, dan pegunungan yang spektakuler. Pengunjung dapat
-                            hiking dan berkemah sambil menikmati udara segar dan keindahan alam. Cocok untuk pecinta
-                            alam dan pengunjung yang mencari ketenangan.</p>
-                    </li>
-                    </li>
-                    <li class="destination-item">
-                        <img src="img/airport kualanamu.jpg" alt="Destination 1" class="destination-image">
-                        <h3 class="destination-title">Airport Kualanamu</h3>
-                        <p class="destination-description">Bandara Internasional Kualanamu adalah bandara modern yang
-                            melayani penerbangan domestik dan internasional di Sumatera Utara. Dengan fasilitas yang
-                            lengkap dan modern, bandara ini menjadi pintu gerbang utama bagi wisatawan yang ingin
-                            menjelajahi Sumatera Utara.</p>
-                    </li>
-                    <li class="destination-item">
-                        <img src="img/airport silangit.jpg" alt="Destination 2" class="destination-image">
-                        <h3 class="destination-title">Airport Silangit</h3>
-                        <p class="destination-description">Bandara Silangit adalah gerbang utama ke Danau Toba yang
-                            terkenal di Sumatera Utara, Indonesia. Dengan terminal modern dan berbagai penerbangan
-                            langsung dari kota-kota besar di Indonesia, Bandara Silangit adalah pilihan terbaik untuk
-                            memulai perjalanan Anda ke destinasi wisata yang menakjubkan di sekitarnya.</p>
-                    </li>
-                </ul>
-            </div>
+                <section class="destination">
+                    <div class="cardbx">
+                        <div class="card mb-3">
+                            <img src="img/taman eden.jpeg" class="card-img-top" alt="Destination 1" />
+                            <div class="card-body">
+                                <h5 class="card-title">Taman Eden 100</h5>
+                                <p class="card-text">
+
+                                    Taman Eden 100 di Sumatera Utara menawarkan keindahan alam yang menakjubkan. Dengan
+                                    pemandangan yang memukau dan lingkungan yang indah, Taman Eden 100 menjadi destinasi
+                                    yang sempurna bagi pecinta alam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardbx">
+                        <div class="card mb-3">
+                            <img src="img/toledo.jpg" class="card-img-top" alt="Destination 2" />
+                            <div class="card-body">
+                                <h5 class="card-title">Toledo InnToledo Inna</h5>
+                                <p class="card-text">
+                                    Hotel di Pematangsiantar, Sumatera Utara menawarkan kamar-kamar
+                                    modern dengan fasilitas seperti AC dan TV layar datar. Terdapat
+                                    juga restoran, lounge, dan ruang rapat. Dekat dengan tempat
+                                    wisata seperti Air Terjun Sipiso-piso dan Danau Toba. Pilihan
+                                    tepat untuk menginap di Pematangsiantar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardbx">
+                        <div class="card mb-3">
+                            <img src="img/baren.jpg" class="card-img-top" alt="Destination 3" />
+                            <div class="card-body">
+                                <h5 class="card-title">Baren Coffee & Roastery</h5>
+                                <p class="card-text">
+                                    Baren's Coffee & Roastery adalah tempat kopi yang menawarkan
+                                    kopi berkualitas tinggi yang dipanggang dengan baik, serta
+                                    suasana yang modern dan nyaman untuk menikmati kopi. Dalam
+                                    lingkungan yang ramah pengunjung.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardbx">
+                        <div class="card mb-3">
+                            <img src="img/Puncak Sipinsur.jpg" class="card-img-top" alt="Destination 4" />
+                            <div class="card-body">
+                                <h5 class="card-title">Puncak Sipinsur</h5>
+                                <p class="card-text">
+                                    Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
+                                    pemandangan sawah, perbukitan hijau, dan pegunungan yang
+                                    spektakuler. Pengunjung dapat hiking dan berkemah sambil
+                                    menikmati udara segar dan keindahan alam. Cocok untuk pecinta
+                                    alam dan pengunjung yang mencari ketenangan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardbx">
+                        <div class="card mb-3">
+                            <img src="img/airport silangit.jpg" class="card-img-top" alt="Destination 5" />
+                            <div class="card-body">
+                                <h5 class="card-title">Airport Silangit</h5>
+                                <p class="card-text">
+                                    Bandara Silangit adalah gerbang utama ke Danau Toba yang
+                                    terkenal di Sumatera Utara, Indonesia. Dengan terminal modern
+                                    dan berbagai penerbangan langsung dari kota-kota besar di
+                                    Indonesia, Bandara Silangit adalah pilihan terbaik untuk memulai
+                                    perjalanan Anda ke destinasi wisata yang menakjubkan di
+                                    sekitarnya.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cardbx">
+                        <div class="card mb-3">
+                            <img src="img/airport kualanamu.jpg" class="card-img-top" alt="Destination 6" />
+                            <div class="card-body">
+                                <h5 class="card-title">Airport Kualanamu</h5>
+                                <p class="card-text">
+                                    Bandara Internasional Kualanamu adalah bandara modern yang
+                                    melayani penerbangan domestik dan internasional di Sumatera
+                                    Utara. Dengan fasilitas yang lengkap dan modern, bandara ini
+                                    menjadi pintu gerbang utama bagi wisatawan yang ingin
+                                    menjelajahi Sumatera Utara.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         </section>
         <!--testimonials-->
         <section class="testimonial">
-            <h2 class="heading">What Our Clients Say</h2>
+            <h2 class="heading">Apa yang klien kami sampaikan</h2>
             <div class="container">
                 <div class="contentBx">
                     <div>
@@ -618,7 +649,6 @@
                             <span class="star">&#9734;</span>
                         </div>
                         <br />
-                        <h3>Just me and You</h3>
                     </div>
                 </div>
                 <div class="contentBx">
@@ -636,7 +666,6 @@
                             <span class="star">&#9734;</span>
                         </div>
                         <br />
-                        <h3>Just me and You</h3>
                     </div>
                 </div>
             </div>
