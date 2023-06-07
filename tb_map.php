@@ -12,31 +12,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="maps.js"></script>
     <style>
-        .social-media img {
-            width: 50px;
-            height: 50px;
+        .heading {
+            text-align: center;
+            padding: 2.5rem;
+            font-size: 3.9rem;
+            border-radius: 0.5rem;
+            padding: 2rem 1rem;
+            color: #0dcdc2;
         }
 
-        /* Sembunyikan radio button */
-        input[type="radio"] {
-            display: none;
+        .services {
+            text-align: center;
+            color: #000;
         }
 
-        /* Tambahkan gaya ikon bintang menggunakan label */
-        .rating label {
-            font-size: 34px;
-            color: #ccc;
-            cursor: pointer;
+        .services a {
+            text-align: center;
+            color: #000;
+            text-decoration: none;
         }
 
-        /* Berikan tampilan ikon bintang terpilih */
-        .rating input[type="radio"]:checked~label {
-            color: gold;
+        .services a:hover {
+            color: #0dcdc2
         }
 
-        .social-media img {
-            width: 50px;
-            height: 50px;
+        .services .box-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: auto;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .services .box-container .box {
+            max-width: 20%;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            white-space: normal;
+        }
+
+        .services .box-container .box:hover {
+            color: #0dcdc2;
+        }
+
+        .services .box-container .box i {
+            padding: 1rem;
+            font-size: 5.5rem;
+        }
+
+        .services .box-container .box h3 {
+            font-size: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        .services .box-container .box p {
+            font-size: 1.4rem;
+            padding: 0.5rem 0;
+        }
+
+        .services .box-container :hover {
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
         }
     </style>
 
@@ -139,27 +175,10 @@
                     </ul>
                 </div>
             </section>
-            <footer class="footer">
-                <div class="footer-container">
-                    <div class="kontak">
-                        <h3 class="footer-heading">Kontak Kami</h3>
-                        <p class="footer-text">Alamat: Jl. Raya Puncak, Bogor, Indonesia</p>
-                        <p class="footer-text">Telepon: (021) 123456</p>
-                        <p class="footer-text">Email: info@contoh.com</p>
-                    </div>
-                    <div class="ikuti">
-                        <h3 class="footer-heading">Ikuti Kami</h3>
-                        <div class="social-media">
-                            <a href="https://www.facebook.com"><i><img src="img/facebook.png" alt="Logo"></i></a>
-                            <a href="https://www.twitter.com"><i><img src="img/twiter.png" alt="Logo"></i></a>
-                            <a href="https://www.instagram.com"><i><img src="img/ig.png" alt="Logo"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p class="footer-text">© 2023 Contoh. All rights reserved.</p>
-                </div>
-            </footer>
+            <!--footer-->
+            <?php
+            include "footer.php";
+            ?>
 
 
             <script>

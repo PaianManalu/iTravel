@@ -480,30 +480,10 @@
             letter-spacing: 1px;
         }
 
-        h5 {
-            color: #0dcdc2;
-            font-size: 72px;
+        ul {
+            margin: 0px;
+            padding: 0px;
         }
-
-        /* Mengatur tampilan footer */
-        .footer {
-            background-color: #000;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .footer p {
-            margin: 0;
-            font-size: 16px;
-            color: #999;
-        }
-
-        .social-media img {
-            width: 100px;
-            height: 100px;
-        }
-
-        /*efek responsif*/
     </style>
 </head>
 
@@ -647,64 +627,74 @@
         <h1 class="heading">Service</h1>
         <div class="box-container">
             <div class="box">
-                <a href="tabel_penginapan.php">
-                    <i class="fas fa-hotel"></i>
+                <i class="fas fa-hotel"></i>
+                <a href="tabel.php?table=tb_penginapan">
                     <h3>Hotel</h3>
-                    <p>
-                        Temukan pilihan penginapan nyaman dan terjangkau di sekitar Bandara
-                        Kualanamu dan Bandara Silangit untuk memastikan Anda memiliki tempat
-                        istirahat yang sempurna.
-                    </p>
+                </a>
+                <p>
+                    Temukan pilihan penginapan nyaman dan terjangkau di sekitar Bandara
+                    Kualanamu dan Bandara Silangit untuk memastikan Anda memiliki tempat
+                    istirahat yang sempurna.
+                </p>
                 </a>
             </div>
             <div class=" box">
-                <a href="tabel_wisata.php">
-                    <i class="fas fa-camera"></i>
-                    <h3>Tempat Wisata</h3>
-                    <p>
-                        Temukan destinasi wisata menarik di sekitar Bandara Kualanamu dan
-                        Bandara Silangit yang memukau dengan keindahan alam, budaya, dan
-                        atraksi wisata unik.
-                    </p>
+                <i class="fas fa-camera"></i>
+                <a href="tabel.php?table=tb_wisata">
+                    <h3>Wisata</h3>
+                </a>
+                <p>
+                    Temukan destinasi wisata menarik di sekitar Bandara Kualanamu dan
+                    Bandara Silangit yang memukau dengan keindahan alam, budaya, dan
+                    atraksi wisata unik.
+                </p>
                 </a>
             </div>
             <div class="box">
-                <a href="tabel_rumahmakan.php">
-                    <i class="fas fa-utensils"></i>
-                    <h3>Restoran</h3>
-                    <p>
-                        Cicipi kuliner lokal terbaik di sekitar Bandara Kualanamu dan
-                        Bandara Silangit yang memanjakan lidah Anda dengan cita rasa khas
-                        daerah dan masakan internasional.
-                    </p>
+                <i class="fas fa-utensils"></i>
+                <a href="tabel.php?table=tb_rumahmakan">
+                    <h3>Rumah Makan</h3>
+                </a>
+                <p>
+                    Cicipi kuliner lokal terbaik di sekitar Bandara Kualanamu dan
+                    Bandara Silangit yang memanjakan lidah Anda dengan cita rasa khas
+                    daerah dan masakan internasional.
+                </p>
                 </a>
             </div>
             <div class="box">
-                <a href="tabel_transportasi.php">
-                    <i class="fas fa-bus"></i>
+                <i class="fas fa-bus"></i>
+                <a href="tabel.php?table=tb_transportasi">
                     <h3>Transportasi</h3>
-                    <p>
-                        Dapatkan informasi lengkap tentang layanan shuttle, angkutan umum,
-                        dan penyewaan mobil/sepeda motor di sekitar Bandara Kualanamu dan
-                        Bandara Silangit untuk memudahkan perjalanan Anda dan menjadikan
-                        pengalaman liburan Anda lebih nyaman.
-                    </p>
+                </a>
+                <p>
+                    Dapatkan informasi lengkap tentang layanan shuttle, angkutan umum,
+                    dan penyewaan mobil/sepeda motor di sekitar Bandara Kualanamu dan
+                    Bandara Silangit untuk memudahkan perjalanan Anda dan menjadikan
+                    pengalaman liburan Anda lebih nyaman.
+                </p>
                 </a>
             </div>
             <div class="box">
-                <a href="tabel_souvenir.php">
-                    <i class="fas fa-gift"></i>
+                <i class="fas fa-gift"></i>\
+                <a href="tabel.php?table=tb_souvenir">
                     <h3>Souvenir</h3>
-                    <p>
-                        Temukan toko-toko souvenir terbaik di sekitar Bandara Kualanamu dan
-                        Bandara Silangit yang menawarkan produk unik dan khas daerah sebagai
-                        oleh-oleh yang sempurna untuk diambil pulang.
-                    </p>
+                </a>
+                <p>
+                    Temukan toko-toko souvenir terbaik di sekitar Bandara Kualanamu dan
+                    Bandara Silangit yang menawarkan produk unik dan khas daerah sebagai
+                    oleh-oleh yang sempurna untuk diambil pulang.
+                </p>
                 </a>
             </div>
         </div>
     </section>
-    <!--about us-->
+    <script>
+        function changeTable(tableName) {
+            window.location.href = 'tabel.php?table=' + tableName;
+        }
+    </script>
+
     <section class="about" id="about">
         <div class="left">
             <img src="img/2.jpg" alt="" class="imgabout">
@@ -736,29 +726,10 @@
     </section>
 
     <!--footer-->
-    <footer style="background-color: #222222; color: #fff; padding: 10px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
-            <div style="flex: 1;">
-                <h3 style="font-size: 24px; margin-bottom: 20px;">Kontak Kami</h3>
-                <p style="font-size: 16px;">Alamat: Indonesia</p>
-                <p style="font-size: 16px;">Telepon: (021) 123456</p>
-                <p style="font-size: 16px;">Email: info@contoh.com</p>
-            </div>
-            <div style="flex: 1;">
-                <h3 style="font-size: 24px; margin-bottom: 20px;">Ikuti Kami</h3>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <div class="social-media">
-                        <a href="https://www.facebook.com"><i><img src="img/facebook.png" alt="Logo"></i></a>
-                        <a href="https://www.twitter.com"><i><img src="img/twiter.png" alt="Logo"></i></a>
-                        <a href="https://www.instagram.com"><i><img src="img/ig.png" alt="Logo"></i></a>
-                    </div>
-                </ul>
-            </div>
-        </div>
-        <div style="background-color: #333; padding: 20px; text-align: center;">
-            <p style="margin: 0; font-size: 16px;">© 2023 Contoh. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php
+    include "footer.php";
+    ?>
+
 </body>
 
 </html>

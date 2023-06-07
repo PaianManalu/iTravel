@@ -1,37 +1,3 @@
-<style>
-    body {
-        background-color: #dddddd;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    form {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        color: #333333;
-    }
-
-    .back-button {
-        display: inline-block;
-        background-color: #ff0000;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .back-button:hover {
-        background-color: #cc0000;
-    }
-</style>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Memeriksa apakah kunci array 'rating' ada dan tidak kosong
@@ -75,15 +41,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
     if (mysqli_query($conn, $query)) {
-        echo '<form>';
-        echo "<h3>Data rating dan komentar berhasil disimpan</h3><br><br>";
-        echo ' <a href="home.php" class="back-button">Kembali ke Halaman Utama</a>';
-        echo '</form>';
+        $notification = "Data rating dan komentar berhasil disimpan";
     } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($conn);
+        $notification = "Error: " . $query . "<br>" . mysqli_error($conn);
     }
-
 
     // Menutup koneksi ke database
     mysqli_close($conn);
 }
+// Mengirimkan notifikasi ke halaman sebelumnya menggunakan JavaScript
+echo "<script>
+    window.onload = function() {
+        alert('$notification');
+        window.location.href = 'home.php';
+    }
+</script>";

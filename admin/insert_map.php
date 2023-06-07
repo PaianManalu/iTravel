@@ -40,29 +40,31 @@ if (isset($_FILES['gambar'])) {
         // Cek apakah ekstensi file gambar valid
         if (in_array($gambar_ext, $allowed_ext)) {
             // Cek ukuran file gambar
-            if ($gambar_size < 5242880) { // 5MB
+            if ($gambar_size < 25242880) { // 5MB
                 // Generate nama unik untuk file gambar
                 $gambar_new_name = uniqid('gambar_', true) . '.' . $gambar_ext;
 
                 // Lokasi penyimpanan file gambar
-                $gambar_path = '../img/' . $gambar_new_name;
+                $gambar_path = 'C:/xampp/htdocs/iTravel/img/' . $gambar_new_name;
 
                 // Pindahkan file gambar ke folder tujuan
-                if (move_uploaded_file($gambar_tmp, $gambar_path)) {
+                if (move_uploaded_file(
+                    $gambar_tmp,
+                    $gambar_path
+                )) {
                     // Memasukkan data ke tabel jika upload gambar sukses
-                    $sql = "INSERT INTO tb_map (id, nama, garis_lintang, garis_bujur, alamat, icon, gambar) 
-                            VALUES ('$id', '$nama', '$garis_lintang', '$garis_bujur', '$alamat', '$icon', '$gambar_new_name')";
+                    $selectedTable = $_GET['table'] ?? 'tb_map';
+                    $sql = "INSERT INTO `$selectedTable` (id, nama, garis_lintang, garis_bujur, alamat, icon, gambar) 
+                            VALUES ('$id', '$nama', '$garis_lintang', '$garis_bujur', '$alamat', '$icon', 'img/$gambar_new_name')";
 
                     if (mysqli_query($conn, $sql)) {
-                        echo "Data berhasil diupload ke database.";
+                        echo '<script>alert("Data berhasil diupload ke database.");</script>';
                     } else {
-                        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                        echo '<script>alert("Error: ' . $sql . '\n' . mysqli_error($conn) . '");</script>';
                     }
                 } else {
                     echo "Maaf, terjadi kesalahan saat mengupload file gambar.";
                 }
-            } else {
-                echo "Ukuran file gambar terlalu besar. Maksimal 5MB.";
             }
         } else {
             echo "Ekstensi file gambar tidak valid. Hanya diperbolehkan JPG, JPEG, PNG, dan GIF.";

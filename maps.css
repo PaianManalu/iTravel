@@ -546,79 +546,70 @@ header {
 }
 
 
-.footer {
-    background-color: #222222;
-    color: #fff;
-    padding: 50px 0;
+
+
+/*service*/
+.heading {
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 3.9rem;
+    border-radius: 0.5rem;
+    padding: 2rem 1rem;
+    color: #0dcdc2;
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.services {
+    text-align: center;
+    color: #000;
 }
 
-.footer-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.footer-text {
-    font-size: 16px;
-}
-
-.social-media {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.social-media li {
-    margin-bottom: 10px;
-}
-
-.social-media a {
-    color: #fff;
+.services a {
+    text-align: center;
+    color: #000;
     text-decoration: none;
 }
 
-.footer-bottom {
-    background-color: #333;
-    padding: 20px;
+.services a:hover {
+    color: #0dcdc2
+}
+
+.services .box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.services .box-container .box {
+    max-width: 20%;
+    border-radius: 0.5rem;
+    padding: 1rem;
     text-align: center;
-    color: #fff;
+    white-space: normal;
 }
 
-.footer-bottom i {
-    margin-right: 5px;
+.services .box-container .box:hover {
+    color: #0dcdc2;
 }
 
-
-.social {
-    display: inline-block;
-    list-style: none;
-    padding-left: 0;
+.services .box-container .box i {
+    padding: 1rem;
+    font-size: 5.5rem;
 }
 
-.social li {
-    display: inline-block;
-    margin-right: 10px;
+.services .box-container .box h3 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
 }
 
-.social li a {
-    color: #fff;
-    font-size: 18px;
+.services .box-container .box p {
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
 }
 
-.social li a:hover {
-    color: #f8b500;
-}
-
-.social-media img {
-    width: 50px;
-    height: 50px;
+.services .box-container :hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
 /* Sembunyikan radio button */

@@ -56,6 +56,14 @@
         }
     </style>
 </head>
+<script>
+    function changeTable(table) {
+        var url = new URL(window.location.href);
+        url.searchParams.set('table', table);
+        window.location.href = url;
+    }
+</script>
+</head>
 
 <body>
     <h2>Form Upload Data Map</h2>
@@ -83,6 +91,16 @@
 
         <input type="submit" value="Upload Data">
     </form>
+    <div>
+        <div>
+            <button id="tb_penginapan" class="table-button" onclick="changeTable('tb_penginapan')">Tabel Penginapan</button>
+            <button id="rumahmakan" class="table-button" onclick="changeTable('rumahmakan')">Tabel Rumah Makan</button>
+            <button id="tb_wisata" class="table-button" onclick="changeTable('tb_wisata')">Tabel Wisata</button>
+            <button id="tb_hotel" class="table-button" onclick="changeTable('tb_hotel')">Tabel Hotel</button>
+            <button id="tb_transportasi" class="table-button" onclick="changeTable('tb_transportasi')">Tabel Transportasi</button>
+        </div>
+
+    </div>
 </body>
 
 </html>
