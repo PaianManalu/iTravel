@@ -75,7 +75,7 @@
 
 <body>
     <section class="services" id="service">
-        <h1 class="heading">Service</h1>
+        <h1 class="heading">ADMIN</h1>
         <div class="box-container">
             <a href="tabel.php?table=tb_penginapan">
                 <div class="box">
@@ -110,18 +110,21 @@
         <div class="box-container">
             <div class="box">
                 <i class="fas fa-comment"></i> <!-- Ganti dengan ikon komentar yang sesuai -->
-                <h3>Komentar</h3>
-                <a href="tb_Komentar.php"></a>
+                <a href="tb_Komentar.php">
+                    <h3>Komentar</h3>
+                </a>
             </div>
             <div class="box">
                 <i class="fas fa-star"></i> <!-- Ganti dengan ikon rating yang sesuai -->
-                <h3>Rating</h3>
-                <a href="tb_rating.php"></a>
+                <a href="tb_rating.php">
+                    <h3>Rating</h3>
+                </a>
             </div>
             <div class="box">
                 <i class="fas fa-map-marker-alt"></i> <!-- Ganti dengan ikon map yang sesuai -->
-                <h3>MAP</h3>
-                <a href="tb_map.php"></a>
+                <a href="tabel.php?table=tb_map">
+                    <h3>MAP</h3>
+                </a>
             </div>
             <div class="box">
                 <i class="fas fa-upload"></i> <a href="upload_form.php"><!-- Ganti dengan ikon upload yang sesuai -->

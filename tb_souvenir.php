@@ -123,46 +123,40 @@
                     <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
                     <ul class="destination-list">
                         <li class="destination-item">
-                            <img src="img/taman eden.jpeg" alt="Destination 1" class="destination-image">
-                            <h3 class="destination-title">Taman Eden 100</h3>
-                            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed ut iaculis
-                                enim.</p>
+                            <img src="img/citra.jpg" alt="Destination 1" class="destination-image">
+                            <h3 class="destination-title">Toko Citra</h3>
+                            <p class="destination-description">Toko Citra terletak di Kota Pematangsiantar, Sumatera Utara. Perusahaan ini bekerja di industri berikut: Toko bahan makanan dan supermarket.<br>
+                                Terlibat dalam: Toko bahan makanan dan supermarket</p>
                         </li>
                         <li class="destination-item">
-                            <img src="img/efrata waterfal.jpg" alt="Destination 2" class="destination-image">
-                            <h3 class="destination-title">Air Terjun Efrata</h3>
-                            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed ut iaculis
-                                enim.</p>
+                            <img src="img/oke.jpg" alt="Destination 2" class="destination-image">
+                            <h3 class="destination-title">Oke Supermarket</h3>
+                            <p class="destination-description"> Alamat: Jl. Gaperta Ujung No.87 C, Tj. Gusta, Kec. Medan Helvetia, Kota Medan, Sumatera Utara 20126, Indonesia<br>
+                                Telepon: +62 61 8442065 </p>
                         </li>
                         <li class="destination-item">
-                            <img src="img/Inna Parapat Hotel.jpg" alt="Destination 3" class="destination-image">
-                            <h3 class="destination-title">Inna Parapat Hotel</h3>
-                            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed ut iaculis
-                                enim.</p>
+                            <img src="img/simpang.jpg" alt="Destination 3" class="destination-image">
+                            <h3 class="destination-title">Alfamart Simpang Matapao</h3>
+                            <p class="destination-description">Alfamart Simpang Matapao (Tempat kerja) terletak di Perbaungan, Sumatera Utara. Perusahaan ini bekerja di industri berikut: Toko bahan makanan dan supermarket.<br>
+                                Telepon: 0812-5054-4731</p>
                         </li>
                         <li class="destination-item">
-                            <img src="img/Puncak Sipinsur.jpg" alt="Destination 4" class="destination-image">
-                            <h3 class="destination-title">Puncak Sipinsur</h3>
-                            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed ut iaculis
-                                enim.</p>
+                            <img src="img/batikta.jpg" alt="Destination 4" class="destination-image">
+                            <h3 class="destination-title">Batikta - Batik Batak Balige</h3>
+                            <p class="destination-description">toko batik yang berlokasi di Kabupaten Samosir. Toko batik ini menawarkan berbagai macam jenis kain dan motif batik khas Indonesia dan berbagai daerah di Provinsi Sumatera Utara. Batik untuk pria dan wanita tersedia disini dengan berbagai jenis seperti batik formal, batik lengan panjang dan pendek, casual, baik tradisional dan batik modern, batik tulis, sogan, batik couple dan lainnya.<br>Nomor telepon : 0811-949-680 </p>
                         </li>
                         <li class="destination-item">
-                            <img src="img/Lembah Bakkara.jpg" alt="Destination 5" class="destination-image">
-                            <h3 class="destination-title">Lembah Bakkara</h3>
-                            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed ut iaculis
-                                enim.</p>
+                            <img src="img/kim.jpg" alt="Destination 5" class="destination-image">
+                            <h3 class="destination-title">Indomaret kim star</h3>
+                            <p class="destination-description"> Alamat: Dirgantara Mitramahardi Pt., Tj. Morawa B, Kec. Tj. Morawa, Kabupaten Deli Serdang, Sumatera Utara 20362, Indonesia<br>
+                                Kategori Bangunan: Toko Bahan Makanan .<br></p>
                         </li>
                         <li class="destination-item">
-                            <img src="img/bukit-simarjarunjung.jpg" alt="Destination 6" class="destination-image">
-                            <h3 class="destination-title">Bukit Indah Simarjarunjung</h3>
-                            <p class="destination-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Sed ut iaculis
-                                enim.</p>
+                            <img src="img/indomsret2.jpg" alt="Destination 6" class="destination-image">
+                            <h3 class="destination-title">Indomaret Karang Sari Tambung Nabolon</h3>
+                            <p class="destination-description"> Alamat: 232P+962, Tambun Nabolon, Kec. Siantar Martoba, Kota Pematang Siantar, Sumatera Utara 21154, Indonesia<br>
+                                Kategori Bangunan: Toko Bahan Makanan .<br>
+                                Telepon: Website: https://indomaret.co.id/</p>
                         </li>
                     </ul>
                 </div>
