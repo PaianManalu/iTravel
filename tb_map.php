@@ -4,10 +4,7 @@
 <head>
     <title>Map</title>
     <meta charset="utf-8">
-    <!--parsing code-->
-    <meta name="viewport" content="initial-scale=1.0">`
-    <!-- Font Awesome Icon Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="maps.css">
     <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
@@ -30,17 +27,11 @@
                 </ul>
             </nav>
         </header>
-    </section><br><br><br><br>
+    </section>
     <section class="body">
         <div class="bodyBx">
             <div class="content">
-                <h1>MAPS<br /></h1>
-                <p>
-
-                </p>
-                <div class="btn-box">
-                    <a href="home.php">Try Now</a>
-                </div>
+                <h1>MAP<br /></h1>
             </div>
         </div>
     </section><br>
@@ -53,9 +44,7 @@
                 </select>
             </datalist>
         </div>
-        <div class="map">
-            <div id="map"></div>
-        </div>
+        <div id="map"></div>
         <!--rekomendation-->
         <section class="Destination">
             <section class="popular-destination">
@@ -70,8 +59,10 @@
                                     <h5 class="card-title">Taman Eden 100</h5>
                                     <p class="card-text">
 
-                                        Taman Eden 100 di Sumatera Utara menawarkan keindahan alam yang menakjubkan. Dengan
-                                        pemandangan yang memukau dan lingkungan yang indah, Taman Eden 100 menjadi destinasi
+                                        Taman Eden 100 di Sumatera Utara menawarkan keindahan alam yang menakjubkan.
+                                        Dengan
+                                        pemandangan yang memukau dan lingkungan yang indah, Taman Eden 100 menjadi
+                                        destinasi
                                         yang sempurna bagi pecinta alam.
                                     </p>
                                 </div>
@@ -154,10 +145,13 @@
                         </div>
                     </section>
                 </div>
-            </section> <!--footer-->
+            </section>
+
             <?php
             include "footer.php";
             ?>
+
+
 
             <script>
                 var input = document.getElementById("search-box");
@@ -271,7 +265,8 @@
                     select.classList.add('show');
                 });
 
-                // Kode yang diberikan bertujuan untuk menyembunyikan opsi-opsi dalam elemen <select> 
+
+                // Hide options when click outside
                 document.addEventListener('click', function(event) {
                     var isClickInside = select.contains(event.target);
                     if (!isClickInside) {
@@ -279,7 +274,6 @@
                         optionCounter = 0; // Reset optionCounter when hiding options
                     }
                 });
-                //Variabel ini kemungkinan akan digunakan untuk mengakses dan mengendalikan peta dalam pengembangan aplikasi atau situs web yang menggunakan Google Maps API.
                 var map;
                 var markers = [];
 
@@ -314,16 +308,16 @@
                         zoom: 9.5
                     });
 
-                    // Membuat marker pada koordinat yang ditentukan untuk nama 
+                    // Membuat marker pada koordinat yang ditentukan untuk nama kota
                     function createMarker(position, name) {
-                        var marker = new google.maps.Marker({ //Objek marker ini akan digunakan untuk menampilkan marker pada peta.
-                            position: position, //Mengatur posisi marker menggunakan nilai dari parameter 
-                            map: map, //Mengatur peta yang ditampilkan oleh marker menggunakan nilai dari variabel 
-                            title: name, // Mengatur judul atau tooltip marker menggunakan nilai dari parameter 
+                        var marker = new google.maps.Marker({
+                            position: position,
+                            map: map,
+                            title: name,
                             label: {
                                 text: name,
                                 color: 'white',
-                                fontSize: '15   px',
+                                fontSize: '15px',
                             },
                             icon: {
                                 url: 'https://maps.google.com/mapfiles/ms/icons/black-dot.png',
@@ -334,61 +328,101 @@
                         return marker;
                     }
 
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama Medan
-                    var medanLatLng = new google.maps.LatLng(3.5901099412346165, 98.67258074382252);
-                    var medanMarker = createMarker(medanLatLng, 'Medan');
-                    medanMarker.setMap(map);
+                    // Menggunakan fungsi createMarker untuk membuat marker dengan setiap nama 
+                    var locati = [{
+                            position: {
+                                lat: 3.5901099412346165,
+                                lng: 98.67258074382252
+                            },
+                            name: 'Medan'
+                        },
+                        {
+                            position: {
+                                lat: 3.57316967302348,
+                                lng: 98.88110164949245
+                            },
+                            name: 'Lubuk Pakam'
+                        },
+                        {
+                            position: {
+                                lat: 3.3162226764522216,
+                                lng: 99.189538047138
+                            },
+                            name: 'Tebing Tinggi'
+                        },
+                        {
+                            position: {
+                                lat: 2.952433949861991,
+                                lng: 99.08575987316539
+                            },
+                            name: 'Pematang Siantar'
+                        },
+                        {
+                            position: {
+                                lat: 2.844865372795513,
+                                lng: 99.05406438008443
+                            },
+                            name: 'Saribudolok'
+                        },
+                        {
+                            position: {
+                                lat: 2.6684433464759127,
+                                lng: 98.9376498121994
+                            },
+                            name: 'Parapat'
+                        },
+                        {
+                            position: {
+                                lat: 2.583205490921636,
+                                lng: 99.06652764174781
+                            },
+                            name: 'Lumban Djulu'
+                        },
+                        {
+                            position: {
+                                lat: 2.4487576185270323,
+                                lng: 99.14404392212444
+                            },
+                            name: 'Porsea'
+                        },
+                        {
+                            position: {
+                                lat: 2.3568731716810443,
+                                lng: 99.12883489439503
+                            },
+                            name: 'Laguboti'
+                        },
+                        {
+                            position: {
+                                lat: 2.3331195644867275,
+                                lng: 99.0825468233071
+                            },
+                            name: 'Balige'
+                        },
+                        {
+                            position: {
+                                lat: 2.1478720598476975,
+                                lng: 98.9623014145697
+                            },
+                            name: 'Silangit'
+                        }
+                    ];
 
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama lubukpakam
-                    var lubukpakamLatLng = new google.maps.LatLng(3.57316967302348, 98.88110164949245);
-                    var lubukpakamMarker = createMarker(lubukpakamLatLng, 'Lubuk Pakam');
-                    lubukpakamMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama Tebingtinggi
-                    var TebingtinggiLatLng = new google.maps.LatLng(3.3162226764522216, 99.189538047138);
-                    var TebingtinggiMarker = createMarker(TebingtinggiLatLng, 'Tebing tinggi');
-                    TebingtinggiMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama Pematangsiantar
-                    var PematangsiantarLatLng = new google.maps.LatLng(2.952433949861991, 99.08575987316539);
-                    var PematangsiantarMarker = createMarker(PematangsiantarLatLng, 'Pematang siantar');
-                    PematangsiantarMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama saribudolok
-                    var saribudolokLatLng = new google.maps.LatLng(2.844865372795513, 99.05406438008443);
-                    var saribudolokMarker = createMarker(saribudolokLatLng, 'Saribudolok');
-                    saribudolokMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama parapat
-                    var parapatLatLng = new google.maps.LatLng(2.6684433464759127, 98.9376498121994);
-                    var parapatMarker = createMarker(parapatLatLng, 'Parapat');
-                    parapatMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama lumbandjulu
-                    var lumbandjuluLatLng = new google.maps.LatLng(2.583205490921636, 99.06652764174781);
-                    var lumbandjuluMarker = createMarker(lumbandjuluLatLng, 'Lumban djulu');
-                    lumbandjuluMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama Porsea
-                    var porseaLatLng = new google.maps.LatLng(2.4487576185270323, 99.14404392212444);
-                    var porseaMarker = createMarker(porseaLatLng, 'Porsea');
-                    porseaMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama laguboti
-                    var lagubotiLatLng = new google.maps.LatLng(2.3568731716810443, 99.12883489439503);
-                    var lagubotiMarker = createMarker(lagubotiLatLng, 'Laguboti');
-                    lagubotiMarker.setMap(map);
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama Balige
-                    var baligeLatLng = new google.maps.LatLng(2.3331195644867275, 99.0825468233071);
-                    var baligeMarker = createMarker(baligeLatLng, 'Balige');
-                    baligeMarker.setMap(map);
+                    locati.forEach(function(locati) {
+                        var marker = createMarker(new google.maps.LatLng(locati.position.lat, locati.position.lng), locati.name);
+                        marker.setMap(map);
+                    });
 
                     // Menggunakan fungsi createMarker untuk membuat marker dengan nama silangit
                     var silangitLatLng = new google.maps.LatLng(2.1478720598476975, 98.9623014145697);
                     var silangitMarker = createMarker(silangitLatLng, 'Silangit');
                     silangitMarker.setMap(map);
 
+                    createButton("Wisata", "tb_wisata.php");
+                    createButton("Rumah Makan", "tb_rumahmakan.php");
+                    createButton("Penginapan", "tb_penginapan.php");
+                    createButton("Souvenir", "tb_souvenir.php");
+                    createButton("Transportasi", "tb_transportasi.php");
 
                     function createButton(label, url) {
                         var button = document.createElement("button");
@@ -399,21 +433,12 @@
                         });
                     }
 
-                    //button di dalam map
-                    createButton("Wisata", "tb_wisata.php");
-                    createButton("Rumah Makan", "tb_rumahmakan.php");
-                    createButton("Penginapan", "tb_penginapan.php");
-                    createButton("Souvenir", "tb_souvenir.php");
-                    createButton("Transportasi", "tb_transportasi.php");
-
                     for (var i = 0; i < locations.length; i++) {
 
                         map: map
 
                     };
 
-
-                    //pemanggilan marker
                     var marker;
                     var infoWindow = new google.maps.InfoWindow();
                     var infoSidebar = document.createElement('div');
@@ -428,7 +453,7 @@
                             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                             icon: {
                                 url: locations[i][3],
-                                scaledSize: new google.maps.Size(25, 25)
+                                scaledSize: new google.maps.Size(35, 30)
                             },
                             map: map
                         });
@@ -447,14 +472,13 @@
                                 title: 'Posisi Saya'
                             });
                         });
-                        // jika marker di klik
+
                         google.maps.event.addListener(marker, 'click', (function(marker, i) {
                             return function() {
                                 var contentString = '<div style="font-weight: bold;">' + locations[i][0] +
                                     '</div>';
                                 infoWindow.setContent(contentString);
                                 infoWindow.open(map, marker);
-
                                 // Munculkan sidebar dan isi kontennya
                                 infoSidebar.style.display = 'block';
                                 infoSidebar.innerHTML = '<div class="location-info">' +
@@ -489,10 +513,13 @@
                         markers.push(marker);
                     }
 
-
                     google.maps.event.addListener(map, 'click', function() {
                         infoSidebar.style.display = 'none'; // sembunyikan sidebar
                     });
+
+
+
+
                     // Tambahkan event listener untuk input pencarian
                     document.getElementById('search-box').addEventListener('input', function() {
                         var searchString = this.value.toLowerCase();
@@ -550,6 +577,7 @@
 
                 }
             </script>
+
             <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBA9KznFyKV2mH5JyKf1nRdJATnGRCV8bQ&callback=initMap">
             </script>
             <script src="script.js"></script>
