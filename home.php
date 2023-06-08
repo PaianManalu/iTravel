@@ -670,8 +670,8 @@
         }
 
         .card {
-            width: 650px;
-            height: 650px;
+            width: 600px;
+            height: 680px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 1rem 3rem rgba(13, 205, 194, 0.2);
@@ -690,7 +690,7 @@
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             width: 100%;
-            height: 300px;
+            height: 350px;
             object-fit: cover;
             margin-bottom: 25px;
             transition: filter 0.3s;
@@ -713,7 +713,7 @@
         }
 
         .card-text {
-            font-size: 22px;
+            font-size: 20px;
         }
 
 
@@ -1087,6 +1087,7 @@
                         </div>
                     </div>
                 </section>
+            </div>
         </section>
         <!--testimonials-->
         <section class="testimonial">

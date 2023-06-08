@@ -8,71 +8,10 @@
     <meta name="viewport" content="initial-scale=1.0">
     <!--web mobile-->
     <link rel="stylesheet" href="maps.css">
+
+    <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
-        /*service*/
-        .heading {
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 3.9rem;
-            border-radius: 0.5rem;
-            padding: 2rem 1rem;
-            color: #0dcdc2;
-        }
-
-        .services {
-            text-align: center;
-            color: #000;
-        }
-
-        .services a {
-            text-align: center;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .services a:hover {
-            color: #0dcdc2
-        }
-
-        .services .box-container {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: auto;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .services .box-container .box {
-            max-width: 20%;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            text-align: center;
-            white-space: normal;
-        }
-
-        .services .box-container .box:hover {
-            color: #0dcdc2;
-        }
-
-        .services .box-container .box i {
-            padding: 1rem;
-            font-size: 5.5rem;
-        }
-
-        .services .box-container .box h3 {
-            font-size: 2.5rem;
-            margin-top: 1rem;
-        }
-
-        .services .box-container .box p {
-            font-size: 1.4rem;
-            padding: 0.5rem 0;
-        }
-
-        .services .box-container :hover {
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-        }
     </style>
 
 </head>
@@ -118,50 +57,91 @@
         <!--rekomendation-->
         <section class="Destination">
             <section class="popular-destination">
-                <h1 class="heading"> Popular Destination</h1>
+                <h1 class="heading"> Destinasi Populer</h1>
                 <div class="container">
                     <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
-                    <ul class="destination-list">
-                        <li class="destination-item">
-                            <img src="img/citra.jpg" alt="Destination 1" class="destination-image">
-                            <h3 class="destination-title">Toko Citra</h3>
-                            <p class="destination-description">Toko Citra terletak di Kota Pematangsiantar, Sumatera Utara. Perusahaan ini bekerja di industri berikut: Toko bahan makanan dan supermarket.<br>
-                                Terlibat dalam: Toko bahan makanan dan supermarket</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/oke.jpg" alt="Destination 2" class="destination-image">
-                            <h3 class="destination-title">Oke Supermarket</h3>
-                            <p class="destination-description"> Alamat: Jl. Gaperta Ujung No.87 C, Tj. Gusta, Kec. Medan Helvetia, Kota Medan, Sumatera Utara 20126, Indonesia<br>
-                                Telepon: +62 61 8442065 </p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/simpang.jpg" alt="Destination 3" class="destination-image">
-                            <h3 class="destination-title">Alfamart Simpang Matapao</h3>
-                            <p class="destination-description">Alfamart Simpang Matapao (Tempat kerja) terletak di Perbaungan, Sumatera Utara. Perusahaan ini bekerja di industri berikut: Toko bahan makanan dan supermarket.<br>
-                                Telepon: 0812-5054-4731</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/batikta.jpg" alt="Destination 4" class="destination-image">
-                            <h3 class="destination-title">Batikta - Batik Batak Balige</h3>
-                            <p class="destination-description">toko batik yang berlokasi di Kabupaten Samosir. Toko batik ini menawarkan berbagai macam jenis kain dan motif batik khas Indonesia dan berbagai daerah di Provinsi Sumatera Utara. Batik untuk pria dan wanita tersedia disini dengan berbagai jenis seperti batik formal, batik lengan panjang dan pendek, casual, baik tradisional dan batik modern, batik tulis, sogan, batik couple dan lainnya.<br>Nomor telepon : 0811-949-680 </p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/kim.jpg" alt="Destination 5" class="destination-image">
-                            <h3 class="destination-title">Indomaret kim star</h3>
-                            <p class="destination-description"> Alamat: Dirgantara Mitramahardi Pt., Tj. Morawa B, Kec. Tj. Morawa, Kabupaten Deli Serdang, Sumatera Utara 20362, Indonesia<br>
-                                Kategori Bangunan: Toko Bahan Makanan .<br></p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/indomsret2.jpg" alt="Destination 6" class="destination-image">
-                            <h3 class="destination-title">Indomaret Karang Sari Tambung Nabolon</h3>
-                            <p class="destination-description"> Alamat: 232P+962, Tambun Nabolon, Kec. Siantar Martoba, Kota Pematang Siantar, Sumatera Utara 21154, Indonesia<br>
-                                Kategori Bangunan: Toko Bahan Makanan .<br>
-                                Telepon: Website: https://indomaret.co.id/</p>
-                        </li>
-                    </ul>
+                    <section class="destination">
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/citra.jpg" class="card-img-top" alt="Destination 1" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Toko Citra</h5>
+                                    <p class="card-text">Toko Citra terletak di Kota Pematangsiantar, Sumatera
+                                        Utara. Perusahaan ini bekerja di industri berikut: Toko bahan makanan dan
+                                        supermarket.<br>
+                                        Terlibat dalam: Toko bahan makanan dan supermarket
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/oke.jpg" class="card-img-top" alt="Destination 2" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Oke Supermarket</h5>
+                                    <p class="card-text"> Alamat: Jl. Gaperta Ujung No.87 C, Tj. Gusta, Kec. Medan
+                                        Helvetia, Kota Medan, Sumatera Utara 20126, Indonesia<br>
+                                        Telepon: +62 61 8442065
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/simpang.jpg" class="card-img-top" alt="Destination 3" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Alfamart Simpang Matapao</h5>
+                                    <p class="card-text">Alfamart Simpang Matapao (Tempat kerja) terletak di
+                                        Perbaungan, Sumatera Utara. Perusahaan ini bekerja di industri berikut: Toko bahan
+                                        makanan dan supermarket.<br>
+                                        Telepon: 0812-5054-4731
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/batikta.jpg" class="card-img-top" alt="Destination 4" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Batikta - Batik Batak Balige</h5>
+                                    <p class="card-text">toko batik yang berlokasi di Kabupaten Samosir. Toko
+                                        batik ini menawarkan berbagai macam jenis kain dan motif batik khas Indonesia dan
+                                        berbagai daerah di Provinsi Sumatera Utara. Batik untuk pria dan wanita tersedia disini
+                                        dengan berbagai jenis seperti batik formal, batik lengan panjang dan pendek, casual,
+                                        baik tradisional dan batik modern, batik tulis, sogan, batik couple dan
+                                        lainnya.<br>Nomor telepon : 0811-949-680
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/kim.jpg" class="card-img-top" alt="Destination 5" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Indomaret kim star</h5>
+                                    <p class="card-text"> Alamat: Dirgantara Mitramahardi Pt., Tj. Morawa B, Kec.
+                                        Tj. Morawa, Kabupaten Deli Serdang, Sumatera Utara 20362, Indonesia<br>
+                                        Kategori Bangunan: Toko Bahan Makanan .<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/indomsret2.jpg" class="card-img-top" alt="Destination 6" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Indomaret Karang Sari Tambung Nabolon</h5>
+                                    <p class="card-text"> Alamat: 232P+962, Tambun Nabolon, Kec. Siantar Martoba,
+                                        Kota Pematang Siantar, Sumatera Utara 21154, Indonesia<br>
+                                        Kategori Bangunan: Toko Bahan Makanan .<br>
+                                        Telepon: Website: https://indomaret.co.id/
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
-            <!--footer-->
+            </section> <!--footer-->
             <?php
             include "footer.php";
             ?>

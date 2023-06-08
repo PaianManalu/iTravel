@@ -5,75 +5,13 @@
     <title>Map</title>
     <meta charset="utf-8">
     <!--parsing code-->
-    <meta name="viewport" content="initial-scale=1.0">
-    <!--web mobile-->
-    <link rel="stylesheet" href="maps.css">
+    <meta name="viewport" content="initial-scale=1.0">`
     <!-- Font Awesome Icon Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
-        .heading {
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 3.9rem;
-            border-radius: 0.5rem;
-            padding: 2rem 1rem;
-            color: #0dcdc2;
-        }
-
-        .services {
-            text-align: center;
-            color: #000;
-        }
-
-        .services a {
-            text-align: center;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .services a:hover {
-            color: #0dcdc2
-        }
-
-        .services .box-container {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: auto;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .services .box-container .box {
-            max-width: 20%;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            text-align: center;
-            white-space: normal;
-        }
-
-        .services .box-container .box:hover {
-            color: #0dcdc2;
-        }
-
-        .services .box-container .box i {
-            padding: 1rem;
-            font-size: 5.5rem;
-        }
-
-        .services .box-container .box h3 {
-            font-size: 2.5rem;
-            margin-top: 1rem;
-        }
-
-        .services .box-container .box p {
-            font-size: 1.4rem;
-            padding: 0.5rem 0;
-        }
-
-        .services .box-container :hover {
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-        }
     </style>
 
 </head>
@@ -121,61 +59,102 @@
         <!--rekomendation-->
         <section class="Destination">
             <section class="popular-destination">
-                <h1 class="heading"> Popular Destination</h1>
+                <h1 class="heading"> Destinasi Populer</h1>
                 <div class="container">
                     <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
-                    <ul class="destination-list">
-                        <li class="destination-item">
-                            <img src="img/taman eden.jpeg" alt="Destination 1" class="destination-image">
-                            <h3 class="destination-title">Taman Eden 100</h3>
-                            <p class="destination-description">Taman Eden 100 di Sumatera Utara menawarkan keindahan
-                                alam
-                                yang menakjubkan.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/toledo.jpg" alt="Destination 4" class="destination-image">
-                            <h3 class="destination-title">Toledo InnToledo Inna</h3>
-                            <p class="destination-description">Hotel di Pematangsiantar, Sumatera Utara menawarkan
-                                kamar-kamar modern dengan fasilitas seperti AC dan TV layar datar. Terdapat juga
-                                restoran, lounge, dan ruang rapat. Dekat dengan tempat wisata seperti Air Terjun
-                                Sipiso-piso dan Danau Toba. Pilihan tepat untuk menginap di Pematangsiantar.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/baren.jpg" alt="Destination 5" class="destination-image">
-                            <h3 class="destination-title">Baren Coffee & Roastery</h3>
-                            <p class="destination-description">Baren's Coffee & Roastery adalah tempat kopi yang
-                                menawarkan kopi berkualitas tinggi yang dipanggang dengan baik, serta suasana yang
-                                modern dan nyaman untuk menikmati kopi. Dalam lingkungan yang ramah pengunjung</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/Puncak Sipinsur.jpg" alt="Destination 4" class="destination-image">
-                            <h3 class="destination-title">Puncak Sipinsur</h3>
-                            <p class="destination-description">Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
-                                pemandangan sawah, perbukitan hijau, dan pegunungan yang spektakuler. Pengunjung dapat
-                                hiking dan berkemah sambil menikmati udara segar dan keindahan alam. Cocok untuk pecinta
-                                alam dan pengunjung yang mencari ketenangan.</p>
-                        </li>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/airport kualanamu.jpg" alt="Destination 1" class="destination-image">
-                            <h3 class="destination-title">Airport Kualanamu</h3>
-                            <p class="destination-description">Bandara Internasional Kualanamu adalah bandara modern
-                                yang melayani penerbangan domestik dan internasional di Sumatera Utara. Dengan fasilitas
-                                yang lengkap dan modern, bandara ini menjadi pintu gerbang utama bagi wisatawan yang
-                                ingin menjelajahi Sumatera Utara.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/airport silangit.jpg" alt="Destination 2" class="destination-image">
-                            <h3 class="destination-title">Airport Silangit</h3>
-                            <p class="destination-description">Bandara Silangit adalah gerbang utama ke Danau Toba yang
-                                terkenal di Sumatera Utara, Indonesia. Dengan terminal modern dan berbagai penerbangan
-                                langsung dari kota-kota besar di Indonesia, Bandara Silangit adalah pilihan terbaik
-                                untuk memulai perjalanan Anda ke destinasi wisata yang menakjubkan di sekitarnya.</p>
-                        </li>
-                    </ul>
+                    <section class="destination">
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/taman eden.jpeg" class="card-img-top" alt="Destination 1" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Taman Eden 100</h5>
+                                    <p class="card-text">
+
+                                        Taman Eden 100 di Sumatera Utara menawarkan keindahan alam yang menakjubkan. Dengan
+                                        pemandangan yang memukau dan lingkungan yang indah, Taman Eden 100 menjadi destinasi
+                                        yang sempurna bagi pecinta alam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/toledo.jpg" class="card-img-top" alt="Destination 2" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Toledo InnToledo Inna</h5>
+                                    <p class="card-text">
+                                        Hotel di Pematangsiantar, Sumatera Utara menawarkan kamar-kamar
+                                        modern dengan fasilitas seperti AC dan TV layar datar. Terdapat
+                                        juga restoran, lounge, dan ruang rapat. Dekat dengan tempat
+                                        wisata seperti Air Terjun Sipiso-piso dan Danau Toba. Pilihan
+                                        tepat untuk menginap di Pematangsiantar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/baren.jpg" class="card-img-top" alt="Destination 3" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Baren Coffee & Roastery</h5>
+                                    <p class="card-text">
+                                        Baren's Coffee & Roastery adalah tempat kopi yang menawarkan
+                                        kopi berkualitas tinggi yang dipanggang dengan baik, serta
+                                        suasana yang modern dan nyaman untuk menikmati kopi. Dalam
+                                        lingkungan yang ramah pengunjung.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/Puncak Sipinsur.jpg" class="card-img-top" alt="Destination 4" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Puncak Sipinsur</h5>
+                                    <p class="card-text">
+                                        Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
+                                        pemandangan sawah, perbukitan hijau, dan pegunungan yang
+                                        spektakuler. Pengunjung dapat hiking dan berkemah sambil
+                                        menikmati udara segar dan keindahan alam. Cocok untuk pecinta
+                                        alam dan pengunjung yang mencari ketenangan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/airport silangit.jpg" class="card-img-top" alt="Destination 5" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Airport Silangit</h5>
+                                    <p class="card-text">
+                                        Bandara Silangit adalah gerbang utama ke Danau Toba yang
+                                        terkenal di Sumatera Utara, Indonesia. Dengan terminal modern
+                                        dan berbagai penerbangan langsung dari kota-kota besar di
+                                        Indonesia, Bandara Silangit adalah pilihan terbaik untuk memulai
+                                        perjalanan Anda ke destinasi wisata yang menakjubkan di
+                                        sekitarnya.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/airport kualanamu.jpg" class="card-img-top" alt="Destination 6" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Airport Kualanamu</h5>
+                                    <p class="card-text">
+                                        Bandara Internasional Kualanamu adalah bandara modern yang
+                                        melayani penerbangan domestik dan internasional di Sumatera
+                                        Utara. Dengan fasilitas yang lengkap dan modern, bandara ini
+                                        menjadi pintu gerbang utama bagi wisatawan yang ingin
+                                        menjelajahi Sumatera Utara.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
-            <!--footer-->
+            </section> <!--footer-->
             <?php
             include "footer.php";
             ?>

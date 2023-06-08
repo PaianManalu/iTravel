@@ -8,71 +8,10 @@
     <meta name="viewport" content="initial-scale=1.0">
     <!--web mobile-->
     <link rel="stylesheet" href="maps.css">
+
+    <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
-        /*service*/
-        .heading {
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 3.9rem;
-            border-radius: 0.5rem;
-            padding: 2rem 1rem;
-            color: #0dcdc2;
-        }
-
-        .services {
-            text-align: center;
-            color: #000;
-        }
-
-        .services a {
-            text-align: center;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .services a:hover {
-            color: #0dcdc2
-        }
-
-        .services .box-container {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: auto;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .services .box-container .box {
-            max-width: 20%;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            text-align: center;
-            white-space: normal;
-        }
-
-        .services .box-container .box:hover {
-            color: #0dcdc2;
-        }
-
-        .services .box-container .box i {
-            padding: 1rem;
-            font-size: 5.5rem;
-        }
-
-        .services .box-container .box h3 {
-            font-size: 2.5rem;
-            margin-top: 1rem;
-        }
-
-        .services .box-container .box p {
-            font-size: 1.4rem;
-            padding: 0.5rem 0;
-        }
-
-        .services .box-container :hover {
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-        }
     </style>
 
 </head>
@@ -118,57 +57,96 @@
         <!--rekomendation-->
         <section class="Destination">
             <section class="popular-destination">
-                <h1 class="heading"> Popular Destination</h1>
+                <h1 class="heading"> Destinasi Populer</h1>
                 <div class="container">
                     <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
-                    <ul class="destination-list">
-                        <li class="destination-item">
-                            <img src="img/airport kualanamu.jpg" alt="Destination 1" class="destination-image">
-                            <h3 class="destination-title">Airport Kualanamu</h3>
-                            <p class="destination-description">Bandara Internasional Kualanamu adalah bandara modern
-                                yang melayani penerbangan domestik dan internasional di Sumatera Utara. Dengan fasilitas
-                                yang lengkap dan modern, bandara ini menjadi pintu gerbang utama bagi wisatawan yang
-                                ingin menjelajahi Sumatera Utara.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/airport silangit.jpg" alt="Destination 2" class="destination-image">
-                            <h3 class="destination-title">Airport Silangit</h3>
-                            <p class="destination-description">Bandara Silangit adalah gerbang utama ke Danau Toba yang
-                                terkenal di Sumatera Utara, Indonesia. Dengan terminal modern dan berbagai penerbangan
-                                langsung dari kota-kota besar di Indonesia, Bandara Silangit adalah pilihan terbaik
-                                untuk memulai perjalanan Anda ke destinasi wisata yang menakjubkan di sekitarnya.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/sampri.jpg" alt="Destination 3" class="destination-image">
-                            <h3 class="destination-title">Sampri</h3>
-                            <p class="destination-description">Loket Sampri adalah layanan penjualan tiket bus dan
-                                travel dengan berbagai rute tujuan di Sumatera Utara. Nikmati kemudahan memesan tiket
-                                dengan harga terjangkau dan layanan yang cepat dan ramah di loket Sampri.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/tigaraja.jpg" alt="Destination 4" class="destination-image">
-                            <h3 class="destination-title">Tigaraja</h3>
-                            <p class="destination-description">Pelabuhan Tigaraja - Pelabuhan di Sumatera Utara yang
-                                terletak di kota Balige dan merupakan gerbang utama menuju Danau Toba. Pelabuhan ini
-                                menyediakan fasilitas penyeberangan feri dan kapal penumpang untuk menuju ke Pulau
-                                Samosir dan sekitarnya.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/helvetia.jpg" alt="Destination 5" class="destination-image">
-                            <h3 class="destination-title">Helvetia</h3>
-                            <p class="destination-description">Deskripsi singkat promosi loket helvetia: Promosi loket
-                                Helvetia, layanan yang memberikan kemudahan dalam melakukan berbagai transaksi keuangan
-                                seperti pembayaran tagihan, pengisian pulsa, pembelian tiket, dan lain sebagainya..</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/pelabuhan balige.jpg" alt="Destination 6" class="destination-image">
-                            <h3 class="destination-title">6. Pelabuhan Balige</h3>
-                            <p class="destination-description">Pelabuhan Balige adalah sebuah pelabuhan di kawasan Danau
-                                Toba, Sumatera Utara, Indonesia. Pelabuhan ini menyediakan kapal penumpang yang
-                                beroperasi menuju beberapa kota di sekitar Danau Toba, termasuk ke pulau Samosir.
-                                Pelabuhan ini juga terletak dekat dengan beberapa objek wisata</p>
-                        </li>
-                    </ul>
+                    <section class="destination">
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/airport kualanamu.jpg" class="card-img-top" alt="Destination 1" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Airport Kualanamu</h5>
+                                    <p class="card-text">Bandara Internasional Kualanamu adalah bandara modern
+                                        yang melayani penerbangan domestik dan internasional di Sumatera Utara. Dengan
+                                        fasilitas
+                                        yang lengkap dan modern, bandara ini menjadi pintu gerbang utama bagi wisatawan yang
+                                        ingin menjelajahi Sumatera Utara.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/airport silangit.jpg" class="card-img-top" alt="Destination 2" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Airport Silangit</h5>
+                                    <p class="card-text">Bandara Silangit adalah gerbang utama ke Danau Toba
+                                        yang
+                                        terkenal di Sumatera Utara, Indonesia. Dengan terminal modern dan berbagai
+                                        penerbangan
+                                        langsung dari kota-kota besar di Indonesia, Bandara Silangit adalah pilihan terbaik
+                                        untuk memulai perjalanan Anda ke destinasi wisata yang menakjubkan di sekitarnya.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/sampri.jpg" class="card-img-top" alt="Destination 3" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Sampri</h5>
+                                    <p class="card-text">Loket Sampri adalah layanan penjualan tiket bus dan
+                                        travel dengan berbagai rute tujuan di Sumatera Utara. Nikmati kemudahan memesan
+                                        tiket
+                                        dengan harga terjangkau dan layanan yang cepat dan ramah di loket Sampri.</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/tigaraja.jpg" class="card-img-top" alt="Destination 4" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Tigaraja</h5>
+                                    <p class="card-text">Pelabuhan Tigaraja - Pelabuhan di Sumatera Utara yang
+                                        terletak di kota Balige dan merupakan gerbang utama menuju Danau Toba. Pelabuhan ini
+                                        menyediakan fasilitas penyeberangan feri dan kapal penumpang untuk menuju ke Pulau
+                                        Samosir dan sekitarnya.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/helvetia.jpg" class="card-img-top" alt="Destination 5" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Helvetia</h5>
+                                    <p class="card-text">Deskripsi singkat promosi loket helvetia: Promosi
+                                        loket
+                                        Helvetia, layanan yang memberikan kemudahan dalam melakukan berbagai transaksi
+                                        keuangan
+                                        seperti pembayaran tagihan, pengisian pulsa, pembelian tiket, dan lain sebagainya..
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/pelabuhan balige.jpg" class="card-img-top" alt="Destination 6" />
+                                <div class="card-body">
+                                    <h5 class="card-title"> Pelabuhan Balige</h5>
+                                    <p class="card-text"> Pelabuhan Balige adalah sebuah pelabuhan di kawasan
+                                        Danau
+                                        Toba, Sumatera Utara, Indonesia. Pelabuhan ini menyediakan kapal penumpang yang
+                                        beroperasi menuju beberapa kota di sekitar Danau Toba, termasuk ke pulau Samosir.
+                                        Pelabuhan ini juga terletak dekat dengan beberapa objek wisata
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </section>
             <!--footer-->

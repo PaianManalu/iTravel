@@ -8,71 +8,9 @@
     <meta name="viewport" content="initial-scale=1.0">
     <!--web mobile-->
     <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
-        /*service*/
-        .heading {
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 3.9rem;
-            border-radius: 0.5rem;
-            padding: 2rem 1rem;
-            color: #0dcdc2;
-        }
-
-        .services {
-            text-align: center;
-            color: #000;
-        }
-
-        .services a {
-            text-align: center;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .services a:hover {
-            color: #0dcdc2
-        }
-
-        .services .box-container {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: auto;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .services .box-container .box {
-            max-width: 20%;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            text-align: center;
-            white-space: normal;
-        }
-
-        .services .box-container .box:hover {
-            color: #0dcdc2;
-        }
-
-        .services .box-container .box i {
-            padding: 1rem;
-            font-size: 5.5rem;
-        }
-
-        .services .box-container .box h3 {
-            font-size: 2.5rem;
-            margin-top: 1rem;
-        }
-
-        .services .box-container .box p {
-            font-size: 1.4rem;
-            padding: 0.5rem 0;
-        }
-
-        .services .box-container :hover {
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-        }
     </style>
 
 </head>
@@ -115,60 +53,92 @@
         <!--rekomendation-->
         <section class="Destination">
             <section class="popular-destination">
-                <h1 class="heading"> Popular Destination</h1>
+                <h1 class="heading"> Destinasi Populer</h1>
                 <div class="container">
                     <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
-                    <ul class="destination-list">
-                        <li class="destination-item">
-                            <img src="img/srikandi.jpg" alt="Destination 1" class="destination-image">
-                            <h3 class="destination-title">Rumah Makan Srikandi</h3>
-                            <p class="destination-description">Rumah Makan Srikandi di Medan, Sumatera Utara, menawarkan
-                                hidangan Indonesia lezat dengan spesialisasi khas Batak seperti naniura dan saksang.
-                                Dengan interior yang nyaman, staf yang ramah, dan harga terjangkau, ini adalah tempat
-                                yang sempurna untuk menikmati hidangan khas Batak saat berada di Medan.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/penatapan.jpg" alt="Destination 2" class="destination-image">
-                            <h3 class="destination-title">Penatapan Restaurant</h3>
-                            <p class="destination-description">Penatapan Restaurant di Danau Toba, Sumatera Utara,
-                                menawarkan hidangan Indonesia dan Barat yang lezat dengan pemandangan indah dari danau.
-                                Dengan interior modern dan bersih, serta staf yang ramah dan profesional, restoran ini
-                                menawarkan pengalaman makan yang nyaman dan santai. Dari hidangan nasi goreng hingga
-                                steak, tempat ini memiliki pilihan yang luas untuk semua selera. Nikmati makanan lezat
-                                sambil menikmati pemandangan alam yang indah di Danau Toba di Penatapan Restaurant.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/panorama1.jpg" alt="Destination 3" class="destination-image">
-                            <h3 class="destination-title">Warung Panorama</h3>
-                            <p class="destination-description">Warung Panorama di Danau Toba menawarkan pengalaman makan
-                                yang unik dengan pemandangan yang menakjubkan dari atas bukit. Dengan hidangan
-                                tradisional Indonesia yang lezat, restoran ini menawarkan pengalaman kuliner yang
-                                autentik dan menyenangkan.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/kens.jpg" alt="Destination 4" class="destination-image">
-                            <h3 class="destination-title">Ken’s Coffee</h3>
-                            <p class="destination-description">Ken's Coffee di Bandung adalah tempat kopi yang nyaman
-                                dan modern, menawarkan berbagai pilihan kopi berkualitas tinggi dari berbagai daerah di
-                                Indonesia. Para barista yang ahli akan meracik kopi dengan sempurna sesuai dengan selera
-                                Anda, dan Anda dapat menikmatinya sambil menikmati suasana santai</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/baren.jpg" alt="Destination 5" class="destination-image">
-                            <h3 class="destination-title">Baren Coffee & Roastery</h3>
-                            <p class="destination-description">Baren's Coffee & Roastery adalah tempat kopi yang
-                                menawarkan kopi berkualitas tinggi yang dipanggang dengan baik, serta suasana yang
-                                modern dan nyaman untuk menikmati kopi. Dalam lingkungan yang ramah pengunjung</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/istana minang.jpg" alt="Destination 6" class="destination-image">
-                            <h3 class="destination-title">Restaurant Minang Gumarang</h3>
-                            <p class="destination-description">Restoran Minang Gumarang menyajikan makanan khas
-                                Minangkabau dengan cita rasa yang autentik.</p>
-                        </li>
-                    </ul>
+                    <section class="destination">
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/srikandi.jpg" class="card-img-top" alt="Destination 1" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Rumah Makan Srikandi</h5>
+                                    <p class="card-text">Rumah Makan Srikandi di Medan, Sumatera Utara, menawarkan
+                                        hidangan Indonesia lezat dengan spesialisasi khas Batak seperti naniura dan saksang.
+                                        Dengan interior yang nyaman, staf yang ramah, dan harga terjangkau, ini adalah tempat
+                                        yang sempurna untuk menikmati hidangan khas Batak saat berada di Medan.</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/penatapan.jpg" class="card-img-top" alt="Destination 2" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Penatapan Restaurant</h5>
+                                    <p class="card-text">Penatapan Restaurant di Danau Toba, Sumatera Utara,
+                                        menawarkan hidangan Indonesia dan Barat yang lezat dengan pemandangan indah dari danau.
+                                        Tempat ini memiliki pilihan yang luas untuk semua selera. Nikmati makanan lezat
+                                        sambil menikmati pemandangan alam yang indah di Danau Toba di Penatapan Restaurant.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/panorama1.jpg" class="card-img-top" alt="Destination 3" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Warung Panorama</h5>
+                                    <p class="card-text">
+                                        Warung Panorama di Danau Toba menawarkan pengalaman makan
+                                        yang unik dengan pemandangan yang menakjubkan dari atas bukit. Dengan hidangan
+                                        tradisional Indonesia yang lezat, restoran ini menawarkan pengalaman kuliner yang
+                                        autentik dan menyenangkan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/kens.jpg" class="card-img-top" alt="Destination 4" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Ken’s Coffee</h5>
+                                    <p class="card-text">
+                                        Ken's Coffee di Bandung adalah tempat kopi yang nyaman
+                                        dan modern, menawarkan berbagai pilihan kopi berkualitas tinggi dari berbagai daerah di
+                                        Indonesia. Para barista yang ahli akan meracik kopi dengan sempurna sesuai dengan selera
+                                        Anda, dan Anda dapat menikmatinya sambil menikmati suasana santai
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/baren.jpg" class="card-img-top" alt="Destination 5" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Baren Coffee & Roastery</h5>
+                                    <p class="card-text">
+                                        Baren's Coffee & Roastery adalah tempat kopi yang
+                                        menawarkan kopi berkualitas tinggi yang dipanggang dengan baik, serta suasana yang
+                                        modern dan nyaman untuk menikmati kopi. Dalam lingkungan yang ramah pengunjung
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/istana minang.jpg" class="card-img-top" alt="Destination 6" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Restaurant Minang Gumarang</h5>
+                                    <p class="card-text">Restoran Minang Gumarang menyajikan makanan khas
+                                        Minangkabau dengan cita rasa yang autentik.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </section>
+
             <!--footer-->
             <?php
             include "footer.php";

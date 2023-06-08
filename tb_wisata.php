@@ -8,71 +8,9 @@
     <meta name="viewport" content="initial-scale=1.0">
     <!--web mobile-->
     <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
-        /*service*/
-        .heading {
-            text-align: center;
-            padding: 2.5rem;
-            font-size: 3.9rem;
-            border-radius: 0.5rem;
-            padding: 2rem 1rem;
-            color: #0dcdc2;
-        }
-
-        .services {
-            text-align: center;
-            color: #000;
-        }
-
-        .services a {
-            text-align: center;
-            color: #000;
-            text-decoration: none;
-        }
-
-        .services a:hover {
-            color: #0dcdc2
-        }
-
-        .services .box-container {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: auto;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-
-        .services .box-container .box {
-            max-width: 20%;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            text-align: center;
-            white-space: normal;
-        }
-
-        .services .box-container .box:hover {
-            color: #0dcdc2;
-        }
-
-        .services .box-container .box i {
-            padding: 1rem;
-            font-size: 5.5rem;
-        }
-
-        .services .box-container .box h3 {
-            font-size: 2.5rem;
-            margin-top: 1rem;
-        }
-
-        .services .box-container .box p {
-            font-size: 1.4rem;
-            padding: 0.5rem 0;
-        }
-
-        .services .box-container :hover {
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-        }
     </style>
 
 </head>
@@ -118,65 +56,95 @@
         <!--rekomendation-->
         <section class="Destination">
             <section class="popular-destination">
-                <h1 class="heading"> Popular Destination</h1>
+                <h1 class="heading"> Destinasi Populer</h1>
                 <div class="container">
                     <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
-                    <ul class="destination-list">
-                        <li class="destination-item">
-                            <img src="img/taman eden.jpeg" alt="Destination 1" class="destination-image">
-                            <h3 class="destination-title">Taman Eden 100</h3>
-                            <p class="destination-description">Taman Eden 100 adalah destinasi wisata yang menawarkan
-                                keindahan alam yang luar biasa. Terletak di tengah hutan pinus di Kota Batu menawarkan
-                                suasana yang tenang dan menegangkan bagi pengunjung yang ingin melepas penat dari
-                                kehidupan sehari-hari. Di dalam Taman Eden 100 ini pengunjung dapat menikmati keindahan
-                                taman bunga yang indah dan air terjun spektakuler.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/efrata waterfal.jpg" alt="Destination 2" class="destination-image">
-                            <h3 class="destination-title">Air Terjun Efrata</h3>
-                            <p class="destination-description">Air Terjun Efrata Sumut adalah destinasi wisata alam
-                                dengan pemandangan menakjubkan dan air yang jernih. Pengunjung dapat berenang, trekking,
-                                atau hanya menikmati keindahan pemandangan sekitar. Terdapat juga warung makan dengan
-                                kuliner khas Sumatera Utara. Cocok untuk pengunjung yang ingin menikmati suasana alami
-                                yang damai dan menenangkan.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/Inna Parapat Hotel.jpg" alt="Destination 3" class="destination-image">
-                            <h3 class="destination-title">Inna Parapat Hotel</h3>
-                            <p class="destination-description">Air Inna Parapat adalah destinasi wisata di Danau Toba
-                                yang menawarkan pemandangan yang memukau dan aktivitas seperti berenang, snorkeling, dan
-                                diving. Terdapat juga fasilitas restoran, tempat penginapan, dan toko souvenir. Cocok
-                                untuk liburan bersama keluarga atau teman-teman.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/Puncak Sipinsur.jpg" alt="Destination 4" class="destination-image">
-                            <h3 class="destination-title">Puncak Sipinsur</h3>
-                            <p class="destination-description">Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
-                                pemandangan sawah, perbukitan hijau, dan pegunungan yang spektakuler. Pengunjung dapat
-                                hiking dan berkemah sambil menikmati udara segar dan keindahan alam. Cocok untuk pecinta
-                                alam dan pengunjung yang mencari ketenangan.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/Lembah Bakkara.jpg" alt="Destination 5" class="destination-image">
-                            <h3 class="destination-title">Lembah Bakkara</h3>
-                            <p class="destination-description">Lembah Bakkara di Humbang Hasundutan, Sumatera Utara,
-                                menawarkan pemandangan sawah, sungai, dan perbukitan yang indah. Pengunjung dapat
-                                hiking, panjat tebing, berkuda, atau mencoba aktivitas air. Juga terdapat warung makan
-                                untuk mencoba kuliner khas Sumatera Utara. Cocok untuk pengunjung yang ingin menikmati
-                                alam dan aktivitas menarik di sekitar lembah.</p>
-                        </li>
-                        <li class="destination-item">
-                            <img src="img/bukit-simarjarunjung.jpg" alt="Destination 6" class="destination-image">
-                            <h3 class="destination-title">Bukit Indah Simarjarunjung</h3>
-                            <p class="destination-description">Lembah Bakkara di Sumatera Utara menawarkan pemandangan
-                                sawah, sungai, dan perbukitan hijau yang indah. Pengunjung dapat melakukan hiking,
-                                panjat tebing, berkuda, atau aktivitas air. Terdapat juga warung makan untuk mencicipi
-                                kuliner khas. Cocok untuk pengunjung yang ingin menikmati alam dan aktivitas menarik di
-                                sekitar lembah.</p>
-                        </li>
-                    </ul>
+                    <section class="destination">
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/taman eden.jpeg" class="card-img-top" alt="Destination 1" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Taman Eden 100</h5>
+                                    <p class="card-text">Taman Eden 100 adalah destinasi wisata yang menawarkan
+                                        keindahan alam yang luar biasa. Terletak di tengah hutan pinus di Kota Batu menawarkan
+                                        suasana yang tenang dan menegangkan bagi pengunjung yang ingin melepas penat dari
+                                        kehidupan sehari-hari. Di dalam Taman Eden 100 ini pengunjung dapat menikmati keindahan
+                                        taman bunga yang indah dan air terjun spektakuler.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/efrata waterfal.jpg" class="card-img-top" alt="Destination 2" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Air Terjun Efrata</h5>
+                                    <p class="card-text">Air Terjun Efrata Sumut adalah destinasi wisata alam
+                                        dengan pemandangan menakjubkan dan air yang jernih. Pengunjung dapat berenang, trekking,
+                                        atau hanya menikmati keindahan pemandangan sekitar. Terdapat juga warung makan dengan
+                                        kuliner khas Sumatera Utara. Cocok untuk pengunjung yang ingin menikmati suasana alami
+                                        yang damai dan menenangkan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/Puncak Sipinsur.jpg" class="card-img-top" alt="Destination 3" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Puncak Sipinsur</h5>
+                                    <p class="card-text">Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
+                                        pemandangan sawah, perbukitan hijau, dan pegunungan yang spektakuler. Pengunjung dapat
+                                        hiking dan berkemah sambil menikmati udara segar dan keindahan alam. Cocok untuk pecinta
+                                        alam dan pengunjung yang mencari ketenangan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/Lembah Bakkara.jpg" class="card-img-top" alt="Destination 4" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Lembah Bakkara</h5>
+                                    <p class="card-text">Lembah Bakkara di Humbang Hasundutan, Sumatera Utara,
+                                        menawarkan pemandangan sawah, sungai, dan perbukitan yang indah. Pengunjung dapat
+                                        hiking, panjat tebing, berkuda, atau mencoba aktivitas air. Juga terdapat warung makan
+                                        untuk mencoba kuliner khas Sumatera Utara. Cocok untuk pengunjung yang ingin menikmati
+                                        alam dan aktivitas menarik di sekitar lembah.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/bukit-simarjarunjung.jpg" class="card-img-top" alt="Destination 5" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Bukit Indah Simarjarunjung</h5>
+                                    <p class="card-text">Lembah Bakkara di Sumatera Utara menawarkan pemandangan
+                                        sawah, sungai, dan perbukitan hijau yang indah. Pengunjung dapat melakukan hiking,
+                                        panjat tebing, berkuda, atau aktivitas air. Terdapat juga warung makan untuk mencicipi
+                                        kuliner khas. Cocok untuk pengunjung yang ingin menikmati alam dan aktivitas menarik di
+                                        sekitar lembah.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/Inna Parapat Hotel.jpg" class="card-img-top" alt="Destination 6" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Inna Parapat Hotel</h5>
+                                    <p class="card-text"> Air Inna Parapat adalah destinasi wisata di Danau Toba
+                                        yang menawarkan pemandangan yang memukau dan aktivitas seperti berenang, snorkeling, dan
+                                        diving. Terdapat juga fasilitas restoran, tempat penginapan, dan toko souvenir. Cocok
+                                        untuk liburan bersama keluarga atau teman-teman.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
+            </section> <!--footer-->
             <!--footer-->
             <?php
             include "footer.php";
