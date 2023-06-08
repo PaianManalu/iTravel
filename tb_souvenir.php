@@ -153,11 +153,29 @@
                 var data = [
                     "Pasar Balige",
                     "Batikta - Batik Batak Balige",
-                    "WISNU TATAH INDAH(SOUVENIR UKIRAN BATAK)",
+                    "WISNU TATAH INDAH (SOUVENIR UKIRAN BATAK)",
                     "Toko Enjelita Balige",
                     "SEKKA Craft Supplies",
-                    "Souvenir pusat oleh - oleh PAPA ROZTI",
-                    "Toko Grosir Adriell Gultom shop balige"
+                    "Souvenir pusat oleh-oleh PAPA ROZTI",
+                    "Toko Grosir Adriell Gultom shop balige",
+                    "Toko P Sihombing",
+                    "Remon Ponsel Situmorang",
+                    "Indomaret",
+                    "Lapak Rosa Girsang (Fresh Farmers Market)",
+                    "Toko N. Sinaga / UD.Florencia (NEGER SINAGA)",
+                    "Toko Raja Oloan 2",
+                    "Alfamidi sm raja parapat",
+                    "Jaya Ponsel Mandiri",
+                    "Distro kaos Batak CKT",
+                    "Pekan Tiga Dolok",
+                    "Panglong Pertukangan Kayu",
+                    "Pekan Tiga Balata",
+                    "Toko Citra",
+                    "Roti Kacang",
+                    "Parluasan Traditional Market",
+                    "TOKO 35 Siantar | RAMBUNGMERAH |",
+                    "Indomaret Karang Sari Tambung Nabolon",
+                    "Poshop.Id"
                 ];
                 for (var i = 0; i < data.length; i++) {
                     var option = document.createElement("option");
@@ -298,42 +316,21 @@
                     var silangitLatLng = new google.maps.LatLng(2.1478720598476975, 98.9623014145697);
                     var silangitMarker = createMarker(silangitLatLng, 'Silangit');
                     silangitMarker.setMap(map);
+                    createButton("MAP", "tb_map.php");
+                    createButton("Wisata", "tb_wisata.php");
+                    createButton("Penginapan", "tb_penginapan.php");
+                    createButton("Rumah Makan", "tb_rumahmakan.php");
+                    createButton("Transportasi", "tb_transportasi.php");
 
-                    var button3 = document.createElement("button");
-                    button3.innerHTML = "MAP";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button3);
-                    button3.addEventListener("click", function() {
-                        window.location.href = "tb_map.php";
-                    });
+                    function createButton(label, url) {
+                        var button = document.createElement("button");
+                        button.innerHTML = label;
+                        map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
+                        button.addEventListener("click", function() {
+                            window.location.href = url;
+                        });
+                    }
 
-                    var button1 = document.createElement("button");
-                    button1.id = "button1";
-                    button1.innerHTML = "Wisata";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button1);
-                    button1.addEventListener("click", function() {
-                        window.location.href = "tb_wisata.php";
-                    });
-
-                    var button2 = document.createElement("button");
-                    button2.innerHTML = "Penginapan";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button2);
-                    button2.addEventListener("click", function() {
-                        window.location.href = "tb_penginapan.php";
-                    });
-
-                    var button4 = document.createElement("button");
-                    button4.innerHTML = "Rumah Makan";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button4);
-                    button4.addEventListener("click", function() {
-                        window.location.href = "tb_rumahmakan.php";
-                    });
-
-                    var button5 = document.createElement("button");
-                    button5.innerHTML = "Transportasi";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button5);
-                    button5.addEventListener("click", function() {
-                        window.location.href = "tb_transportasi.php";
-                    });
                     for (var i = 0; i < locations.length; i++) {
 
                         map: map

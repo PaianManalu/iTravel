@@ -321,40 +321,21 @@
                     var silangitMarker = createMarker(silangitLatLng, 'Silangit');
                     silangitMarker.setMap(map);
 
-                    var button3 = document.createElement("button");
-                    button3.innerHTML = "MAP";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button3);
-                    button3.addEventListener("click", function() {
-                        window.location.href = "tb_map.php";
-                    });
+                    createButton("MAP", "tb_map.php");
+                    createButton("Penginapan", "tb_penginapan.php");
+                    createButton("Rumah Makan", "tb_rumahmakan.php");
+                    createButton("Souvenir", "tb_souvenir.php");
+                    createButton("Transportasi", "tb_transportasi.php");
 
-                    var button2 = document.createElement("button");
-                    button2.innerHTML = "Penginapan";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button2);
-                    button2.addEventListener("click", function() {
-                        window.location.href = "tb_penginapan.php";
-                    });
+                    function createButton(label, url) {
+                        var button = document.createElement("button");
+                        button.innerHTML = label;
+                        map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
+                        button.addEventListener("click", function() {
+                            window.location.href = url;
+                        });
+                    }
 
-                    var button4 = document.createElement("button");
-                    button4.innerHTML = "Rumah Makan";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button4);
-                    button4.addEventListener("click", function() {
-                        window.location.href = "tb_rumahmakan.php";
-                    });
-
-                    var button5 = document.createElement("button");
-                    button5.innerHTML = "Souvenir";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button5);
-                    button5.addEventListener("click", function() {
-                        window.location.href = "tb_souvenir.php";
-                    });
-
-                    var button1 = document.createElement("button");
-                    button1.innerHTML = "Transportasi";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button1);
-                    button1.addEventListener("click", function() {
-                        window.location.href = "tb_transportasi.php";
-                    });
                     for (var i = 0; i < locations.length; i++) {
 
                         map: map

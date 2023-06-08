@@ -159,7 +159,6 @@
             include "footer.php";
             ?>
 
-
             <script>
                 var input = document.getElementById("search-box");
                 var select = document.getElementById("options");
@@ -248,13 +247,15 @@
                     "Pakkodian"
 
                 ];
+                //loop for yang akan berjalan sebanyak elemen dalam array data berdasar option yang diberikan
                 for (var i = 0; i < data.length; i++) {
                     var option = document.createElement("option");
                     option.value = data[i];
                     select.appendChild(option);
                 }
 
-                var optionCounter = 0; // Add this line   
+                // kode ini membantu mengurangi jumlah opsi yang ditampilkan menjadi jumlah yang lebih terkelola (maksimal 6 dalam kode yang diberikan). 
+                var optionCounter = 0;
                 input.addEventListener("input", function() {
                     var value = this.value.toLowerCase();
                     var options = select.getElementsByTagName("option");
@@ -270,7 +271,7 @@
                     select.classList.add('show');
                 });
 
-                // Hide options when click outside
+                // Kode yang diberikan bertujuan untuk menyembunyikan opsi-opsi dalam elemen <select> 
                 document.addEventListener('click', function(event) {
                     var isClickInside = select.contains(event.target);
                     if (!isClickInside) {
@@ -278,6 +279,7 @@
                         optionCounter = 0; // Reset optionCounter when hiding options
                     }
                 });
+                //Variabel ini kemungkinan akan digunakan untuk mengakses dan mengendalikan peta dalam pengembangan aplikasi atau situs web yang menggunakan Google Maps API.
                 var map;
                 var markers = [];
 
@@ -312,12 +314,12 @@
                         zoom: 9.5
                     });
 
-                    // Membuat marker pada koordinat yang ditentukan untuk nama kota
+                    // Membuat marker pada koordinat yang ditentukan untuk nama 
                     function createMarker(position, name) {
-                        var marker = new google.maps.Marker({
-                            position: position,
-                            map: map,
-                            title: name,
+                        var marker = new google.maps.Marker({ //Objek marker ini akan digunakan untuk menampilkan marker pada peta.
+                            position: position, //Mengatur posisi marker menggunakan nilai dari parameter 
+                            map: map, //Mengatur peta yang ditampilkan oleh marker menggunakan nilai dari variabel 
+                            title: name, // Mengatur judul atau tooltip marker menggunakan nilai dari parameter 
                             label: {
                                 text: name,
                                 color: 'white',
@@ -387,49 +389,23 @@
                     var silangitMarker = createMarker(silangitLatLng, 'Silangit');
                     silangitMarker.setMap(map);
 
-                    var delLatLng = new google.maps.LatLng(2.3832437410753893, 99.14860188961029);
-                    var delMarker = new google.maps.Marker({
-                        position: delLatLng,
-                        map: map,
-                        icon: 'img/del.png' // Ganti 'path/ke/del.png' dengan path file gambar del.png
-                    });
 
+                    function createButton(label, url) {
+                        var button = document.createElement("button");
+                        button.innerHTML = label;
+                        map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
+                        button.addEventListener("click", function() {
+                            window.location.href = url;
+                        });
+                    }
 
-                    var button1 = document.createElement("button");
-                    button1.id = "button1";
-                    button1.innerHTML = "Wisata";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button1);
-                    button1.addEventListener("click", function() {
-                        window.location.href = "tb_wisata.php";
-                    });
+                    //button di dalam map
+                    createButton("Wisata", "tb_wisata.php");
+                    createButton("Rumah Makan", "tb_rumahmakan.php");
+                    createButton("Penginapan", "tb_penginapan.php");
+                    createButton("Souvenir", "tb_souvenir.php");
+                    createButton("Transportasi", "tb_transportasi.php");
 
-                    var button2 = document.createElement("button");
-                    button2.innerHTML = "Rumah Makan";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button2);
-                    button2.addEventListener("click", function() {
-                        window.location.href = "tb_rumahmakan.php";
-                    });
-
-                    var button3 = document.createElement("button");
-                    button3.innerHTML = "Penginapan";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button3);
-                    button3.addEventListener("click", function() {
-                        window.location.href = "tb_penginapan.php";
-                    });
-
-                    var button4 = document.createElement("button");
-                    button4.innerHTML = "Souvenir";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button4);
-                    button4.addEventListener("click", function() {
-                        window.location.href = "tb_souvenir.php";
-                    });
-
-                    var button5 = document.createElement("button");
-                    button5.innerHTML = "Transportasi";
-                    map.controls[google.maps.ControlPosition.TOP_CENTER].push(button5);
-                    button5.addEventListener("click", function() {
-                        window.location.href = "tb_transportasi.php";
-                    });
                     for (var i = 0; i < locations.length; i++) {
 
                         map: map
