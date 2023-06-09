@@ -56,7 +56,7 @@
                             <div class="card mb-3">
                                 <img src="img/airport kualanamu.jpg" class="card-img-top" alt="Destination 1" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Airport Kualanamu</h5>
+                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Airport Kualanamu</h5>
                                     <p class="card-text">Bandara Internasional Kualanamu adalah bandara modern
                                         yang melayani penerbangan domestik dan internasional di Sumatera Utara. Dengan
                                         fasilitas
@@ -70,7 +70,7 @@
                             <div class="card mb-3">
                                 <img src="img/airport silangit.jpg" class="card-img-top" alt="Destination 2" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Airport Silangit</h5>
+                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Airport Silangit</h5>
                                     <p class="card-text">Bandara Silangit adalah gerbang utama ke Danau Toba
                                         yang
                                         terkenal di Sumatera Utara, Indonesia. Dengan terminal modern dan berbagai
@@ -86,7 +86,7 @@
                             <div class="card mb-3">
                                 <img src="img/sampri.jpg" class="card-img-top" alt="Destination 3" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Sampri</h5>
+                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Sampri</h5>
                                     <p class="card-text">Loket Sampri adalah layanan penjualan tiket bus dan
                                         travel dengan berbagai rute tujuan di Sumatera Utara. Nikmati kemudahan memesan
                                         tiket
@@ -99,7 +99,7 @@
                             <div class="card mb-3">
                                 <img src="img/tigaraja.jpg" class="card-img-top" alt="Destination 4" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Tigaraja</h5>
+                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Tigaraja</h5>
                                     <p class="card-text">Pelabuhan Tigaraja - Pelabuhan di Sumatera Utara yang
                                         terletak di kota Balige dan merupakan gerbang utama menuju Danau Toba. Pelabuhan ini
                                         menyediakan fasilitas penyeberangan feri dan kapal penumpang untuk menuju ke Pulau
@@ -113,7 +113,7 @@
                                 <img src="img/helvetia.jpg" class="card-img-top" alt="Destination 5" />
                                 <div class="card-body">
                                     <h5 class="card-title">Helvetia</h5>
-                                    <p class="card-text">Deskripsi singkat promosi loket helvetia: Promosi
+                                    <p class="card-text"><i class="fas fa-bus"></i>&nbsp Deskripsi singkat promosi loket helvetia: Promosi
                                         loket
                                         Helvetia, layanan yang memberikan kemudahan dalam melakukan berbagai transaksi
                                         keuangan
@@ -127,7 +127,7 @@
                             <div class="card mb-3">
                                 <img src="img/pelabuhan balige.jpg" class="card-img-top" alt="Destination 6" />
                                 <div class="card-body">
-                                    <h5 class="card-title"> Pelabuhan Balige</h5>
+                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Pelabuhan Balige</h5>
                                     <p class="card-text"> Pelabuhan Balige adalah sebuah pelabuhan di kawasan
                                         Danau
                                         Toba, Sumatera Utara, Indonesia. Pelabuhan ini menyediakan kapal penumpang yang

@@ -57,7 +57,7 @@
                             <div class="card mb-3">
                                 <img src="img/srikandi.jpg" class="card-img-top" alt="Destination 1" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Rumah Makan Srikandi</h5>
+                                    <h5 class="card-title"><i class="fas fa-utensils"></i>&nbsp Rumah Makan Srikandi</h5>
                                     <p class="card-text">Rumah Makan Srikandi di Medan, Sumatera Utara, menawarkan
                                         hidangan Indonesia lezat dengan spesialisasi khas Batak seperti naniura dan saksang.
                                         Dengan interior yang nyaman, staf yang ramah, dan harga terjangkau, ini adalah tempat
@@ -70,7 +70,7 @@
                             <div class="card mb-3">
                                 <img src="img/penatapan.jpg" class="card-img-top" alt="Destination 2" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Penatapan Restaurant</h5>
+                                    <h5 class="card-title"><i class="fas fa-utensils"></i>&nbsp Penatapan Restaurant</h5>
                                     <p class="card-text">Penatapan Restaurant di Danau Toba, Sumatera Utara,
                                         menawarkan hidangan Indonesia dan Barat yang lezat dengan pemandangan indah dari danau.
                                         Tempat ini memiliki pilihan yang luas untuk semua selera. Nikmati makanan lezat
@@ -83,7 +83,7 @@
                             <div class="card mb-3">
                                 <img src="img/panorama1.jpg" class="card-img-top" alt="Destination 3" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Warung Panorama</h5>
+                                    <h5 class="card-title"><i class="fas fa-utensils"></i>&nbsp Warung Panorama</h5>
                                     <p class="card-text">
                                         Warung Panorama di Danau Toba menawarkan pengalaman makan
                                         yang unik dengan pemandangan yang menakjubkan dari atas bukit. Dengan hidangan
@@ -97,7 +97,7 @@
                             <div class="card mb-3">
                                 <img src="img/kens.jpg" class="card-img-top" alt="Destination 4" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Ken’s Coffee</h5>
+                                    <h5 class="card-title"><i class="fas fa-utensils"></i>&nbsp Ken’s Coffee</h5>
                                     <p class="card-text">
                                         Ken's Coffee di Bandung adalah tempat kopi yang nyaman
                                         dan modern, menawarkan berbagai pilihan kopi berkualitas tinggi dari berbagai daerah di
@@ -111,7 +111,7 @@
                             <div class="card mb-3">
                                 <img src="img/baren.jpg" class="card-img-top" alt="Destination 5" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Baren Coffee & Roastery</h5>
+                                    <h5 class="card-title"><i class="fas fa-utensils"></i>&nbsp Baren Coffee & Roastery</h5>
                                     <p class="card-text">
                                         Baren's Coffee & Roastery adalah tempat kopi yang
                                         menawarkan kopi berkualitas tinggi yang dipanggang dengan baik, serta suasana yang
@@ -124,7 +124,7 @@
                             <div class="card mb-3">
                                 <img src="img/istana minang.jpg" class="card-img-top" alt="Destination 6" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Restaurant Minang Gumarang</h5>
+                                    <h5 class="card-title"><i class="fas fa-utensils"></i>&nbsp Restaurant Minang Gumarang</h5>
                                     <p class="card-text">Restoran Minang Gumarang menyajikan makanan khas
                                         Minangkabau dengan cita rasa yang autentik.
                                     </p>

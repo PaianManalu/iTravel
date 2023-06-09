@@ -56,7 +56,7 @@
                             <div class="card mb-3">
                                 <img src="img/niagara.jpg" class="card-img-top" alt="Destination 1" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Hotel Niagara Parapat</h5>
+                                    <h5 class="card-title"><i class="fas fa-hotel"></i>&nbsp Hotel Niagara Parapat</h5>
                                     <p class="card-text">Hotel Niagara Parapat di tepi Danau Toba menawarkan
                                         pemandangan indah dari kamar yang menghadap danau. Terdapat kolam renang, restoran, dan
                                         spa, serta dekat dengan tempat wisata seperti Bukit Indah Simarjarunjung dan Air Terjun
@@ -69,7 +69,7 @@
                             <div class="card mb-3">
                                 <img src="img/parapat.jpg" class="card-img-top" alt="Destination 2" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Khas Parapat Hotel</h5>
+                                    <h5 class="card-title"><i class="fas fa-hotel"></i>&nbsp Khas Parapat Hotel</h5>
                                     <p class="card-text">Khas Parapat Hotel di Sumatera Utara menawarkan
                                         kamar-kamar nyaman dan modern, serta restoran yang menyajikan makanan khas dan
                                         internasional. Dekat dengan tempat wisata di sekitar Parapat seperti Bukit Indah
@@ -83,7 +83,7 @@
                             <div class="card mb-3">
                                 <img src="img/gibeon1.jpg" class="card-img-top" alt="Destination 3" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Sapadia Villa Bukit Gibeon</h5>
+                                    <h5 class="card-title"><i class="fas fa-hotel"></i>&nbsp Sapadia Villa Bukit Gibeon</h5>
                                     <p class="card-text">
                                         Sapadia Villa Bukit Gibeon di Sumatera Utara menawarkan
                                         kamar-kamar luas dengan pemandangan yang spektakuler, dilengkapi dengan fasilitas
@@ -98,7 +98,7 @@
                             <div class="card mb-3">
                                 <img src="img/my nasha.jpg" class="card-img-top" alt="Destination 4" />
                                 <div class="card-body">
-                                    <h5 class="card-title">My Nasha Tigaras</h5>
+                                    <h5 class="card-title"><i class="fas fa-hotel"></i>&nbsp My Nasha Tigaras</h5>
                                     <p class="card-text">
                                         My Nasha Tigaras Hotel di Tigaras, Sumatera Utara
                                         menawarkan kamar-kamar mewah dan nyaman dengan fasilitas modern seperti AC dan TV layar
@@ -113,7 +113,7 @@
                             <div class="card mb-3">
                                 <img src="img/sitito.jpg" class="card-img-top" alt="Destination 5" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Hotel Sitio tio</h5>
+                                    <h5 class="card-title"><i class="fas fa-hotel"></i>&nbsp Hotel Sitio tio</h5>
                                     <p class="card-text">
                                         Hotel Sitio Tio di Parapat, Sumatera Utara menawarkan
                                         kamar-kamar nyaman dengan fasilitas seperti AC, TV layar datar, dan kamar mandi pribadi.
@@ -128,7 +128,7 @@
                             <div class="card mb-3">
                                 <img src="img/toledo.jpg" class="card-img-top" alt="Destination 6" />
                                 <div class="card-body">
-                                    <h5 class="card-title">oledo InnToledo Inna</h5>
+                                    <h5 class="card-title"><i class="fas fa-hotel"></i>&nbsp oledo InnToledo Inna</h5>
                                     <p class="card-text">
                                         Hotel di Pematangsiantar, Sumatera Utara menawarkan
                                         kamar-kamar modern dengan fasilitas seperti AC dan TV layar datar. Terdapat juga

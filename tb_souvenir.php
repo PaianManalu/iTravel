@@ -153,7 +153,7 @@
                             <div class="card mb-3">
                                 <img src="img/citra.jpg" class="card-img-top" alt="Destination 1" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Toko Citra</h5>
+                                    <h5 class="card-title"> <i class="fas fa-gift"></i>&nbsp Toko Citra</h5>
                                     <p class="card-text">Toko Citra terletak di Kota Pematangsiantar, Sumatera
                                         Utara. Perusahaan ini bekerja di industri berikut: Toko bahan makanan dan
                                         supermarket.<br>
@@ -166,7 +166,7 @@
                             <div class="card mb-3">
                                 <img src="img/oke.jpg" class="card-img-top" alt="Destination 2" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Oke Supermarket</h5>
+                                    <h5 class="card-title"> <i class="fas fa-gift"></i>&nbsp Oke Supermarket</h5>
                                     <p class="card-text"> Alamat: Jl. Gaperta Ujung No.87 C, Tj. Gusta, Kec. Medan
                                         Helvetia, Kota Medan, Sumatera Utara 20126, Indonesia<br>
                                         Telepon: +62 61 8442065
@@ -178,7 +178,7 @@
                             <div class="card mb-3">
                                 <img src="img/simpang.jpg" class="card-img-top" alt="Destination 3" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Alfamart Simpang Matapao</h5>
+                                    <h5 class="card-title"> <i class="fas fa-gift"></i>&nbsp Alfamart Simpang Matapao</h5>
                                     <p class="card-text">Alfamart Simpang Matapao (Tempat kerja) terletak di
                                         Perbaungan, Sumatera Utara. Perusahaan ini bekerja di industri berikut: Toko bahan
                                         makanan dan supermarket.<br>
@@ -191,7 +191,7 @@
                             <div class="card mb-3">
                                 <img src="img/batikta.jpg" class="card-img-top" alt="Destination 4" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Batikta - Batik Batak Balige</h5>
+                                    <h5 class="card-title"> <i class="fas fa-gift"></i>&nbsp Batikta - Batik Batak Balige</h5>
                                     <p class="card-text">toko batik yang berlokasi di Kabupaten Samosir. Toko
                                         batik ini menawarkan berbagai macam jenis kain dan motif batik khas Indonesia dan
                                         berbagai daerah di Provinsi Sumatera Utara. Batik untuk pria dan wanita tersedia disini
@@ -206,7 +206,7 @@
                             <div class="card mb-3">
                                 <img src="img/kim.jpg" class="card-img-top" alt="Destination 5" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Indomaret kim star</h5>
+                                    <h5 class="card-title"> <i class="fas fa-gift"></i>&nbsp Indomaret kim star</h5>
                                     <p class="card-text"> Alamat: Dirgantara Mitramahardi Pt., Tj. Morawa B, Kec.
                                         Tj. Morawa, Kabupaten Deli Serdang, Sumatera Utara 20362, Indonesia<br>
                                         Kategori Bangunan: Toko Bahan Makanan .<br>
@@ -218,7 +218,7 @@
                             <div class="card mb-3">
                                 <img src="img/indomsret2.jpg" class="card-img-top" alt="Destination 6" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Indomaret Karang Sari Tambung Nabolon</h5>
+                                    <h5 class="card-title"> <i class="fas fa-gift"></i>&nbsp Indomaret Karang Sari Tambung Nabolon</h5>
                                     <p class="card-text"> Alamat: 232P+962, Tambun Nabolon, Kec. Siantar Martoba,
                                         Kota Pematang Siantar, Sumatera Utara 21154, Indonesia<br>
                                         Kategori Bangunan: Toko Bahan Makanan .<br>

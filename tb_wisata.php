@@ -57,7 +57,7 @@
                             <div class="card mb-3">
                                 <img src="img/taman eden.jpeg" class="card-img-top" alt="Destination 1" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Taman Eden 100</h5>
+                                    <h5 class="card-title"><i class="fas fa-camera"></i>&nbsp Taman Eden 100</h5>
                                     <p class="card-text">Taman Eden 100 adalah destinasi wisata yang menawarkan
                                         keindahan alam yang luar biasa. Terletak di tengah hutan pinus di Kota Batu menawarkan
                                         suasana yang tenang dan menegangkan bagi pengunjung yang ingin melepas penat dari
@@ -71,7 +71,7 @@
                             <div class="card mb-3">
                                 <img src="img/efrata waterfal.jpg" class="card-img-top" alt="Destination 2" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Air Terjun Efrata</h5>
+                                    <h5 class="card-title"><i class="fas fa-camera"></i>&nbsp Air Terjun Efrata</h5>
                                     <p class="card-text">Air Terjun Efrata Sumut adalah destinasi wisata alam
                                         dengan pemandangan menakjubkan dan air yang jernih. Pengunjung dapat berenang, trekking,
                                         atau hanya menikmati keindahan pemandangan sekitar. Terdapat juga warung makan dengan
@@ -85,7 +85,7 @@
                             <div class="card mb-3">
                                 <img src="img/Puncak Sipinsur.jpg" class="card-img-top" alt="Destination 3" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Puncak Sipinsur</h5>
+                                    <h5 class="card-title"><i class="fas fa-camera"></i>&nbsp Puncak Sipinsur</h5>
                                     <p class="card-text">Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
                                         pemandangan sawah, perbukitan hijau, dan pegunungan yang spektakuler. Pengunjung dapat
                                         hiking dan berkemah sambil menikmati udara segar dan keindahan alam. Cocok untuk pecinta
@@ -98,7 +98,7 @@
                             <div class="card mb-3">
                                 <img src="img/Lembah Bakkara.jpg" class="card-img-top" alt="Destination 4" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Lembah Bakkara</h5>
+                                    <h5 class="card-title"><i class="fas fa-camera"></i>&nbsp Lembah Bakkara</h5>
                                     <p class="card-text">Lembah Bakkara di Humbang Hasundutan, Sumatera Utara,
                                         menawarkan pemandangan sawah, sungai, dan perbukitan yang indah. Pengunjung dapat
                                         hiking, panjat tebing, berkuda, atau mencoba aktivitas air. Juga terdapat warung makan
@@ -112,7 +112,7 @@
                             <div class="card mb-3">
                                 <img src="img/bukit-simarjarunjung.jpg" class="card-img-top" alt="Destination 5" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Bukit Indah Simarjarunjung</h5>
+                                    <h5 class="card-title"><i class="fas fa-camera"></i>&nbsp Bukit Indah Simarjarunjung</h5>
                                     <p class="card-text">Lembah Bakkara di Sumatera Utara menawarkan pemandangan
                                         sawah, sungai, dan perbukitan hijau yang indah. Pengunjung dapat melakukan hiking,
                                         panjat tebing, berkuda, atau aktivitas air. Terdapat juga warung makan untuk mencicipi
@@ -126,7 +126,7 @@
                             <div class="card mb-3">
                                 <img src="img/Inna Parapat Hotel.jpg" class="card-img-top" alt="Destination 6" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Inna Parapat Hotel</h5>
+                                    <h5 class="card-title"><i class="fas fa-camera"></i>&nbsp Inna Parapat Hotel</h5>
                                     <p class="card-text"> Air Inna Parapat adalah destinasi wisata di Danau Toba
                                         yang menawarkan pemandangan yang memukau dan aktivitas seperti berenang, snorkeling, dan
                                         diving. Terdapat juga fasilitas restoran, tempat penginapan, dan toko souvenir. Cocok

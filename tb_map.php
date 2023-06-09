@@ -56,7 +56,9 @@
                             <div class="card mb-3">
                                 <img src="img/taman eden.jpeg" class="card-img-top" alt="Destination 1" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Taman Eden 100</h5>
+                                    <h5 class="card-title">
+                                        <i class="fas fa-camera"></i>&nbsp Taman Eden 100
+                                    </h5>
                                     <p class="card-text">
 
                                         Taman Eden 100 di Sumatera Utara menawarkan keindahan alam yang menakjubkan.
@@ -70,9 +72,41 @@
                         </div>
                         <div class="cardbx">
                             <div class="card mb-3">
+                                <img src="img/Lembah Bakkara.jpg" class="card-img-top" alt="Destination 4" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-camera"></i>&nbsp Lembah Bakkara
+                                    </h5>
+                                    <p class="card-text">Lembah Bakkara di Humbang Hasundutan, Sumatera Utara,
+                                        menawarkan pemandangan sawah, sungai, dan perbukitan yang indah. Pengunjung dapat
+                                        hiking, panjat tebing, berkuda, atau mencoba aktivitas air. Juga terdapat warung makan
+                                        untuk mencoba kuliner khas Sumatera Utara. Cocok untuk pengunjung yang ingin menikmati
+                                        alam dan aktivitas menarik di sekitar lembah.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/bukit-simarjarunjung.jpg" class="card-img-top" alt="Destination 5" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-camera"></i>&nbsp Bukit Indah Simarjarunjung
+                                    </h5>
+                                    <p class="card-text">Lembah Bakkara di Sumatera Utara menawarkan pemandangan
+                                        sawah, sungai, dan perbukitan hijau yang indah. Pengunjung dapat melakukan hiking,
+                                        panjat tebing, berkuda, atau aktivitas air. Terdapat juga warung makan untuk mencicipi
+                                        kuliner khas. Cocok untuk pengunjung yang ingin menikmati alam dan aktivitas menarik di
+                                        sekitar lembah.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
                                 <img src="img/toledo.jpg" class="card-img-top" alt="Destination 2" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Toledo InnToledo Inna</h5>
+                                    <h5 class="card-title"> <i class="fas fa-hotel"></i>&nbsp Toledo InnToledo Inna</h5>
                                     <p class="card-text">
                                         Hotel di Pematangsiantar, Sumatera Utara menawarkan kamar-kamar
                                         modern dengan fasilitas seperti AC dan TV layar datar. Terdapat
@@ -87,7 +121,9 @@
                             <div class="card mb-3">
                                 <img src="img/baren.jpg" class="card-img-top" alt="Destination 3" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Baren Coffee & Roastery</h5>
+                                    <h5 class="card-title">
+                                        <i class="fas fa-utensils"></i> &nbsp Baren Coffee & Roastery
+                                    </h5>
                                     <p class="card-text">
                                         Baren's Coffee & Roastery adalah tempat kopi yang menawarkan
                                         kopi berkualitas tinggi yang dipanggang dengan baik, serta
@@ -101,7 +137,9 @@
                             <div class="card mb-3">
                                 <img src="img/Puncak Sipinsur.jpg" class="card-img-top" alt="Destination 4" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Puncak Sipinsur</h5>
+                                    <h5 class="card-title">
+                                        <i class="fas fa-camera"></i>&nbsp Puncak Sipinsur
+                                    </h5>
                                     <p class="card-text">
                                         Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
                                         pemandangan sawah, perbukitan hijau, dan pegunungan yang
@@ -114,9 +152,69 @@
                         </div>
                         <div class="cardbx">
                             <div class="card mb-3">
+                                <img src="img/niagara.jpg" class="card-img-top" alt="Destination 1" />
+                                <div class="card-body">
+                                    <h5 class="card-title"> <i class="fas fa-hotel"></i>&nbsp Hotel Niagara Parapat</h5>
+                                    <p class="card-text">Hotel Niagara Parapat di tepi Danau Toba menawarkan
+                                        pemandangan indah dari kamar yang menghadap danau. Terdapat kolam renang, restoran, dan
+                                        spa, serta dekat dengan tempat wisata seperti Bukit Indah Simarjarunjung dan Air Terjun
+                                        Sipiso-piso. Pilihan tepat untuk menginap saat berkunjung ke Danau Toba.</p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/restaurant sehaat.jpg" class="card-img-top" alt="Destination 2" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-utensils"></i>&nbsp Restaurant Sehat
+                                    </h5>
+                                    <p class="card-text">Penatapan Restaurant di Danau Toba, Sumatera Utara,
+                                        menawarkan hidangan Indonesia dan Barat yang lezat dengan pemandangan indah dari danau.
+                                        Tempat ini memiliki pilihan yang luas untuk semua selera. Nikmati makanan lezat
+                                        sambil menikmati pemandangan alam yang indah di Danau Toba di Penatapan Restaurant.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/batikta.jpg" class="card-img-top" alt="Destination 4" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-gift"></i>&nbsp Batikta - Batik Batak Balige
+                                    </h5>
+                                    <p class="card-text">toko batik yang berlokasi di Kabupaten Samosir. Toko yang menawarkan berbagai macam jenis kain dan motif batik khas Indonesia,. Batik untuk pria dan wanita tersedia disini
+                                        dengan berbagai jenis seperti batik formal, batik tradisional dan batik modern, batik tulis, sogan, batik couple dan
+                                        lainnya.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
+                                <img src="img/pelabuhan balige.jpg" class="card-img-top" alt="Destination 6" />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-bus"></i> &nbsp Pelabuhan Balige
+                                    </h5>
+                                    <p class="card-text"> Pelabuhan Balige adalah sebuah pelabuhan di kawasan
+                                        Danau
+                                        Toba, Sumatera Utara, Indonesia. Pelabuhan ini menyediakan kapal penumpang yang
+                                        beroperasi menuju beberapa kota di sekitar Danau Toba, termasuk ke pulau Samosir.
+                                        Pelabuhan ini juga terletak dekat dengan beberapa objek wisata
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbx">
+                            <div class="card mb-3">
                                 <img src="img/airport silangit.jpg" class="card-img-top" alt="Destination 5" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Airport Silangit</h5>
+                                    <h5 class="card-title">
+                                        <i class="fas fa-bus"></i>&nbsp Airport Silangit
+                                    </h5>
                                     <p class="card-text">
                                         Bandara Silangit adalah gerbang utama ke Danau Toba yang
                                         terkenal di Sumatera Utara, Indonesia. Dengan terminal modern
@@ -132,7 +230,9 @@
                             <div class="card mb-3">
                                 <img src="img/airport kualanamu.jpg" class="card-img-top" alt="Destination 6" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Airport Kualanamu</h5>
+                                    <h5 class="card-title">
+                                        <i class="fas fa-bus"></i>&nbsp Airport Kualanamu
+                                    </h5>
                                     <p class="card-text">
                                         Bandara Internasional Kualanamu adalah bandara modern yang
                                         melayani penerbangan domestik dan internasional di Sumatera
