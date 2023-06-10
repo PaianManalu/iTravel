@@ -92,14 +92,6 @@
         <input type="submit" value="Upload Data">
     </form>
     <div>
-        <div>
-            <button id="tb_penginapan" class="table-button" onclick="changeTable('tb_penginapan')">Tabel Penginapan</button>
-            <button id="rumahmakan" class="table-button" onclick="changeTable('rumahmakan')">Tabel Rumah Makan</button>
-            <button id="tb_wisata" class="table-button" onclick="changeTable('tb_wisata')">Tabel Wisata</button>
-            <button id="tb_hotel" class="table-button" onclick="changeTable('tb_hotel')">Tabel Hotel</button>
-            <button id="tb_transportasi" class="table-button" onclick="changeTable('tb_transportasi')">Tabel Transportasi</button>
-        </div>
-
     </div>
 </body>
 

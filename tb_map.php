@@ -20,7 +20,7 @@
             <nav>
                 <ul>
                     <div class="navigation">
-                        <a href="home.php">Home</a>
+                        <a href=" home.php">Home</a>
                         <a href="tb_map.php">Map</a>
                         <a href="tb_contact.php">Contact Us</a>
                     </div>
@@ -513,10 +513,6 @@
                         marker.setMap(map);
                     });
 
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan nama silangit
-                    var silangitLatLng = new google.maps.LatLng(2.1478720598476975, 98.9623014145697);
-                    var silangitMarker = createMarker(silangitLatLng, 'Silangit');
-                    silangitMarker.setMap(map);
 
                     createButton("Wisata", "tb_wisata.php");
                     createButton("Rumah Makan", "tb_rumahmakan.php");
