@@ -153,30 +153,37 @@
         <div class="row">
             <section class="services" id="service">
                 <div class="box-container">
-                    <a href="tabel.php?table=tb_penginapan">
+                    <i class="fas fa-utensils"></i> <a href="queryy.php?category=inapan" class="query-button">
                         <div class="box">
                             <i class="fas fa-hotel"></i>
-                            <h3>Hotel</h3>
-                    </a>
-                </div>
-                <div class=" box">
-                    <a href="tabel.php?table=tb_wisata">
-                        <i class="fas fa-camera"></i>
-                        <h3>Wisata</h3>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="tabel.php?table=tb_rumahmakan">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Rumah Makan</h3>
-                    </a>
-                </div>
-                <div class="box">
-                    <a href="tabel.php?table=tb_transportasi">
-                        <i class="fas fa-bus"></i>
-                        <h3>Transportasi</h3>
-                    </a>
-                </div>
+                            <a href="queryy.php?category=inapan" class="query-button">
+                                <h3>Hotel</h3>
+                            </a>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-camera"></i>
+                            <a href="queryy.php?category=wisata" class="query-button">
+                                <h3>Wisata</h3>
+                            </a>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-utensils"></i>
+                            <a href="queryy.php?category=rumahmakan" class="query-button">
+                                <h3>Rumah Makan</h3>
+                            </a>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-bus"></i>
+                            <a href="queryy.php?category=transportasi" class="query-button">
+                                <h3>Transportasi</h3>
+                            </a>
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-utensils"></i>
+                            <a href="queryy.php?category=inapan" class="query-button">
+                                <h3>Inapan</h3>
+                            </a>
+                        </div>
             </section>
         </div>
         <div class="row">
@@ -197,7 +204,7 @@
                 </div>
                 <div class="box">
                     <i class="fas fa-map-marker-alt"></i> <!-- Ganti dengan ikon map yang sesuai -->
-                    <a href="tabel.php?table=tb_map">
+                    <a href="queryyy.php">
                         <h3>MAP</h3>
                     </a>
                 </div>

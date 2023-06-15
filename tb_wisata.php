@@ -5,7 +5,7 @@
     <title>Map</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="mapp.css">
     <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
@@ -21,9 +21,20 @@
             <nav>
                 <ul>
                     <div class="navigation">
-                        <a href="home.php">Home</a>
-                        <a href="tb_map.php">Map</a>
-                        <a href="tb_contact.php">Contact Us</a>
+                        <div id="button">
+                            <button class="raise">
+                                <a href="home.php">
+                                    Beranda</a>
+                            </button>
+                            <button class="raise">
+                                <a href="tb_map.php">
+                                    MAP</a>
+                            </button>
+                            <button class="raise">
+                                <a href="tb_contact.php">
+                                    Kontak</a>
+                            </button>
+                        </div>
                     </div>
                 </ul>
             </nav>
@@ -211,7 +222,7 @@
                     <?php
                     include "database.php";
 
-                    $sql = "SELECT * FROM tb_wisata";
+                    $sql = "SELECT * FROM tb_map WHERE category = 'wisata'";
                     $result = $conn->query($sql);
 
                     $locations = [];
@@ -223,8 +234,7 @@
                             $row['garis_bujur'],
                             $row['icon'],
                             $row['alamat'],
-                            $row['gambar'],
-                            $row['des']
+                            $row['gambar']
                         );
                     }
                     ?>
@@ -354,11 +364,13 @@
                     function createButton(label, url) {
                         var button = document.createElement("button");
                         button.innerHTML = label;
+                        button.classList.add("button"); // Menambahkan kelas CSS "button" pada tombol
                         map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
                         button.addEventListener("click", function() {
                             window.location.href = url;
                         });
                     }
+
 
                     for (var i = 0; i < locations.length; i++) {
 
@@ -413,9 +425,9 @@
                                 infoSidebar.innerHTML = '<div class="location-info">' +
                                     '<b>Keterangan :</b><br>' +
                                     '<b><h1>' + locations[i][0] + '</h1><b><br>' +
-                                    '<b>Lokasi :</b><br>' +
+                                    '<b></b>Lokasi :</b><br>' +
                                     '<h3>' + locations[i][4] + '</h3><br>' +
-                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br>' +
+                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br><br>' +
                                     '<h3>Rating</h3><br>' +
                                     '<form action="rating.php" method="POST">' +
                                     '<div class="rating">' +
@@ -432,7 +444,9 @@
                                     '</div><br>' +
                                     '<h3>Komentar</h3><br>' +
                                     '<textarea id="comment" name="comment"></textarea>' +
-                                    '<button type="submit">Simpan</button>' +
+                                    '<div class="button-wrapper">' +
+                                    '<button type="submit"><i class="fas fa-paper-plane"></i></button>' +
+                                    '</div>' +
                                     '</form>' +
                                     '</div>';
 

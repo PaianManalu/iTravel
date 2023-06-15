@@ -5,7 +5,7 @@
     <title>Map</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="mapp.css">
     <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
@@ -20,9 +20,20 @@
             <nav>
                 <ul>
                     <div class="navigation">
-                        <a href="home.php">Home</a>
-                        <a href="tb_map.php">Map</a>
-                        <a href="tb_contact.php">Contact Us</a>
+                        <div id="button">
+                            <button class="raise">
+                                <a href="home.php">
+                                    Beranda</a>
+                            </button>
+                            <button class="raise">
+                                <a href="tb_map.php">
+                                    MAP</a>
+                            </button>
+                            <button class="raise">
+                                <a href="tb_contact.php">
+                                    Kontak</a>
+                            </button>
+                        </div>
                     </div>
                 </ul>
             </nav>
@@ -117,8 +128,8 @@
                             <div class="card mb-3">
                                 <img src="img/helvetia.jpg" class="card-img-top" alt="Destination 5" />
                                 <div class="card-body">
-                                    <h5 class="card-title">Helvetia</h5>
-                                    <p class="card-text"><i class="fas fa-bus"></i>&nbsp Deskripsi singkat promosi loket helvetia: Promosi
+                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Helvetia</h5>
+                                    <p class="card-text"></i> Deskripsi singkat promosi loket helvetia: Promosi
                                         loket
                                         Helvetia, layanan yang memberikan kemudahan dalam melakukan berbagai transaksi
                                         keuangan
@@ -216,7 +227,7 @@
                     <?php
                     include "database.php";
 
-                    $sql = "SELECT * FROM tb_transportasi";
+                    $sql = "SELECT * FROM tb_map WHERE category = 'transportasi'";
                     $result = $conn->query($sql);
 
                     $locations = [];
@@ -228,8 +239,7 @@
                             $row['garis_bujur'],
                             $row['icon'],
                             $row['alamat'],
-                            $row['gambar'],
-                            $row['des']
+                            $row['gambar']
                         );
                     }
                     ?>
@@ -257,7 +267,7 @@
                             },
                             icon: {
                                 url: 'https://maps.google.com/mapfiles/ms/icons/black-dot.png',
-                                scaledSize: new google.maps.Size(20, 20)
+                                scaledSize: new google.maps.Size(40, 40)
                             }
                         });
 
@@ -360,11 +370,13 @@
                     function createButton(label, url) {
                         var button = document.createElement("button");
                         button.innerHTML = label;
+                        button.classList.add("button"); // Menambahkan kelas CSS "button" pada tombol
                         map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
                         button.addEventListener("click", function() {
                             window.location.href = url;
                         });
                     }
+
 
                     for (var i = 0; i < locations.length; i++) {
 
@@ -419,9 +431,9 @@
                                 infoSidebar.innerHTML = '<div class="location-info">' +
                                     '<b>Keterangan :</b><br>' +
                                     '<b><h1>' + locations[i][0] + '</h1><b><br>' +
-                                    '<b>Lokasi :</b><br>' +
+                                    '<b></b>Lokasi :</b><br>' +
                                     '<h3>' + locations[i][4] + '</h3><br>' +
-                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br>' +
+                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br><br>' +
                                     '<h3>Rating</h3><br>' +
                                     '<form action="rating.php" method="POST">' +
                                     '<div class="rating">' +
@@ -438,7 +450,9 @@
                                     '</div><br>' +
                                     '<h3>Komentar</h3><br>' +
                                     '<textarea id="comment" name="comment"></textarea>' +
-                                    '<button type="submit">Simpan</button>' +
+                                    '<div class="button-wrapper">' +
+                                    '<button type="submit"><i class="fas fa-paper-plane"></i></button>' +
+                                    '</div>' +
                                     '</form>' +
                                     '</div>';
 

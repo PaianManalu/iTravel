@@ -4,8 +4,7 @@
 <head>
     <title>Map</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="mapp.css">
     <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
@@ -17,15 +16,24 @@
     <section class="header" id="home">
         <header>
             <a href="../php/home.php" class="logo">iTravel</a>
-            <nav>
-                <ul>
-                    <div class="navigation">
-                        <a href=" home.php">Home</a>
-                        <a href="tb_map.php">Map</a>
-                        <a href="tb_contact.php">Contact Us</a>
+            <ul>
+                <div class="navigation">
+                    <div id="button">
+                        <button class="raise">
+                            <a href="home.php">
+                                Beranda</a>
+                        </button>
+                        <button class="raise">
+                            <a href="tb_map.php">
+                                MAP</a>
+                        </button>
+                        <button class="raise">
+                            <a href="tb_contact.php">
+                                Kontak</a>
+                        </button>
                     </div>
-                </ul>
-            </nav>
+                </div>
+            </ul>
         </header>
     </section>
     <section class="body">
@@ -251,95 +259,12 @@
             include "footer.php";
             ?>
 
-
-
             <script>
                 var input = document.getElementById("search-box");
                 var select = document.getElementById("options");
                 var data = [
-                    "Lago Hotel & Resto",
-                    "Pondok Berata Dapdap",
-                    "Hotel Santo Djaya",
-                    "inagodang Park",
-                    "PIK ( Penginapan Indah Kirana",
-                    "Parapat Danau Toba",
-                    "Rumah Nek Ribut",
-                    "Desa Huta Baru",
-                    "OYO 90920 Agave Hotel",
-                    "OYO 90509 Nadia Hotel",
-                    "Batavia Hotel",
-                    "Sapadia Hotel",
-                    "Pancur Gading Hotel dan Resort",
-                    "Lim's Hotel dan Cafe",
-                    "Perumahan Beringin Indah Permai",
-                    "Grand Family",
-                    "Pancur Gading Hotel dan Resort",
-                    "Tiara Bunga Hotel",
-                    "Rumah Makan Srikandi",
-                    "Rumah Makan Muslim Bundo Minang",
-                    "Restaurant Asia",
-                    "Parapat Pansit",
-                    "Damar Toba ~ Lakeside Eatery & Stay",
-                    "Rm Asido Rohana ",
-                    "Rumah makan jahir tombur bpk gultom",
-                    "Rest Area Modern Bamboo",
-                    "RM MUSLIM MAS ARI",
-                    "RM. Khas Batak Horas Silindung",
-                    "Restaurant Panorama ori",
-                    "Mie Gacoan Medan Karya",
-                    "Ayam Penyet Ar - Rahman Pasar 10 Tembung",
-                    "RUMAH MAKAN AJO TANJUNG",
-                    "Warung Pak Dikun",
-                    "Rumah Makan Restu",
-                    "WISNU TATAH INDAH (SOUVENIR UKIRAN BATAK)",
-                    "Pasar Balige",
-                    "SEKKA Craft Supplies",
-                    "Toko Grosir Adriell Gultom shop balige",
-                    "Remon Ponsel Situmorang",
-                    "Lapak Rosa Girsang (Fresh Farmers Market)",
-                    "Toko Raja Oloan 2",
-                    "Jaya Ponsel Mandiri",
-                    "Pekan Tiga Dolok",
-                    "Pekan Tiga Balata",
-                    "Roti Kacang R2.961105723051156ajawali",
-                    "TOKO 35 Siantar",
-                    "Poshop.Id",
-                    "Irian Supermarket & Dept. Store",
-                    "Alfamart setia budi t.tinggi",
-                    "Alfamart Simpang Matapao",
-                    "Carrefour - Medan Citra Garden",
-                    "Pekan Minggu Percut Sei Tuan Deli Serdang",
-                    "Stasiun Kereta Api Baja Linggei",
-                    "Stasiun Siantar",
-                    "Stasiun KA Galang",
-                    "Terminal Amplas",
-                    "Terminal Bus Sumatera Transport",
-                    "Terminal Pinang Baris Medan",
-                    "Terminal Helvetia",
-                    "Terminal Tanjung Gusta",
-                    "Pelabuhan Tigaraja / Tiga Raja Pier",
-                    "Pelabuhan Penyeberangan Balige",
-                    "Bandara Silangit International Airport",
-                    "Bandara Kualanamu International Airport",
-                    "Pantai Inna Parapat",
-                    "Bukit Gibeon",
-                    "Bukit Sipolha dan Pulau Hole",
-                    "Air Terjun efrata Harian Boho",
-                    "Tankahan Bah Alip",
-                    "Air Terjun Biak- Biak",
-                    "Waterpark Gundaling Paya Pasir ",
-                    "Bah Bolon Arum Jeram",
-                    "Pantai Mutiara 88",
-                    "Pantai Pasir Putih Parparean",
-                    "Museum Batak TB Silalahi Center",
-                    "Bukit Doa",
-                    "Tanjung unta,Simalungun",
-                    "Kebun Teh Sidamanik",
-                    "Bah Bolon Arum Jeram",
-                    "Museum Kota",
-                    "Desa Meat",
-                    "Pakkodian"
 
+                    "Lago Hotel & Resto", "Pondok Berata Dapdap", "Hotel Santo Djaya", "Sinagodang Park", "PIK ( Penginapan Indah Kirana )", "Parapat Danau Toba", "Rumah Nek Ribut", "Desa Huta Baru", "OYO 90920 Agave Hotel", "OYO 90509 Nadia Hotel", "Batavia Hotel", "Sapadia Hotel", "Pancur Gading", "Lim's Hotel dan Cafe", "Perumahan Beringin Indah Permai", "Grand Family", "Pancur Gading Hotel dan Resort", "Tiara Bunga Hotel", "Rumah Makan Srikandi", "Rumah Makan Muslim Bundo Minang", "Restaurant Asia", "Parapat Pansi", "Damar Toba ~ Lakeside Eatery & Stay", "Rm Asido Rohana", "Rumah makan jahir tombur bpk gultom", "Rest Area Modern Bamboo", "RM MUSLIM MAS ARI", "RM. Khas Batak Horas Silindung", "Restaurant Panorama ori", "Mie Gacoan Medan Karya", "Ayam Penyet Ar - Rahman Pasar 10 Tembung", "RUMAH MAKAN AJO TANJUNG", "Warung Pak Dikun", "Rumah Makan Restu", "WISNU TATAH INDAH (SOUVENIR UKIRAN BATAK", "Pasar Balige", "SEKKA Craft Supplies", "Toko Grosir Adriell Gultom shop balige", "Remon Ponsel Situmorang Lapak Rosa Girsang (Fresh Farmers Market)", "Toko Raja Oloan 2", "Jaya Ponsel Mandiri", "Pekan Tiga Dolok", "Pekan Tiga Balata", "Roti Kacang R2.961105723051156ajawali", "TOKO 35 Siantar | RAMBUNGMERAH |", "Poshop.Id", "Irian Supermarket & Dept. Store", "Alfamart setia budi t.tinggi", "Alfamart Simpang Matapao", "Carrefour - Medan Citra Garden", "Pekan Minggu Percut Sei Tuan Deli Serdang", "Stasiun Kereta Api Baja Linggei", "Stasiun Siantar", "Stasiun KA Galang", "Stasiun Lubuk Pakam", "Terminal Amplas", "Terminal Bus Sumatera Transport", "Terminal Pinang Baris Medan", "Terminal Helvetia", "Terminal Tanjung Gusta", "Pelabuhan Tigaraja / Tiga Raja Pier", "Pelabuhan Penyeberangan Balige", "Bandara Silangit International Airport", "Bandara Kualanamu International Airport", "Pantai Inna Parapat", "Bukit Gibeon", "Bukit Sipolha dan Pulau Hole", "Air Terjun efrata Harian Boho", "Tankahan Bah Alip", "Air Terjun Biak- Biak", "Waterpark Gundaling Paya Pasir", "Bah Bolon Arum Jeram", "Pantai Mutiara 88", "Pantai Pasir Putih Parparean", "Museum Batak TB Silalahi Center", "Bukit Doa", "Tanjung unta,Simalungun", "Kebun Teh Sidamanik", "Bah Bolon Arum Jeram", "Museum Kota", "Desa Meat", "Pakkodian", "Hotel Nabasa", "HOTRONA HOTEL", "Mabar Homestay & Taxi", "Patane l", "Desa Bonandolok Sosortaguru Sinurat", "BAGAS HOMESTAY", "Ps. Lumbun Julu", "Star Beach Hotel", "Hotel Niagara Parapat", "Rumah Nek Ribut", "OYO 2045 Hotel 211", "Patra Parapat Hotel", "Desa Lumban Holbung Nabalau", "Rumah Makan Padang SABANA MINANG", "Restaurant Sehat", "Restaurant Istana Minang 2", "Restaurant Asia", "nama", "Restaurant Istana Minang 2", "Rumah Makan Lembah Anai Salero Minang", "RM. Fly Over Laguboti", "Bpk 'Jaya'", "Wr. Muslim", "Rest Area Modern Bamboo", "Rumah Makan Sri Kemuning", "Pintu Batu Tepi Sawah", "Kepiting Gokil's", "Lemang Barokah", "Rumah Makan Barokah", "KFC", "RM Pondok Senangkong", "Pelangi FC & Rainbow Cafe", "FWR4+P3P", "Batikta - Batik Batak Balige", "Toko Enjelita Balige", "Souvenir pusat oleh-oleh PAPA ROZTI", "Toko P Sihombing", "Toko N. Sinaga / UD.Florencia (NEGER SINAGA)", "Alfamidi sm raja parapat", "Distro kaos Batak CKT", "Panglong Pertukangan Kayu UD. SITOLU SADA CIPTA GE...", "Toko Citra", "Parluasan Traditional Market", "Stasiun Siantar", "Stasiun K.A. Sei Rampah", "Stasiun Kereta Api Perbaungan", "Terminal Amplas", "Tanjung unta,Simalungun", "Bukit Sipolha dan Pulau Hole", "Taman Hewan", "Kebun Teh Sidamanik", "Waterpark Gundaling Paya Pasir", "Bah Bolon Arum Jeram", "Museum Kota", "Danau Laut Tador", "Air Terjun Widuri", "Situmurun Waterfall", "Taman Eden 100 Tobasa", "Pantai Pasir Putih Parparean", "Pantai BUL BUL", "Museum Batak TB Silalahi Center", "Tiara Bunga Hotel", "Pakkodian", "Desa Meat", "Bukit Doa", "Monumen Prasasti Geopark", "Puncak Sipinsur", "Lembah Bakkara", "IT DEL"
                 ];
                 //loop for yang akan berjalan sebanyak elemen dalam array data berdasar option yang diberikan
                 for (var i = 0; i < data.length; i++) {
@@ -348,8 +273,7 @@
                     select.appendChild(option);
                 }
 
-                // kode ini membantu mengurangi jumlah opsi yang ditampilkan menjadi jumlah yang lebih terkelola (maksimal 6 dalam kode yang diberikan). 
-                var optionCounter = 0;
+                var optionCounter = 0; // Add this line   
                 input.addEventListener("input", function() {
                     var value = this.value.toLowerCase();
                     var options = select.getElementsByTagName("option");
@@ -364,7 +288,6 @@
                     }
                     select.classList.add('show');
                 });
-
 
                 // Hide options when click outside
                 document.addEventListener('click', function(event) {
@@ -514,6 +437,7 @@
                     });
 
 
+
                     createButton("Wisata", "tb_wisata.php");
                     createButton("Rumah Makan", "tb_rumahmakan.php");
                     createButton("Penginapan", "tb_penginapan.php");
@@ -523,11 +447,14 @@
                     function createButton(label, url) {
                         var button = document.createElement("button");
                         button.innerHTML = label;
+                        button.classList.add("button"); // Menambahkan kelas CSS "button" pada tombol
                         map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
                         button.addEventListener("click", function() {
                             window.location.href = url;
                         });
                     }
+
+
 
                     for (var i = 0; i < locations.length; i++) {
 
@@ -549,7 +476,7 @@
                             position: new google.maps.LatLng(locations[i][1], locations[i][2]),
                             icon: {
                                 url: locations[i][3],
-                                scaledSize: new google.maps.Size(35, 30)
+                                scaledSize: new google.maps.Size(15, 20)
                             },
                             map: map
                         });
@@ -580,9 +507,9 @@
                                 infoSidebar.innerHTML = '<div class="location-info">' +
                                     '<b>Keterangan :</b><br>' +
                                     '<b><h1>' + locations[i][0] + '</h1><b><br>' +
-                                    '<b>Lokasi :</b><br>' +
+                                    '<b></b>Lokasi :</b><br>' +
                                     '<h3>' + locations[i][4] + '</h3><br>' +
-                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br>' +
+                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br><br>' +
                                     '<h3>Rating</h3><br>' +
                                     '<form action="rating.php" method="POST">' +
                                     '<div class="rating">' +
@@ -599,7 +526,9 @@
                                     '</div><br>' +
                                     '<h3>Komentar</h3><br>' +
                                     '<textarea id="comment" name="comment"></textarea>' +
-                                    '<button type="submit">Simpan</button>' +
+                                    '<div class="button-wrapper">' +
+                                    '<button type="submit"><i class="fas fa-paper-plane"></i></button>' +
+                                    '</div>' +
                                     '</form>' +
                                     '</div>';
 
@@ -612,9 +541,6 @@
                     google.maps.event.addListener(map, 'click', function() {
                         infoSidebar.style.display = 'none'; // sembunyikan sidebar
                     });
-
-
-
 
                     // Tambahkan event listener untuk input pencarian
                     document.getElementById('search-box').addEventListener('input', function() {

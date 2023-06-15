@@ -1,0 +1,47 @@
+.button {
+    background-color: white;
+    /* Warna latar belakang putih bening dengan transparansi */
+    border: none;
+    color: black;
+    margin: 20px;
+    /* Warna teks */
+    padding: 10px 25px;
+    /* Padding tombol */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    /* Radius melengkung pada tombol */
+    margin-right: 10px;
+    /* Jarak antara tombol sebesar 20px */
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: aqua;
+    /* Warna latar belakang putih bening saat dihover dengan transparansi */
+}
+
+.button:last-child {
+    margin-right: 0;
+    /* Menghilangkan margin kanan pada tombol terakhir */
+}
+
+.button-wrapper {
+    display: inline-block;
+}
+
+.button-wrapper button {
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.button-wrapper button i {
+    margin-right: 5px;
+}

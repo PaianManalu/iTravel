@@ -70,7 +70,6 @@ if (isset($_GET['table'])) {
         }
     </style>
 </head>
-<h1>Data dari <span id="table-name"><?php echo $selectedTable; ?></span></h1><br><br>
 
 <?php
 $server = "localhost";
@@ -82,33 +81,39 @@ if (!$db) {
     die("Gagal Terhubung Dengan Database : " . mysqli_connect_error());
 }
 
-// Query untuk SELECT dari tabel yang dipilih
-$query_selected_table = "SELECT `id`, `nama`, `garis_lintang`, `garis_bujur`, `alamat`, `icon`, `gambar` FROM `$selectedTable`";
-$result_selected_table = mysqli_query($db, $query_selected_table);
+// Mengecek apakah parameter category ada dalam URL
+if (isset($_GET['category'])) {
+    $category = $_GET['category'];
 
-if (mysqli_num_rows($result_selected_table) > 0) {
-    echo "<table>";
-    echo "<thead><tr><th>ID</th><th>Nama</th><th>Alamat</th></tr></thead>";
-    echo "<tbody>";
+    // Melakukan sanitasi pada kategori untuk mencegah serangan SQL Injection
+    $category = mysqli_real_escape_string($db, $category);
 
-    while ($row = mysqli_fetch_assoc($result_selected_table)) {
-        echo "<tr>";
-        echo "<td>" . $row['id'] . "</td>";
-        echo "<td>" . $row['nama'] . "</td>";
-        echo "<td>" . $row['alamat'] . "</td>";
-        echo "</tr>";
+    // Query untuk SELECT dari tabel dengan kategori yang diterima
+    $sql = "SELECT * FROM tb_map WHERE category = '$category'";
+    $result = mysqli_query($db, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo "<h1>Data dari " . $category . " <span id=\"table-name\">" . $selectedTable . "</span></h1><br><br>";
+        echo "<table>";
+        echo "<thead><tr><th>ID</th><th>Nama</th><th>Alamat</th></tr></thead>";
+        echo "<tbody>";
+
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<tr>";
+            echo "<td>" . $row['id'] . "</td>";
+            echo "<td>" . $row['nama'] . "</td>";
+            echo "<td>" . $row['alamat'] . "</td>";
+            echo "</tr>";
+        }
+
+        echo "</tbody>";
+        echo "</table>";
+    } else {
+        echo "Tidak ada data yang ditemukan.";
     }
-
-    echo "</tbody>";
-    echo "</table>";
 } else {
-    echo "Tidak ada data yang ditemukan.";
+    echo "Kategori tidak ditemukan.";
 }
+
+mysqli_close($db);
 ?>
-
-<br><br>
-
-<a href="home.php" class="back-button">Kembali ke Halaman Utama</a>
-</body>
-
-</html>

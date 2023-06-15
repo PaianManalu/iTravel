@@ -6,7 +6,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            background-color: #f2f2f2;
+            padding: 20px;
         }
 
         h2 {
@@ -14,17 +15,18 @@
         }
 
         form {
-            width: 450px;
-            border: 1px solid #ccc;
-            padding: 40px;
+            width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
             border-radius: 5px;
-            background-color: #f5f5f5;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         label {
             display: block;
             margin-bottom: 10px;
-            color: #333;
+            color: #666;
             font-weight: bold;
         }
 
@@ -38,10 +40,10 @@
         }
 
         input[type="submit"] {
-            background-color: #4CAF50;
+            background-color: #4caf50;
             color: #fff;
-            border: none;
             padding: 10px 20px;
+            border: none;
             border-radius: 4px;
             cursor: pointer;
         }
@@ -49,12 +51,8 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
-
-        .error-message {
-            color: red;
-            margin-bottom: 10px;
-        }
     </style>
+
 </head>
 <script>
     function changeTable(table) {

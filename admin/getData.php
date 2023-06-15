@@ -27,8 +27,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
             header("Location: admin.php");
             exit();
         } else {
-            // Sandi salah
-            echo "Nama pengguna atau sandi salah.";
+            // Login gagal
+            header("Location: home.php");
+            exit();
         }
     }
 }

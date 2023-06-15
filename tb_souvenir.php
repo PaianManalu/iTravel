@@ -5,107 +5,10 @@
     <title>Map</title>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="mapp.css">
     <link rel="stylesheet" href="map.css">
     <script src="maps.js"></script>
     <style>
-        * {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /*content*/
-        .body .bodyBx {
-            position: relative;
-            background: linear-gradient(to left, #00000000, transparent),
-                linear-gradient(to right, #000000 1%, transparent), url(img/bgbg2.jpg );
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            height: 39vh;
-        }
-
-        .body::before {
-            display: flex;
-            align-items: center;
-            content: "";
-            background: #000;
-            position: absolute;
-            max-height: 43vh;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: -1;
-        }
-
-        .body .content h1 {
-            font-size: 70px;
-            font-weight: 750;
-            color: white;
-        }
-
-        .body .content p {
-            max-width: 700px;
-            font-size: 40px;
-            margin: 20px 0 40px;
-            color: #fff;
-        }
-
-        .body .content .btn-box {
-            display: flex;
-            width: 345px;
-            height: 50px;
-        }
-
-        .btn-box a {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 150px;
-            height: 100%;
-            background: transparent;
-            font-size: 26px;
-            color: #0dcdc2;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 1px;
-            padding: 10px 20px;
-        }
-
-        .btn-box .raise {
-            border: 2px solid #0dcdc2;
-            border-radius: 20px;
-            background: transparent;
-
-        }
-
-        .navigation button.raise {
-            --color: #0dcdc2;
-            --hover: #00bab0;
-        }
-
-        button {
-            color: var(--color);
-            transition: 0.25s;
-        }
-
-        button:hover,
-        button:focus {
-            border-color: var(--hover);
-            color: #fff;
-        }
-
-        .raise:hover,
-        .raise:focus {
-            box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-            transform: translateY(-0.25em);
-        }
     </style>
 
 </head>
@@ -117,9 +20,20 @@
             <nav>
                 <ul>
                     <div class="navigation">
-                        <a href="home.php">Home</a>
-                        <a href="tb_map.php">Map</a>
-                        <a href="tb_contact.php">Contact Us</a>
+                        <div id="button">
+                            <button class="raise">
+                                <a href="home.php">
+                                    Beranda</a>
+                            </button>
+                            <button class="raise">
+                                <a href="tb_map.php">
+                                    MAP</a>
+                            </button>
+                            <button class="raise">
+                                <a href="tb_contact.php">
+                                    Kontak</a>
+                            </button>
+                        </div>
                     </div>
                 </ul>
             </nav>
@@ -302,7 +216,7 @@
                     <?php
                     include "database.php";
 
-                    $sql = "SELECT * FROM tb_souvenir";
+                    $sql = "SELECT * FROM tb_map WHERE category = 'souvenir'";
                     $result = $conn->query($sql);
 
                     $locations = [];
@@ -314,8 +228,7 @@
                             $row['garis_bujur'],
                             $row['icon'],
                             $row['alamat'],
-                            $row['gambar'],
-                            $row['des']
+                            $row['gambar']
                         );
                     }
                     ?>
@@ -444,11 +357,13 @@
                     function createButton(label, url) {
                         var button = document.createElement("button");
                         button.innerHTML = label;
+                        button.classList.add("button"); // Menambahkan kelas CSS "button" pada tombol
                         map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
                         button.addEventListener("click", function() {
                             window.location.href = url;
                         });
                     }
+
 
                     for (var i = 0; i < locations.length; i++) {
 
@@ -503,9 +418,9 @@
                                 infoSidebar.innerHTML = '<div class="location-info">' +
                                     '<b>Keterangan :</b><br>' +
                                     '<b><h1>' + locations[i][0] + '</h1><b><br>' +
-                                    '<b>Lokasi :</b><br>' +
+                                    '<b></b>Lokasi :</b><br>' +
                                     '<h3>' + locations[i][4] + '</h3><br>' +
-                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br>' +
+                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br><br>' +
                                     '<h3>Rating</h3><br>' +
                                     '<form action="rating.php" method="POST">' +
                                     '<div class="rating">' +
@@ -522,9 +437,12 @@
                                     '</div><br>' +
                                     '<h3>Komentar</h3><br>' +
                                     '<textarea id="comment" name="comment"></textarea>' +
-                                    '<button type="submit">Simpan</button>' +
+                                    '<div class="button-wrapper">' +
+                                    '<button type="submit"><i class="fas fa-paper-plane"></i></button>' +
+                                    '</div>' +
                                     '</form>' +
                                     '</div>';
+
 
                             };
                         })(marker, i));

@@ -5,57 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="home.css">
     <script src="../js/home.js"></script>
     <title>i-Travel</title>
-    <style>
-        .navigation a {
-            font-size: 26px;
-            text-decoration: none;
-            color: #0dcdc2;
-            font-weight: 400;
-            margin-left: 5px;
-            transition: background 0.3s ease;
-            position: relative;
-            z-index: 1;
-            padding: 7px 15px;
-            /* Tambahkan border tipis putih pada menu yang aktif */
-            border: 1px solid transparent;
-        }
 
-        .navigation button {
-            background: none;
-            border: 2px solid;
-            font: inherit;
-            line-height: 1;
-            margin: 0.5em;
-            padding: 1em 2em;
-        }
-
-        .navigation button.raise {
-            --color: #0dcdc2;
-            --hover: #00bab0;
-        }
-
-        button {
-            color: var(--color);
-            transition: 0.25s;
-        }
-
-        button:hover,
-        button:focus {
-            border-color: var(--hover);
-            color: #fff;
-        }
-
-        .raise:hover,
-        .raise:focus {
-            box-shadow: 0 0.8em 0.8em -0.4em var(--hover);
-            transform: translateY(-0.25em);
-        }
-    </style>
 </head>
 
 <body>
@@ -357,7 +311,7 @@
         <div class="box-container">
             <div class="box">
                 <i class="fas fa-hotel"></i>
-                <a href="tabel.php?table=tb_penginapan">
+                <i class="fas fa-utensils"></i> <a href="query.php?category=inapan" class="query-button">
                     <h3>Hotel</h3>
                 </a>
                 <p>
@@ -369,7 +323,7 @@
             </div>
             <div class=" box">
                 <i class="fas fa-camera"></i>
-                <a href="tabel.php?table=tb_wisata">
+                <i class="fas fa-utensils"></i> <a href="query.php?categoty=wisata" class="query-button">
                     <h3>Wisata</h3>
                 </a>
                 <p>
@@ -380,8 +334,7 @@
                 </a>
             </div>
             <div class="box">
-                <i class="fas fa-utensils"></i>
-                <a href="tabel.php?table=tb_rumahmakan">
+                <i class="fas fa-utensils"></i> <a href="query.php?category=rumahmakan" class="query-button">
                     <h3>Rumah Makan</h3>
                 </a>
                 <p>
@@ -393,7 +346,7 @@
             </div>
             <div class="box">
                 <i class="fas fa-bus"></i>
-                <a href="tabel.php?table=tb_transportasi">
+                <i class="fas fa-utensils"></i> <a href="query.php?category=transportasi" class="query-button">
                     <h3>Transportasi</h3>
                 </a>
                 <p>
@@ -406,7 +359,7 @@
             </div>
             <div class="box">
                 <i class="fas fa-gift"></i>
-                <a href="tabel.php?table=tb_souvenir">
+                <i class="fas fa-utensils"></i> <a href="query.php?category=souvenir" class="query-button">
                     <h3>Souvenir</h3>
                 </a>
                 <p>
