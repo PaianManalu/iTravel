@@ -310,8 +310,7 @@
         <h1 class="heading">Layanan</h1>
         <div class="box-container">
             <div class="box">
-                <i class="fas fa-hotel"></i>
-                <i class="fas fa-utensils"></i> <a href="query.php?category=inapan" class="query-button">
+                <i class="fas fa-hotel"></i> <a href="query.php?category=inapan" class="query-button">
                     <h3>Hotel</h3>
                 </a>
                 <p>
@@ -322,8 +321,7 @@
                 </a>
             </div>
             <div class=" box">
-                <i class="fas fa-camera"></i>
-                <i class="fas fa-utensils"></i> <a href="query.php?categoty=wisata" class="query-button">
+                <i class="fas fa-camera"></i> <a href="query.php?category=wisata" class="query-button">
                     <h3>Wisata</h3>
                 </a>
                 <p>
@@ -345,8 +343,7 @@
                 </a>
             </div>
             <div class="box">
-                <i class="fas fa-bus"></i>
-                <i class="fas fa-utensils"></i> <a href="query.php?category=transportasi" class="query-button">
+                <i class="fas fa-bus"></i> <a href="query.php?category=transportasi" class="query-button">
                     <h3>Transportasi</h3>
                 </a>
                 <p>
@@ -358,8 +355,7 @@
                 </a>
             </div>
             <div class="box">
-                <i class="fas fa-gift"></i>
-                <i class="fas fa-utensils"></i> <a href="query.php?category=souvenir" class="query-button">
+                <i class="fas fa-gift"></i> <a href="query.php?category=souvenir" class="query-button">
                     <h3>Souvenir</h3>
                 </a>
                 <p>
