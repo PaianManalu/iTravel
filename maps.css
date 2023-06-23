@@ -1,3 +1,86 @@
+html,
+body {
+  height: 95%;
+  margin: 1%;
+  padding: 3;
+  background-color: white !important;
+}
+
+.bodyy {
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.destination {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding: 0 50px;
+}
+
+.card {
+  width: 600px;
+  height: 680px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(13, 205, 194, 0.2);
+  padding-bottom: 2rem;
+  margin: 3rem 3rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #0dcdc2;
+  text-decoration: none;
+}
+.card a {
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1rem 3rem rgba(13, 205, 194, 0.4),
+    0 0.5rem 1rem rgba(13, 205, 194, 0.3);
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 25px;
+  transition: filter 0.3s;
+}
+
+.card-img-top:hover {
+  filter: brightness(60%);
+}
+
+.card-body {
+  padding: 1rem 4.5rem;
+  margin-bottom: 120px;
+}
+.card-body a {
+  color: #000000;
+}
+
+.card-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #0dcdc2;
+}
+
+.card-text {
+  font-size: 20px;
+}
+
 * {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -6,32 +89,52 @@
   box-sizing: border-box;
 }
 
-/*header*/
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 10%;
-  z-index: 100;
-  transition: 0.6s;
-  background: #000;
-  align-items: center;
-}
-
-.logo {
+/*content*/
+.body .bodyBx {
   position: relative;
-  font-weight: bold;
-  color: #0dcdc2;
-  text-decoration: none;
-  font-size: 3.5em;
-  letter-spacing: 2px;
-  transition: 0.6s;
+  background: linear-gradient(to left, #00000000, transparent),
+    linear-gradient(to right, #000000 1%, transparent), url(img/bgbg2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  height: 39vh;
 }
 
-/* navigasi */
+.body::before {
+  display: flex;
+  align-items: center;
+  content: "";
+  background: #000;
+  position: absolute;
+  max-height: 43vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.body .content h1 {
+  font-size: 70px;
+  font-weight: 750;
+  color: white;
+}
+
+.body .content p {
+  max-width: 700px;
+  font-size: 40px;
+  margin: 20px 0 40px;
+  color: #fff;
+}
+
+.body .content .btn-box {
+  display: flex;
+  width: 345px;
+  height: 50px;
+}
+
 .navigation a {
   font-size: 26px;
   text-decoration: none;
@@ -77,76 +180,388 @@ button:focus {
   transform: translateY(-0.25em);
 }
 
-/*content*/
-.body .bodyBx {
-  position: relative;
-  background: linear-gradient(to left, #00000000, transparent),
-    linear-gradient(to right, #000000 1%, transparent), url(img/bgbg2.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  height: 58vh;
-  margin-left: 10%;
+.button {
+  background-color: white;
+  /* Warna latar belakang putih bening dengan transparansi */
+  border: none;
+  color: black;
+  margin: 20px;
+  /* Warna teks */
+  padding: 10px 25px;
+  /* Padding tombol */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  /* Radius melengkung pada tombol */
+  margin-right: 10px;
+  /* Jarak antara tombol sebesar 20px */
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Warna latar belakang putih bening saat dihover dengan transparansi */
+}
+
+.button:last-child {
   margin-right: 0;
-  min-height: 100%;
-  margin-top: 115px;
+  /* Menghilangkan margin kanan pada tombol terakhir */
 }
 
-.body::before {
-  display: flex;
-  align-items: center;
-  content: "";
-  background: #000;
+.button {
+  background-color: white;
+  /* Warna latar belakang putih bening dengan transparansi */
+  border: none;
+  color: black;
+  margin: 20px;
+  /* Warna teks */
+  padding: 10px 25px;
+  /* Padding tombol */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  /* Radius melengkung pada tombol */
+  margin-right: 10px;
+  /* Jarak antara tombol sebesar 20px */
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Warna latar belakang putih bening saat dihover dengan transparansi */
+}
+
+.button:last-child {
+  margin-right: 0;
+  /* Menghilangkan margin kanan pada tombol terakhir */
+}
+
+.search {
+  position: relative;
+}
+
+.search input[type="text"] {
+  padding-right: 70px;
+  /* Menambahkan ruang kosong untuk tombol */
+}
+
+.search .options-container {
   position: absolute;
-  max-height: 69.2vh;
-  top: 0;
-  bottom: 0;
+  top: 100%;
   left: 0;
-  right: 0;
-  z-index: -1;
   width: 100%;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
-.body .content h1 {
-  font-size: 70px;
-  font-weight: 750;
-  color: #0dcdc2;
+.search .options-container option {
+  padding: 5px;
+  font-size: 14px;
+  color: #333;
 }
 
-.body .content p {
-  max-width: 700px;
-  font-size: 40px;
-  margin: 20px 0 40px;
-  color: #fff;
-}
-
-.body .content .btn-box {
-  display: flex;
-  width: 345px;
-  height: 50px;
-}
-
-.btn-box a {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
+.search button[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
   height: 100%;
-  background: transparent;
-  font-size: 26px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#search-options option {
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#search-box {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  color: black;
+  background-color: #fff;
+  margin: 14px;
+  font-family: "Amarante";
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+#search-box::placeholder {
+  color: black;
+  font-weight: 500;
+}
+
+#search-box:focus {
+  outline: none;
+  border-color: black;
+  box-shadow: 0 8px 15px black(255, 140, 0, 0.4);
+}
+
+.button {
+  background-color: white;
+  /* Warna latar belakang putih bening dengan transparansi */
+  border: none;
+  color: black;
+  margin: 20px;
+  /* Warna teks */
+  padding: 10px 25px;
+  /* Padding tombol */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  /* Radius melengkung pada tombol */
+  margin-right: 10px;
+  /* Jarak antara tombol sebesar 20px */
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Warna latar belakang putih bening saat dihover dengan transparansi */
+}
+
+.button:last-child {
+  margin-right: 0;
+  /* Menghilangkan margin kanan pada tombol terakhir */
+}
+
+#info-sidebar {
+  width: 500px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  display: none;
+}
+
+#options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-top: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+#options option {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#options option:hover {
+  background-color: #f2f2f2;
+}
+
+#options.show {
+  display: block;
+}
+
+.gm-style .custom-info-window {
+  display: none !important;
+}
+
+#map {
+  height: 1000px;
+  /* Atur tinggi peta */
+  width: 2225px;
+  text-align: left;
+  /* Atur lebar peta */
+}
+
+/*penanda lokasi*/
+#markerName {
+  color: red;
+  /* Ganti dengan warna yang diinginkan */
+  font-weight: bold;
+  /* Atur gaya teks sesuai kebutuhan */
+  font-size: 14px;
+  /* Atur ukuran teks sesuai kebutuhan */
+}
+
+/* Styling untuk infoSidebar */
+.location-info {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to bottom, #f6f6f6, #fff);
+}
+
+/* Styling untuk rating-star */
+.rating-star {
+  display: flex;
+  align-items: center;
+}
+
+.rating-star input[type="checkbox"] {
+  display: none;
+}
+
+.rating-star label {
+  font-size: 30px;
+  color: #ddd;
+  margin-right: 10px;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.rating-star label:before {
+  content: "\2605";
+}
+
+.rating-star input[type="checkbox"]:checked ~ label {
+  color: #ffce00;
+}
+
+/* Styling untuk textarea */
+#comment {
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating input[type="checkbox"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: #ddd;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.rating label:before {
+  content: "\2605";
+}
+
+.rating input[type="checkbox"]:checked ~ label {
+  color: #ffce00;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*header*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10%;
+  z-index: 100;
+  transition: 0.6s;
+  background: #000;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  font-weight: bold;
   color: #0dcdc2;
   text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding: 10px 20px;
+  font-size: 2.8em;
+  letter-spacing: 2px;
+  transition: 0.6s;
 }
 
-.btn-box .raise {
-  border: 2px solid #0dcdc2;
-  border-radius: 20px;
-  background: transparent;
+.navigation a:hover::before,
+.navigation a.active::before {
+  opacity: 1;
+}
+
+/* Tambahkan style untuk menu yang aktif */
+.navigation a.active {
+  border-color: #ffffff;
+  border-radius: 100px;
+}
+
+.nav-item.dropdown {
+  position: relative;
+  float: right;
+  margin-left: 15px;
+}
+
+.nav-link.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  content: "\25BC";
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  pointer-events: none;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
 }
 
 /* Popular Destination */
@@ -160,8 +575,14 @@ button:focus {
 }
 
 .section-subtitle {
-  font-size: 24px;
-  color: #000000;
+  font-size: 18px;
+  color: #777;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container {
@@ -228,72 +649,26 @@ button:focus {
   font-size: 20px;
 }
 
-/*testinmonials*/
+/* Styles for Popular Destination section */
 
-.testimonial {
-  background: url(img/1.jpeg);
-  background-size: cover;
-  min-height: 800px;
-  padding: 60px 0;
-}
-
-.testimonial .heading {
-  text-align: center;
-  font-size: 72px;
-  font-weight: bold;
-  color: #0dcdc2;
-  margin-bottom: 40px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-}
-
-.contentBx {
-  width: 600px;
-  padding: 50px;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 160px;
-}
-
-.testimonialContent {
-  flex: 1;
-}
-
-.testimonialImg {
-  margin-top: 20px;
-}
-
-.contentBx p {
+.star {
   font-size: 24px;
-  color: #ffffff;
-  line-height: 1.6;
+  color: #f7d22c;
+  margin-right: 5px;
 }
 
-h3 {
-  font-size: 28px;
-  font-weight: bold;
-  color: #0dcdc2;
-  margin-top: 20px;
+.review-btn {
+  padding: 10px 20px;
+  background-color: #0dcdc2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.testimonial .rating {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.testimonial .rating .star {
-  color: #f8d32a;
-  margin: 0 2px;
+.review-btn:hover {
+  background-color: #008b8b;
 }
 
 /*service*/
@@ -306,144 +681,43 @@ h3 {
   color: #0dcdc2;
 }
 
-.services {
-  text-align: center;
-  color: #000;
+/* Sembunyikan radio button */
+input[type="radio"] {
+  display: none;
 }
 
-.services a {
-  text-align: center;
-  color: #000;
-  text-decoration: none;
+/* Tambahkan gaya ikon bintang menggunakan label */
+.rating label {
+  font-size: 34px;
+  color: #ccc;
+  cursor: pointer;
 }
 
-.services a:hover {
-  color: #0dcdc2;
+/* Berikan tampilan ikon bintang terpilih */
+.rating input[type="radio"]:checked ~ label {
+  color: gold;
 }
 
-.services .box-container {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: auto;
-  gap: 1.5rem;
-  justify-content: center;
+.social-media img {
+  width: 50px;
+  height: 50px;
 }
 
-.services .box-container .box {
-  max-width: 20%;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  text-align: center;
-  white-space: normal;
+.button-wrapper {
+  display: inline-block;
 }
 
-.services .box-container .box:hover {
-  color: #0dcdc2;
-}
-
-.services .box-container .box i {
-  padding: 1rem;
-  font-size: 5.5rem;
-}
-
-.services .box-container .box h3 {
-  font-size: 2.5rem;
-  margin-top: 1rem;
-}
-
-.services .box-container .box p {
-  font-size: 1.4rem;
-  padding: 0.5rem 0;
-}
-
-.services .box-container :hover {
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-}
-
-/*about us*/
-.about {
-  position: relative;
-  width: 100%;
-  display: flex;
-  color: #000;
-  padding: 50px;
-}
-
-.about .left {
-  padding: 100px;
-  display: flex;
-  width: 50%;
-}
-
-.about .left img.imgabout {
-  position: sticky;
-  max-width: 1000px;
-  border-radius: 100px;
-  box-shadow: -30px 20px 40px 0 rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease-in-out;
-}
-
-.about .left img.imgabout:hover {
-  transform: translateY(-20px);
-  box-shadow: -50px 40px 40px 0 rgba(0, 0, 0, 0.5);
-}
-
-.about .about-content {
-  padding: 100px;
-  width: 50%;
-}
-
-.headingabout {
-  color: #0dcdc2;
-  font-size: 50px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-}
-
-hr {
-  color: #0dcdc2;
+.button-wrapper button {
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
   border: none;
-  height: 1px;
-  background-color: #0dcdc2;
-  margin-bottom: 20px;
-  position: relative;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-hr::before {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  background-color: #0dcdc2;
-  border-radius: 50%;
-}
-
-hr::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-
-.text {
-  color: #000000;
-  font-size: 32px;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-h5 {
-  color: #0dcdc2;
-  font-size: 72px;
+.button-wrapper button i {
+  margin-right: 5px;
 }
 
 @media (max-width: 720px) {
@@ -530,9 +804,6 @@ h5 {
     padding-bottom: 0.3rem;
     margin: 1rem 1rem;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  a {
-    text-decoration: none !important;
   }
 
   .card-img-top {

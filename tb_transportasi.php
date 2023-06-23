@@ -63,168 +63,114 @@
                 <div class="container">
                     <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
                     <section class="destination">
-                        <div class="cardbx">
-                            <div class="card mb-3">
-                                <img src="img/airport kualanamu.jpg" class="card-img-top" alt="Destination 1" />
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Airport Kualanamu</h5>
-                                    <p class="card-text">Bandara Internasional Kualanamu adalah bandara modern
-                                        yang melayani penerbangan domestik dan internasional di Sumatera Utara. Dengan
-                                        fasilitas
-                                        yang lengkap dan modern, bandara ini menjadi pintu gerbang utama bagi wisatawan
-                                        yang
-                                        ingin menjelajahi Sumatera Utara.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardbx">
-                            <div class="card mb-3">
-                                <img src="img/airport silangit.jpg" class="card-img-top" alt="Destination 2" />
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Airport Silangit</h5>
-                                    <p class="card-text">Bandara Silangit adalah gerbang utama ke Danau Toba
-                                        yang
-                                        terkenal di Sumatera Utara, Indonesia. Dengan terminal modern dan berbagai
-                                        penerbangan
-                                        langsung dari kota-kota besar di Indonesia, Bandara Silangit adalah pilihan
-                                        terbaik
-                                        untuk memulai perjalanan Anda ke destinasi wisata yang menakjubkan di
-                                        sekitarnya.
+                        <?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$db = "go_map";
 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+$kon = mysqli_connect($host, $user, $password, $db);
+if (!$kon) {
+    die("Koneksi gagal:" . mysqli_connect_error());
+}
+$query = mysqli_query($kon, "SELECT * FROM tb_map WHERE category = 'transportasi' ORDER BY id LIMIT 6");
+
+if (mysqli_num_rows($query) > 0) {
+    while ($data = mysqli_fetch_assoc($query)) {
+        ?>
                         <div class="cardbx">
                             <div class="card mb-3">
-                                <img src="img/sampri.jpg" class="card-img-top" alt="Destination 3" />
+                                <a href="deskripsi.php?id=<?php echo $data['id']; ?>">
+                                    <img src="<?php echo $data['gambar']; ?>" class="card-img-top"
+                                        alt="<?php echo $data['nama']; ?>" />
+                                </a>
                                 <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Sampri</h5>
-                                    <p class="card-text">Loket Sampri adalah layanan penjualan tiket bus dan
-                                        travel dengan berbagai rute tujuan di Sumatera Utara. Nikmati kemudahan memesan
-                                        tiket
-                                        dengan harga terjangkau dan layanan yang cepat dan ramah di loket Sampri.</p>
-                                    </p>
+                                    <a href="deskripsi.php?id=<?php echo $data['id']; ?>">
+                                        <h5 class="card-title">
+                                            <i class="fas fa-camera"></i>&nbsp; <?php echo $data['nama']; ?>
+                                        </h5>
+                                    </a>
+                                    <a href="deskripsi.php?id=<?php echo $data['id']; ?>">
+                                        <p class="card-text">
+                                            <?php echo $data['deskripsi']; ?>
+                                        </p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="cardbx">
-                            <div class="card mb-3">
-                                <img src="img/tigaraja.jpg" class="card-img-top" alt="Destination 4" />
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Tigaraja</h5>
-                                    <p class="card-text">Pelabuhan Tigaraja - Pelabuhan di Sumatera Utara yang
-                                        terletak di kota Balige dan merupakan gerbang utama menuju Danau Toba. Pelabuhan
-                                        ini
-                                        menyediakan fasilitas penyeberangan feri dan kapal penumpang untuk menuju ke
-                                        Pulau
-                                        Samosir dan sekitarnya.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardbx">
-                            <div class="card mb-3">
-                                <img src="img/helvetia.jpg" class="card-img-top" alt="Destination 5" />
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Helvetia</h5>
-                                    <p class="card-text"></i> Deskripsi singkat promosi loket helvetia: Promosi
-                                        loket
-                                        Helvetia, layanan yang memberikan kemudahan dalam melakukan berbagai transaksi
-                                        keuangan
-                                        seperti pembayaran tagihan, pengisian pulsa, pembelian tiket, dan lain
-                                        sebagainya..
-                                        <br>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="cardbx">
-                            <div class="card mb-3">
-                                <img src="img/pelabuhan balige.jpg" class="card-img-top" alt="Destination 6" />
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-bus"></i>&nbsp Pelabuhan Balige</h5>
-                                    <p class="card-text"> Pelabuhan Balige adalah sebuah pelabuhan di kawasan
-                                        Danau
-                                        Toba, Sumatera Utara, Indonesia. Pelabuhan ini menyediakan kapal penumpang yang
-                                        beroperasi menuju beberapa kota di sekitar Danau Toba, termasuk ke pulau
-                                        Samosir.
-                                        Pelabuhan ini juga terletak dekat dengan beberapa objek wisata
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </section>
-            <!--footer-->
-            <?php
+                        <?php
+    }
+} else {
+    echo "Maaf, data tidak ada.";
+}
+?>
+                        <!--footer-->
+                        <?php
             include "footer.php";
             ?>
 
 
-            <script>
-                var input = document.getElementById("search-box");
-                var select = document.getElementById("options");
-                var data = [
-                    "Stasiun Siantar",
-                    "Dolok Merangir",
-                    "Stasiun Kereta Api Baja Linggei",
-                    "Stasiun K.A. Sei Rampah",
-                    "Stasiun KA Galang",
-                    "Stasiun Kereta Api Perbaungan",
-                    "Stasiun Lubuk Pakam",
-                    "Terminal Amplas",
-                    "Terminal Bus Sumatera Transport",
-                    "Terminal Pinang Baris Medan",
-                    "Terminal Helvetiav",
-                    "Terminal Tanjung Gusta",
-                    "Pelabuhan Tigaraja / Tiga Raja Pier",
-                    "Pelabuhan Penyeberangan Balige",
-                    "Bandara Silangit International Airport",
-                    "Bandara Kualanamu International Airport",
-                    "Terminal Porsea",
-                    "Terminal Sidulang",
-                    "Terminal Sosor Saba Parapat",
-                    "Loket Sejahtera"
-                ];
+                        <script>
+                        var input = document.getElementById("search-box");
+                        var select = document.getElementById("options");
+                        var data = [
+                            "Stasiun Siantar",
+                            "Dolok Merangir",
+                            "Stasiun Kereta Api Baja Linggei",
+                            "Stasiun K.A. Sei Rampah",
+                            "Stasiun KA Galang",
+                            "Stasiun Kereta Api Perbaungan",
+                            "Stasiun Lubuk Pakam",
+                            "Terminal Amplas",
+                            "Terminal Bus Sumatera Transport",
+                            "Terminal Pinang Baris Medan",
+                            "Terminal Helvetiav",
+                            "Terminal Tanjung Gusta",
+                            "Pelabuhan Tigaraja / Tiga Raja Pier",
+                            "Pelabuhan Penyeberangan Balige",
+                            "Bandara Silangit International Airport",
+                            "Bandara Kualanamu International Airport",
+                            "Terminal Porsea",
+                            "Terminal Sidulang",
+                            "Terminal Sosor Saba Parapat",
+                            "Loket Sejahtera"
+                        ];
 
-                for (var i = 0; i < data.length; i++) {
-                    var option = document.createElement("option");
-                    option.value = data[i];
-                    select.appendChild(option);
-                }
-
-                var optionCounter = 0; // Add this line   
-                input.addEventListener("input", function() {
-                    var value = this.value.toLowerCase();
-                    var options = select.getElementsByTagName("option");
-                    for (var i = 0; i < options.length; i++) {
-                        var text = options[i].value.toLowerCase();
-                        if (text.indexOf(value) !== -1 && optionCounter < 6) {
-                            options[i].style.display = "";
-                            optionCounter++;
-                        } else {
-                            options[i].style.display = "none";
+                        for (var i = 0; i < data.length; i++) {
+                            var option = document.createElement("option");
+                            option.value = data[i];
+                            select.appendChild(option);
                         }
-                    }
-                    select.classList.add('show');
-                });
 
-                // Hide options when click outside
-                document.addEventListener('click', function(event) {
-                    var isClickInside = select.contains(event.target);
-                    if (!isClickInside) {
-                        select.classList.remove('show');
-                        optionCounter = 0; // Reset optionCounter when hiding options
-                    }
-                });
-                var map;
-                var markers = [];
+                        var optionCounter = 0; // Add this line   
+                        input.addEventListener("input", function() {
+                            var value = this.value.toLowerCase();
+                            var options = select.getElementsByTagName("option");
+                            for (var i = 0; i < options.length; i++) {
+                                var text = options[i].value.toLowerCase();
+                                if (text.indexOf(value) !== -1 && optionCounter < 6) {
+                                    options[i].style.display = "";
+                                    optionCounter++;
+                                } else {
+                                    options[i].style.display = "none";
+                                }
+                            }
+                            select.classList.add('show');
+                        });
 
-                function initMap() {
-                    <?php
+                        // Hide options when click outside
+                        document.addEventListener('click', function(event) {
+                            var isClickInside = select.contains(event.target);
+                            if (!isClickInside) {
+                                select.classList.remove('show');
+                                optionCounter = 0; // Reset optionCounter when hiding options
+                            }
+                        });
+                        var map;
+                        var markers = [];
+
+                        function initMap() {
+                            <?php
                     include "database.php";
 
                     $sql = "SELECT * FROM tb_map WHERE category = 'transportasi'";
@@ -244,292 +190,297 @@
                     }
                     ?>
 
-                    var locations = <?php echo json_encode($locations); ?>;
+                            var locations = <?php echo json_encode($locations); ?>;
 
-                    map = new google.maps.Map(document.getElementById('map'), {
-                        center: {
-                            lat: 3.0016031867434,
-                            lng: 98.61766475067328
-                        },
-                        zoom: 9.5
-                    });
-
-                    // Membuat marker pada koordinat yang ditentukan untuk nama kota
-                    function createMarker(position, name) {
-                        var marker = new google.maps.Marker({
-                            position: position,
-                            map: map,
-                            title: name,
-                            label: {
-                                text: name,
-                                color: 'white',
-                                fontSize: '15px',
-                            },
-                            icon: {
-                                url: 'https://maps.google.com/mapfiles/ms/icons/black-dot.png',
-                                scaledSize: new google.maps.Size(40, 40)
-                            }
-                        });
-
-                        return marker;
-                    }
-
-
-                    // Menggunakan fungsi createMarker untuk membuat marker dengan setiap nama 
-                    var locati = [{
-                            position: {
-                                lat: 3.5901099412346165,
-                                lng: 98.67258074382252
-                            },
-                            name: 'Medan'
-                        },
-                        {
-                            position: {
-                                lat: 3.57316967302348,
-                                lng: 98.88110164949245
-                            },
-                            name: 'Lubuk Pakam'
-                        },
-                        {
-                            position: {
-                                lat: 3.3162226764522216,
-                                lng: 99.189538047138
-                            },
-                            name: 'Tebing Tinggi'
-                        },
-                        {
-                            position: {
-                                lat: 2.952433949861991,
-                                lng: 99.08575987316539
-                            },
-                            name: 'Pematang Siantar'
-                        },
-                        {
-                            position: {
-                                lat: 2.844865372795513,
-                                lng: 99.05406438008443
-                            },
-                            name: 'Saribudolok'
-                        },
-                        {
-                            position: {
-                                lat: 2.6684433464759127,
-                                lng: 98.9376498121994
-                            },
-                            name: 'Parapat'
-                        },
-                        {
-                            position: {
-                                lat: 2.583205490921636,
-                                lng: 99.06652764174781
-                            },
-                            name: 'Lumban Djulu'
-                        },
-                        {
-                            position: {
-                                lat: 2.4487576185270323,
-                                lng: 99.14404392212444
-                            },
-                            name: 'Porsea'
-                        },
-                        {
-                            position: {
-                                lat: 2.3568731716810443,
-                                lng: 99.12883489439503
-                            },
-                            name: 'Laguboti'
-                        },
-                        {
-                            position: {
-                                lat: 2.3331195644867275,
-                                lng: 99.0825468233071
-                            },
-                            name: 'Balige'
-                        },
-                        {
-                            position: {
-                                lat: 2.1478720598476975,
-                                lng: 98.9623014145697
-                            },
-                            name: 'Silangit'
-                        }
-                    ];
-
-                    locati.forEach(function(locati) {
-                        var marker = createMarker(new google.maps.LatLng(locati.position.lat, locati.position.lng), locati.name);
-                        marker.setMap(map);
-                    });
-
-
-                    createButton("MAP", "tb_map.php");
-                    createButton("Penginapan", "tb_penginapan.php");
-                    createButton("Wisata", "tb_wisata.php");
-                    createButton("Rumah Makan", "tb_rumahmakan.php");
-                    createButton("Souvenir", "tb_souvenir.php");
-
-                    function createButton(label, url) {
-                        var button = document.createElement("button");
-                        button.innerHTML = label;
-                        button.classList.add("button"); // Menambahkan kelas CSS "button" pada tombol
-                        map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
-                        button.addEventListener("click", function() {
-                            window.location.href = url;
-                        });
-                    }
-
-
-                    for (var i = 0; i < locations.length; i++) {
-
-                        map: map
-
-                    };
-
-
-
-                    var marker;
-
-                    var infoWindow = new google.maps.InfoWindow();
-                    var infoSidebar = document.createElement('div');
-                    infoSidebar.id = 'info-sidebar';
-                    // Sembunyikan sidebar saat halaman pertama kali dimuat
-                    infoSidebar.style.display = 'none';
-                    map.controls[google.maps.ControlPosition.RIGHT_TOP].push(
-                        infoSidebar); // Gunakan RIGHT_TOP agar posisi sidebar lebih rapi
-
-                    for (var i = 0; i < locations.length; i++) {
-                        marker = new google.maps.Marker({
-                            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                            icon: {
-                                url: locations[i][3],
-                                scaledSize: new google.maps.Size(25, 20)
-                            },
-                            map: map
-                        });
-                        //membuat marker posisi pengguna
-                        navigator.geolocation.getCurrentPosition(function(position) {
-                            var lat = position.coords.latitude;
-                            var lng = position.coords.longitude;
-
-                            // Add a marker at the user's location
-                            var marker = new google.maps.Marker({
-                                position: {
-                                    lat: lat,
-                                    lng: lng
+                            map = new google.maps.Map(document.getElementById('map'), {
+                                center: {
+                                    lat: 3.0016031867434,
+                                    lng: 98.61766475067328
                                 },
-                                map: map,
-                                title: 'Posisi Saya'
+                                zoom: 9.5
                             });
-                        });
-                        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-                            return function() {
-                                var contentString = '<div style="font-weight: bold;">' + locations[i][0] +
-                                    '</div>';
-                                infoWindow.setContent(contentString);
-                                infoWindow.open(map, marker);
-                                // Munculkan sidebar dan isi kontennya
-                                infoSidebar.style.display = 'block';
-                                infoSidebar.innerHTML = '<div class="location-info">' +
-                                    '<b>Keterangan :</b><br>' +
-                                    '<b><h1>' + locations[i][0] + '</h1><b><br>' +
-                                    '<b></b>Lokasi :</b><br>' +
-                                    '<h3>' + locations[i][4] + '</h3><br>' +
-                                    '<img src="' + locations[i][5] + '" style="width: 420px; height: 250px;"><br><br>' +
-                                    '<h3>Rating</h3><br>' +
-                                    '<form action="rating.php" method="POST">' +
-                                    '<div class="rating">' +
-                                    '<input type="radio" id="star5" name="rating" value="5">' +
-                                    '<label for="star5"></label><br>' +
-                                    '<input type="radio" id="star4" name="rating" value="4">' +
-                                    '<label for="star4"></label><br>' +
-                                    '<input type="radio" id="star3" name="rating" value="3">' +
-                                    '<label for="star3"></label><br>' +
-                                    '<input type="radio" id="star2" name="rating" value="2">' +
-                                    '<label for="star2"></label><br>' +
-                                    '<input type="radio" id="star1" name="rating" value="1">' +
-                                    '<label for="star1"></label><br>' +
-                                    '</div><br>' +
-                                    '<h3>Komentar</h3><br>' +
-                                    '<textarea id="comment" name="comment"></textarea>' +
-                                    '<div class="button-wrapper">' +
-                                    '<button type="submit"><i class="fas fa-paper-plane"></i></button>' +
-                                    '</div>' +
-                                    '</form>' +
-                                    '</div>';
 
+                            // Membuat marker pada koordinat yang ditentukan untuk nama kota
+                            function createMarker(position, name) {
+                                var marker = new google.maps.Marker({
+                                    position: position,
+                                    map: map,
+                                    title: name,
+                                    label: {
+                                        text: name,
+                                        color: 'white',
+                                        fontSize: '15px',
+                                    },
+                                    icon: {
+                                        url: 'https://maps.google.com/mapfiles/ms/icons/black-dot.png',
+                                        scaledSize: new google.maps.Size(40, 40)
+                                    }
+                                });
+
+                                return marker;
+                            }
+
+
+                            // Menggunakan fungsi createMarker untuk membuat marker dengan setiap nama 
+                            var locati = [{
+                                    position: {
+                                        lat: 3.5901099412346165,
+                                        lng: 98.67258074382252
+                                    },
+                                    name: 'Medan'
+                                },
+                                {
+                                    position: {
+                                        lat: 3.57316967302348,
+                                        lng: 98.88110164949245
+                                    },
+                                    name: 'Lubuk Pakam'
+                                },
+                                {
+                                    position: {
+                                        lat: 3.3162226764522216,
+                                        lng: 99.189538047138
+                                    },
+                                    name: 'Tebing Tinggi'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.952433949861991,
+                                        lng: 99.08575987316539
+                                    },
+                                    name: 'Pematang Siantar'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.844865372795513,
+                                        lng: 99.05406438008443
+                                    },
+                                    name: 'Saribudolok'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.6684433464759127,
+                                        lng: 98.9376498121994
+                                    },
+                                    name: 'Parapat'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.583205490921636,
+                                        lng: 99.06652764174781
+                                    },
+                                    name: 'Lumban Djulu'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.4487576185270323,
+                                        lng: 99.14404392212444
+                                    },
+                                    name: 'Porsea'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.3568731716810443,
+                                        lng: 99.12883489439503
+                                    },
+                                    name: 'Laguboti'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.3331195644867275,
+                                        lng: 99.0825468233071
+                                    },
+                                    name: 'Balige'
+                                },
+                                {
+                                    position: {
+                                        lat: 2.1478720598476975,
+                                        lng: 98.9623014145697
+                                    },
+                                    name: 'Silangit'
+                                }
+                            ];
+
+                            locati.forEach(function(locati) {
+                                var marker = createMarker(new google.maps.LatLng(locati.position.lat, locati
+                                    .position.lng), locati.name);
+                                marker.setMap(map);
+                            });
+
+
+                            createButton("MAP", "tb_map.php");
+                            createButton("Penginapan", "tb_penginapan.php");
+                            createButton("Wisata", "tb_wisata.php");
+                            createButton("Rumah Makan", "tb_rumahmakan.php");
+                            createButton("Souvenir", "tb_souvenir.php");
+
+                            function createButton(label, url) {
+                                var button = document.createElement("button");
+                                button.innerHTML = label;
+                                button.classList.add("button"); // Menambahkan kelas CSS "button" pada tombol
+                                map.controls[google.maps.ControlPosition.TOP_CENTER].push(button);
+                                button.addEventListener("click", function() {
+                                    window.location.href = url;
+                                });
+                            }
+
+
+                            for (var i = 0; i < locations.length; i++) {
+
+                                map: map
 
                             };
-                        })(marker, i));
-                        markers.push(marker);
-                    }
-
-                    google.maps.event.addListener(map, 'click', function() {
-                        infoSidebar.style.display = 'none'; // sembunyikan sidebar
-                    });
 
 
 
+                            var marker;
 
-                    // Tambahkan event listener untuk input pencarian
-                    document.getElementById('search-box').addEventListener('input', function() {
-                        var searchString = this.value.toLowerCase();
+                            var infoWindow = new google.maps.InfoWindow();
+                            var infoSidebar = document.createElement('div');
+                            infoSidebar.id = 'info-sidebar';
+                            // Sembunyikan sidebar saat halaman pertama kali dimuat
+                            infoSidebar.style.display = 'none';
+                            map.controls[google.maps.ControlPosition.RIGHT_TOP].push(
+                                infoSidebar); // Gunakan RIGHT_TOP agar posisi sidebar lebih rapi
 
-                        // Tampilkan semua marker jika pencarian kosong
-                        if (searchString === '') {
-                            for (var i = 0; i < markers.length; i++) {
-                                markers[i].setVisible(true);
+                            for (var i = 0; i < locations.length; i++) {
+                                marker = new google.maps.Marker({
+                                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                                    icon: {
+                                        url: locations[i][3],
+                                        scaledSize: new google.maps.Size(25, 20)
+                                    },
+                                    map: map
+                                });
+                                //membuat marker posisi pengguna
+                                navigator.geolocation.getCurrentPosition(function(position) {
+                                    var lat = position.coords.latitude;
+                                    var lng = position.coords.longitude;
+
+                                    // Add a marker at the user's location
+                                    var marker = new google.maps.Marker({
+                                        position: {
+                                            lat: lat,
+                                            lng: lng
+                                        },
+                                        map: map,
+                                        title: 'Posisi Saya'
+                                    });
+                                });
+                                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                                    return function() {
+                                        var contentString = '<div style="font-weight: bold;">' +
+                                            locations[i][0] +
+                                            '</div>';
+                                        infoWindow.setContent(contentString);
+                                        infoWindow.open(map, marker);
+                                        // Munculkan sidebar dan isi kontennya
+                                        infoSidebar.style.display = 'block';
+                                        infoSidebar.innerHTML = '<div class="location-info">' +
+                                            '<b>Keterangan :</b><br>' +
+                                            '<b><h1>' + locations[i][0] + '</h1><b><br>' +
+                                            '<b></b>Lokasi :</b><br>' +
+                                            '<h3>' + locations[i][4] + '</h3><br>' +
+                                            '<img src="' + locations[i][5] +
+                                            '" style="width: 420px; height: 250px;"><br><br>' +
+                                            '<h3>Rating</h3><br>' +
+                                            '<form action="rating.php" method="POST">' +
+                                            '<div class="rating">' +
+                                            '<input type="radio" id="star5" name="rating" value="5">' +
+                                            '<label for="star5"></label><br>' +
+                                            '<input type="radio" id="star4" name="rating" value="4">' +
+                                            '<label for="star4"></label><br>' +
+                                            '<input type="radio" id="star3" name="rating" value="3">' +
+                                            '<label for="star3"></label><br>' +
+                                            '<input type="radio" id="star2" name="rating" value="2">' +
+                                            '<label for="star2"></label><br>' +
+                                            '<input type="radio" id="star1" name="rating" value="1">' +
+                                            '<label for="star1"></label><br>' +
+                                            '</div><br>' +
+                                            '<h3>Komentar</h3><br>' +
+                                            '<textarea id="comment" name="comment"></textarea>' +
+                                            '<div class="button-wrapper">' +
+                                            '<button type="submit"><i class="fas fa-paper-plane"></i></button>' +
+                                            '</div>' +
+                                            '</form>' +
+                                            '</div>';
+
+
+                                    };
+                                })(marker, i));
+                                markers.push(marker);
                             }
-                            infoSidebar.style.display = 'none'; // Sembunyikan sidebar saat pencarian kosong
-                            return;
-                        }
 
-                        // Sembunyikan semua marker yang tidak sesuai
-                        for (var i = 0; i < markers.length; i++) {
-                            var locationName = locations[i][0].toLowerCase();
-                            if (locationName.indexOf(searchString) === -1) {
-                                markers[i].setVisible(false);
-                            } else {
-                                markers[i].setVisible(true);
-                            }
-                        }
-                    });
-                    var input = document.getElementById("search-box");
-                    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+                            google.maps.event.addListener(map, 'click', function() {
+                                infoSidebar.style.display = 'none'; // sembunyikan sidebar
+                            });
 
-                    var searchBox = new google.maps.places.SearchBox(input);
 
-                    searchBox.addListener('places_changed', function() {
-                        var places = searchBox.getPlaces();
-                        if (places.length == 0) {
-                            return;
-                        }
 
-                        // Sembunyikan semua marker yang tidak sesuai dengan pencarian
-                        for (var i = 0; i < markers.length; i++) {
-                            markers[i].setVisible(false);
-                        }
 
-                        // Tampilkan marker yang sesuai dengan tempat yang dicari
-                        var bounds = new google.maps.LatLngBounds();
-                        for (var i = 0; i < places.length; i++) {
-                            var place = places[i];
-                            for (var j = 0; j < markers.length; j++) {
-                                if (markers[j].getPosition().equals(place.geometry.location)) {
-                                    markers[j].setVisible(true);
-                                    bounds.extend(place.geometry.location);
-                                    break;
+                            // Tambahkan event listener untuk input pencarian
+                            document.getElementById('search-box').addEventListener('input', function() {
+                                var searchString = this.value.toLowerCase();
+
+                                // Tampilkan semua marker jika pencarian kosong
+                                if (searchString === '') {
+                                    for (var i = 0; i < markers.length; i++) {
+                                        markers[i].setVisible(true);
+                                    }
+                                    infoSidebar.style.display =
+                                        'none'; // Sembunyikan sidebar saat pencarian kosong
+                                    return;
                                 }
-                            }
+
+                                // Sembunyikan semua marker yang tidak sesuai
+                                for (var i = 0; i < markers.length; i++) {
+                                    var locationName = locations[i][0].toLowerCase();
+                                    if (locationName.indexOf(searchString) === -1) {
+                                        markers[i].setVisible(false);
+                                    } else {
+                                        markers[i].setVisible(true);
+                                    }
+                                }
+                            });
+                            var input = document.getElementById("search-box");
+                            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                            var searchBox = new google.maps.places.SearchBox(input);
+
+                            searchBox.addListener('places_changed', function() {
+                                var places = searchBox.getPlaces();
+                                if (places.length == 0) {
+                                    return;
+                                }
+
+                                // Sembunyikan semua marker yang tidak sesuai dengan pencarian
+                                for (var i = 0; i < markers.length; i++) {
+                                    markers[i].setVisible(false);
+                                }
+
+                                // Tampilkan marker yang sesuai dengan tempat yang dicari
+                                var bounds = new google.maps.LatLngBounds();
+                                for (var i = 0; i < places.length; i++) {
+                                    var place = places[i];
+                                    for (var j = 0; j < markers.length; j++) {
+                                        if (markers[j].getPosition().equals(place.geometry.location)) {
+                                            markers[j].setVisible(true);
+                                            bounds.extend(place.geometry.location);
+                                            break;
+                                        }
+                                    }
+
+                                }
+                                map.fitBounds(bounds);
+                            });
 
                         }
-                        map.fitBounds(bounds);
-                    });
+                        </script>
 
-                }
-            </script>
-
-            <script src="https://maps.googleapis.com/maps/api/js?AIzaSyBA9KznFyKV2mH5JyKf1nRdJATnGRCV8bQ&callback=initMap">
-            </script>
-            <script src="script.js"></script>
+                        <script
+                            src="https://maps.googleapis.com/maps/api/js?AIzaSyBA9KznFyKV2mH5JyKf1nRdJATnGRCV8bQ&callback=initMap">
+                        </script>
+                        <script src="script.js"></script>
 </body>
 
 </html>

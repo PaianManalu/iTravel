@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="homes.css">
     <script src="../js/home.js"></script>
     <title>i-Travel</title>
 
@@ -40,7 +40,7 @@
                 </div>
             </nav>
             <script src="../js/nav.js">
-                /*active navigation*/
+            /*active navigation*/
             </script>
         </header>
     </section>
@@ -64,207 +64,56 @@
         </div>
     </section>
     <!--rekomendation-->
-    <!--rekomendation-->
     <section class="Destination">
         <section class="popular-destination">
             <h1 class="heading"> Destinasi Populer</h1>
             <div class="container">
-                <h3 class="section-subtitle">Lihat beberapa tujuan perjalanan kami yang paling populer</h3>
+                <h3 class="section-subtitle">Check out some of our most popular travel destinations</h3>
                 <section class="destination">
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/taman eden.jpeg" class="card-img-top" alt="Destination 1" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-camera"></i>&nbsp Taman Eden 100
-                                </h5>
-                                <p class="card-text">
+                    <?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$db = "go_map";
 
-                                    Taman Eden 100 di Sumatera Utara menawarkan keindahan alam yang menakjubkan.
-                                    Dengan
-                                    pemandangan yang memukau dan lingkungan yang indah, Taman Eden 100 menjadi
-                                    destinasi
-                                    yang sempurna bagi pecinta alam.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+$kon = mysqli_connect($host, $user, $password, $db);
+if (!$kon) {
+    die("Koneksi gagal:" . mysqli_connect_error());
+}
+$query = mysqli_query($kon, "SELECT * FROM tb_map WHERE category = 'wisata' ORDER BY id LIMIT 12");
+
+if (mysqli_num_rows($query) > 0) {
+    while ($data = mysqli_fetch_assoc($query)) {
+        ?>
                     <div class="cardbx">
                         <div class="card mb-3">
-                            <img src="img/Lembah Bakkara.jpg" class="card-img-top" alt="Destination 4" />
+                            <a href="deskripsi.php?id=<?php echo $data['id']; ?>">
+                                <img src="<?php echo $data['gambar']; ?>" class="card-img-top"
+                                    alt="<?php echo $data['nama']; ?>" />
+                            </a>
                             <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-camera"></i>&nbsp Lembah Bakkara
-                                </h5>
-                                <p class="card-text">Lembah Bakkara di Humbang Hasundutan, Sumatera Utara,
-                                    menawarkan pemandangan sawah, sungai, dan perbukitan yang indah. Pengunjung dapat
-                                    hiking, panjat tebing, berkuda, atau mencoba aktivitas air. Juga terdapat warung makan
-                                    untuk mencoba kuliner khas Sumatera Utara. Cocok untuk pengunjung yang ingin menikmati
-                                    alam dan aktivitas menarik di sekitar lembah.
-                                </p>
+                                <a href="deskripsi.php?id=<?php echo $data['id']; ?>">
+                                    <h5 class="card-title">
+                                        <i class="fas fa-camera"></i>&nbsp; <?php echo $data['nama']; ?>
+                                    </h5>
+                                </a>
+                                <a href="deskripsi.php?id=<?php echo $data['id']; ?>">
+                                    <p class="card-text">
+                                        <?php echo $data['deskripsi']; ?>
+                                    </p>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/bukit-simarjarunjung.jpg" class="card-img-top" alt="Destination 5" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-camera"></i>&nbsp Bukit Indah Simarjarunjung
-                                </h5>
-                                <p class="card-text">Lembah Bakkara di Sumatera Utara menawarkan pemandangan
-                                    sawah, sungai, dan perbukitan hijau yang indah. Pengunjung dapat melakukan hiking,
-                                    panjat tebing, berkuda, atau aktivitas air. Terdapat juga warung makan untuk mencicipi
-                                    kuliner khas. Cocok untuk pengunjung yang ingin menikmati alam dan aktivitas menarik di
-                                    sekitar lembah.<br>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/toledo.jpg" class="card-img-top" alt="Destination 2" />
-                            <div class="card-body">
-                                <h5 class="card-title"> <i class="fas fa-hotel"></i>&nbsp Toledo InnToledo Inna</h5>
-                                <p class="card-text">
-                                    Hotel di Pematangsiantar, Sumatera Utara menawarkan kamar-kamar
-                                    modern dengan fasilitas seperti AC dan TV layar datar. Terdapat
-                                    juga restoran, lounge, dan ruang rapat. Dekat dengan tempat
-                                    wisata seperti Air Terjun Sipiso-piso dan Danau Toba. Pilihan
-                                    tepat untuk menginap di Pematangsiantar.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/baren.jpg" class="card-img-top" alt="Destination 3" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-utensils"></i> &nbsp Baren Coffee & Roastery
-                                </h5>
-                                <p class="card-text">
-                                    Baren's Coffee & Roastery adalah tempat kopi yang menawarkan
-                                    kopi berkualitas tinggi yang dipanggang dengan baik, serta
-                                    suasana yang modern dan nyaman untuk menikmati kopi. Dalam
-                                    lingkungan yang ramah pengunjung.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/Puncak Sipinsur.jpg" class="card-img-top" alt="Destination 4" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-camera"></i>&nbsp Puncak Sipinsur
-                                </h5>
-                                <p class="card-text">
-                                    Puncak Sipincur di Simalungun, Sumatera Utara, menawarkan
-                                    pemandangan sawah, perbukitan hijau, dan pegunungan yang
-                                    spektakuler. Pengunjung dapat hiking dan berkemah sambil
-                                    menikmati udara segar dan keindahan alam. Cocok untuk pecinta
-                                    alam dan pengunjung yang mencari ketenangan.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/niagara.jpg" class="card-img-top" alt="Destination 1" />
-                            <div class="card-body">
-                                <h5 class="card-title"> <i class="fas fa-hotel"></i>&nbsp Hotel Niagara Parapat</h5>
-                                <p class="card-text">Hotel Niagara Parapat di tepi Danau Toba menawarkan
-                                    pemandangan indah dari kamar yang menghadap danau. Terdapat kolam renang, restoran, dan
-                                    spa, serta dekat dengan tempat wisata seperti Bukit Indah Simarjarunjung dan Air Terjun
-                                    Sipiso-piso. Pilihan tepat untuk menginap saat berkunjung ke Danau Toba.</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/penatapan.jpg" class="card-img-top" alt="Destination 2" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-utensils"></i>&nbsp Penatapan Restaurant
-                                </h5>
-                                <p class="card-text">Penatapan Restaurant di Danau Toba, Sumatera Utara,
-                                    menawarkan hidangan Indonesia dan Barat yang lezat dengan pemandangan indah dari danau.
-                                    Tempat ini memiliki pilihan yang luas untuk semua selera. Nikmati makanan lezat
-                                    sambil menikmati pemandangan alam yang indah di Danau Toba di Penatapan Restaurant.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/batikta.jpg" class="card-img-top" alt="Destination 4" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-gift"></i>&nbsp Batikta - Batik Batak Balige
-                                </h5>
-                                <p class="card-text">toko batik yang berlokasi di Kabupaten Samosir. Toko yang menawarkan berbagai macam jenis kain dan motif batik khas Indonesia,. Batik untuk pria dan wanita tersedia disini
-                                    dengan berbagai jenis seperti batik formal, batik tradisional dan batik modern, batik tulis, sogan, batik couple dan
-                                    lainnya.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/pelabuhan balige.jpg" class="card-img-top" alt="Destination 6" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-bus"></i> &nbsp Pelabuhan Balige
-                                </h5>
-                                <p class="card-text"> Pelabuhan Balige adalah sebuah pelabuhan di kawasan
-                                    Danau
-                                    Toba, Sumatera Utara, Indonesia. Pelabuhan ini menyediakan kapal penumpang yang
-                                    beroperasi menuju beberapa kota di sekitar Danau Toba, termasuk ke pulau Samosir.
-                                    Pelabuhan ini juga terletak dekat dengan beberapa objek wisata
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/airport silangit.jpg" class="card-img-top" alt="Destination 5" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-bus"></i>&nbsp Airport Silangit
-                                </h5>
-                                <p class="card-text">
-                                    Bandara Silangit adalah gerbang utama ke Danau Toba yang
-                                    terkenal di Sumatera Utara, Indonesia. Dengan terminal modern
-                                    dan berbagai penerbangan langsung dari kota-kota besar di
-                                    Indonesia, Bandara Silangit adalah pilihan terbaik untuk memulai
-                                    perjalanan Anda ke destinasi wisata yang menakjubkan di
-                                    sekitarnya.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cardbx">
-                        <div class="card mb-3">
-                            <img src="img/airport kualanamu.jpg" class="card-img-top" alt="Destination 6" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <i class="fas fa-bus"></i>&nbsp Airport Kualanamu
-                                </h5>
-                                <p class="card-text">
-                                    Bandara Internasional Kualanamu adalah bandara modern yang
-                                    melayani penerbangan domestik dan internasional di Sumatera
-                                    Utara. Dengan fasilitas yang lengkap dan modern, bandara ini
-                                    menjadi pintu gerbang utama bagi wisatawan yang ingin
-                                    menjelajahi Sumatera Utara.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                    <?php
+    }
+} else {
+    echo "Maaf, data tidak ada.";
+}
+?>
             </div>
-        </section> <!--testimonials-->
+        </section>
+        <!--testimonials-->
         <section class="testimonial">
             <h2 class="heading">Feedback</h2>
             <div class="container">
@@ -368,9 +217,9 @@
         </div>
     </section>
     <script>
-        function changeTable(tableName) {
-            window.location.href = 'tabel.php?table=' + tableName;
-        }
+    function changeTable(tableName) {
+        window.location.href = 'tabel.php?table=' + tableName;
+    }
     </script>
 
     <section class="about" id="about">
